@@ -201,9 +201,35 @@ Verification Register into one row per open item, and chunks brief text (~800 to
 - Mapping each verdict to ISO/IEC 42001 controls and NIST AI RMF functions.
 - The full 280-brief KB with embeddings and hybrid search.
 
+## Demo video
+
+▶ **[Watch the demo on YouTube](https://youtu.be/ktF9vd21EIM)** · or download [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4)
+
+A narrated walkthrough of every tab, run live against Tavily and Bifrost. Long waits while it checks live
+sources are sped up and labelled.
+
 ## Screenshots
 
-See `screenshots/` (Check an Answer, Verification Register, Gateway).
+**Check an Answer:** overall score, corrected answer (red removed, green added), verdict cards
+![Check an Answer](screenshots/1_check_answer.png)
+
+**Why 10/100?** The score breakdown and the official sources behind a verdict
+![Score breakdown](screenshots/2_score_breakdown.png)
+
+**Ask the KB:** a grounded answer from the knowledge base, then a live freshness check of that answer
+![Ask the KB](screenshots/3_ask_kb.png)
+
+**KB Freshness Audit:** 268 briefs, review cycles and 1,902 open verification items
+![KB Freshness Audit](screenshots/4_kb_audit.png)
+
+**Verification Register:** open fact-check items from a BSP brief, verified live
+![Verification Register](screenshots/5_verification_register.png)
+
+**Gateway (Bifrost):** every LLM call with model, provider, latency, tokens and fallback
+![Gateway](screenshots/6_gateway.png)
+
+**`/check` API** for other AI apps
+![API](screenshots/7_api.png)
 
 ---
 Not legal advice. Verify against official sources.
