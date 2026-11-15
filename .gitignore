@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+build/
+logs/
+.streamlit/secrets.toml
+# Knowledge base stays out of the repo, except the committed samples
+data/*
+!data/sample/
