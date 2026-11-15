@@ -318,5 +318,581 @@
    "snippet": "Data controllers (organizations that determine the purposes and means of processing personal data) are required to notify. Data processors (organizations that process data on behalf of a controller, such as cloud service providers or outsourced IT) must notify the data controller 'without undue delay' upon becoming aware of a breach — the controller then notifies the supervisory authority.\n\n#### The 72-hour window [...] not known within 72 hours, a phase-one notification can be filed with available information, with a follow-up when investigation is complete. [...] The clock-start events matte",
    "published_date": null
   }
+ ],
+ "The Philippines' National Privacy Commission has not issued any guidance on AI systems that process personal data. current status 2026": [
+  {
+   "url": "https://securiti.ai/philippines-data-privacy-act-application-to-ai-systems-processing-personal-data",
+   "title": "Philippines Data Privacy Act’s Application to AI Systems Processing Personal Data - Securiti",
+   "snippet": "### Accuracy\n\nThe PICs must maintain the accuracy and currency of personal data to uphold fairness in AI system outputs. To maintain accuracy, it recommends the adoption of measures to verify and update personal data used in AI systems regularly.\n\n### Data Minimization\n\nThe PICs must ensure that they exclude personal data that does not contribute meaningfully to developing, training, or deploying AI systems.\n\n## 3. Lawful Basis for Processing [...] The governance of AI systems is becoming increasingly critical, particularly when these systems process personal data. To address this, the Nationa",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/advisories-circulars",
+   "title": "Advisories & Circulars - National Privacy CommissionNational Privacy Commission",
+   "snippet": "NPC-IC Joint Advisory No. 2025-001: Considerations on the Use of Privacy Enhancing Technologies (PETs) in the Insurance Industry\n NPC Advisory No. 2024-04: Guidelines on the Application of Republic Act No. 10173 or the Data Privacy Act of 2012 (DPA), its Implementing Rules and Regulations, and the Issuances of the Commission to Artificial Intelligence Systems Processing Personal Data [...] NPC Circular 2023-02 - Data Privacy Competency Program - FAQ Data Privacy Competency Program\n NPC Circular No. 2023-01 - Schedule of Fees and Charges of the National Privacy Commission\n NPC Circular No. 2022",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/jurisdictions/philippines",
+   "title": "Philippines | Jurisdictions | DataGuidance",
+   "snippet": "comply with when processing personal data, as well as the sanctions for violations of the Act. The NPC has also released over 100 advisory opinions in response to queries on topics such as data breach management, notifications regarding automated decision-making, the designation of data protection officers, Privacy Impact Assessments, and access to personal data. The Philippines participates in the Asia-Pacific Economic Cooperation Cross-Border Privacy Rules (APEC CBPR) system. [...] Summary: On September 8, 2012, the Data Privacy Act of 2012 (Republic Act No. 10173) (the Act) became effective",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph",
+   "title": "HOME - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Data Privacy Act of 2012 is a 21st-century law that addresses 21st-century crimes and concerns. It (1) protects the privacy of individuals while ensuring free flow of information to promote innovation and growth; (2) regulates the collection, recording, organization, storage, updating or modification, retrieval, consultation, use, consolidation, blocking, erasure, or destruction of personal data; and (3) ensures that the Philippines complies with international standards set for data [...] is inviting personal information controllers (PICs) and processors (PIPs), data subjects, and other in",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/ipc-releases-guidance-ai-scribes-170000228.html",
+   "title": "IPC releases new guidance on AI scribes to help protect patient privacy",
+   "snippet": "AI Scribes: Key Considerations for the Health Sector helps health professionals take a privacy-first approach, focused on essential governance and accountability measures to protect personal health information and reduce risk of bias and inaccuracies. The guidance, together with a companion checklist, provide practical how-to information for developers, procurers and users of AI systems to consider throughout the AI lifecycle. They set out clear expectations and best practices to ensure [...] AI scribes can help health care providers reduce administrative burden and enhance the quality of inte",
+   "published_date": null
+  }
+ ],
+ "OpenAI's GPT-4 API costs $0.03 per 1K input tokens. current status 2026": [
+  {
+   "url": "https://www.cloudzero.com/blog/gpt-4-api-cost",
+   "title": "GPT-4 API cost 2026: pricing breakdown and how to estimate it",
+   "snippet": "Per 1,000 tokens as of June 2026: GPT-4.1 at $0.002 input / $0.008 output; GPT-4.1 mini at $0.0004 / $0.0016; GPT-4.1 nano at $0.0001 / $0.0004; legacy GPT-4 (8K) at $0.030 / $0.060.\n\nWhy is my GPT-4 API bill higher than expected? [...] Individual call costs look innocuous. $0.002 per 1,000 input tokens on GPT-4.1. Hard to get alarmed about a fifth of a cent. The place where OpenAIAPI cost becomes a finance conversation is scale, and the mismatch between what engineering estimated and what the invoice says. [...] No. Every GPT-4 family model is billed per token consumed. OpenAI provides a limi",
+   "published_date": null
+  },
+  {
+   "url": "https://justinmckelvey.com/blog/openai-api-pricing",
+   "title": "OpenAI API Pricing 2026: Every Model Per Million Tokens",
+   "snippet": "| Low-volume work where the output is the product | GPT-6 Astra $10 / $50 | Where a better answer is worth $10 in and $50 out. Not for a bot. |\n| Anything on GPT-4o, GPT-4.1, or GPT-5 mini | Migrate | Each now costs as much as a newer model that beats it. | [...] As of September 2026, OpenAI API pricing per million tokens (input / cached input / output) is: GPT-6 Astra $10 / $1 / $50, GPT-5.6 Sol $4 / $0.40 / $20, GPT-5.6 Terra $2 / $0.20 / $12, and GPT-5.6 Luna $0.20 / $0.02 / $1.20. Cached input bills at 10% of the input price, the Batch API halves everything, and there is no monthly platfor",
+   "published_date": null
+  },
+  {
+   "url": "https://stob.ai/blog/openai-model-pricing-comparison-2026",
+   "title": "OpenAI API Pricing 2026: GPT Token Costs Compared | Stob.AI",
+   "snippet": "OpenAI now offers models at radically different price points. Standard short-context input pricing ranges from $0.05 per million tokens for GPT-5 nano to $30 per million tokens for GPT-5.5 Pro and GPT-5.4 Pro. Output pricing has an even wider range, from $0.40 to $180 per million tokens. [...] | Request type | Recommended model | Example cost per 1,000 requests |\n --- \n| Classification, extraction and routing | GPT-6 Luna | $0.45 |\n| Everyday writing, visual and computer-use work | GPT-6.1 Terra | $4.50 |\n| Demanding coding and agent work | GPT-6.1 Sol | $9.00 |\n| Difficult, high-value excepti",
+   "published_date": null
+  },
+  {
+   "url": "https://ca.finance.yahoo.com/news/openais-gpt-4-5-ai-181225820.html",
+   "title": "OpenAI's GPT-4.5 AI model comes to more ChatGPT users",
+   "snippet": "GPT-4.5 is also very expensive to run, OpenAI admits — so expensive that the company says it’s evaluating whether to continue serving GPT-4.5 in its API in the long term. To cover costs, the company is charging $75 per million tokens (~750,000 words) fed into the model and $150 per million tokens generated by the model, which is 30x the input cost and 15x the output cost of OpenAI’s workhorse GPT-4o model. [...] In a series of posts on X, OpenAI said that the rollout will take \"1-3 days,\" and that it expects rate limits to change. GPT-4.5 launched first for subscribers to OpenAI's $200-a-month",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/openais-gpt-4-5-ai-181225802.html",
+   "title": "OpenAI's GPT-4.5 AI model comes to more ChatGPT users",
+   "snippet": "GPT-4.5 is also very expensive to run, OpenAI admits — so expensive that the company says it's evaluating whether to continue serving GPT-4.5 in its API in the long term. To cover costs, the company is charging $75 per million tokens (~750,000 words) fed into the model and $150 per million tokens generated by the model, which is 30x the input cost and 15x the output cost of OpenAI's workhorse GPT-4o model. [...] In a series of posts on X, OpenAI said that the rollout will take \"1-3 days,\" and that it expects rate limits to change. GPT-4.5 launched first for subscribers to OpenAI's $200-a-month",
+   "published_date": null
+  }
+ ],
+ "OpenAI's GPT-4 API costs $0.06 per 1K output tokens. current status 2026": [
+  {
+   "url": "https://www.cloudzero.com/blog/gpt-4-api-cost",
+   "title": "GPT-4 API cost 2026: pricing breakdown and how to estimate it",
+   "snippet": "Per 1,000 tokens as of June 2026: GPT-4.1 at $0.002 input / $0.008 output; GPT-4.1 mini at $0.0004 / $0.0016; GPT-4.1 nano at $0.0001 / $0.0004; legacy GPT-4 (8K) at $0.030 / $0.060.\n\nWhy is my GPT-4 API bill higher than expected? [...] No. Every GPT-4 family model is billed per token consumed. OpenAI provides a limited free tier with rate-restricted access suitable for testing and development, which activates at a cumulative spend of $5. Production workloads require a paid account. The lowest OpenAI API key cost entry point is GPT-4.1 nano at $0.10 per million input tokens. Even then, a high-",
+   "published_date": null
+  },
+  {
+   "url": "https://mem0.ai/library/llms-and-models/openai-api-pricing",
+   "title": "OpenAI API Pricing (Oct 2026): Models, Token Costs, How to Save",
+   "snippet": "For example, 2,000 uncached input tokens and 1,000 total billable output tokens cost $0.07 under standard processing: $0.02 for input plus $0.05 for output, assuming no cache writes, tools, or other charges. Billable output includes reasoning tokens, not just the visible answer.\n\n## How Does OpenAI API Billing Work? [...] Billable output includes reasoning tokens where applicable. Do not add a separate reasoning-token surcharge on top of the output total.\n\nThe examples below use actual standard-tier model rates checked on October 6, 2026, with illustrative workload assumptions. They exclude Ba",
+   "published_date": null
+  },
+  {
+   "url": "https://www.morphllm.com/openai-api-pricing",
+   "title": "OpenAI API Pricing (2026): GPT-5.6, GPT-5.5, GPT-5.4 and the Full Per-Token Table | Morph",
+   "snippet": "Earlier in 2026, GPT-4o and the original GPT-5 family dropped off OpenAI's main pricing table, and this page said so. That has changed: as of August 21, 2026, OpenAI's pricing docs list them again with their own rates, alongside o3 and o1. If you searched \"gpt 4o pricing\" or \"gpt-5 pricing\", these are the current published numbers. [...] ### Does OpenAI charge the same for input and output tokens?\n\nNo. Output tokens cost more than input across every OpenAI model, usually 5x to 6x. gpt-5.6-sol is $5.00/1M input and $30.00/1M output, a 6x ratio. GPT-5.4 is $2.50/1M input and $15.00/1M output. Wh",
+   "published_date": null
+  },
+  {
+   "url": "https://ca.finance.yahoo.com/news/openais-gpt-4-5-ai-181225820.html",
+   "title": "OpenAI's GPT-4.5 AI model comes to more ChatGPT users",
+   "snippet": "GPT-4.5 is also very expensive to run, OpenAI admits — so expensive that the company says it’s evaluating whether to continue serving GPT-4.5 in its API in the long term. To cover costs, the company is charging $75 per million tokens (~750,000 words) fed into the model and $150 per million tokens generated by the model, which is 30x the input cost and 15x the output cost of OpenAI’s workhorse GPT-4o model.",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/openais-gpt-4-5-ai-181225802.html",
+   "title": "OpenAI's GPT-4.5 AI model comes to more ChatGPT users",
+   "snippet": "GPT-4.5 is also very expensive to run, OpenAI admits — so expensive that the company says it's evaluating whether to continue serving GPT-4.5 in its API in the long term. To cover costs, the company is charging $75 per million tokens (~750,000 words) fed into the model and $150 per million tokens generated by the model, which is 30x the input cost and 15x the output cost of OpenAI's workhorse GPT-4o model.",
+   "published_date": null
+  }
+ ],
+ "GPT-4 has a maximum context window of 8K tokens. current status 2026": [
+  {
+   "url": "https://www.morphllm.com/llm-context-window",
+   "title": "What Is an LLM Context Window? The Developer's Guide (2026) | Morph",
+   "snippet": "| Year | Model | Context Window | Increase |\n ---  --- |\n| 2018 | GPT-1 | 512 tokens | Baseline |\n| 2020 | GPT-3 | 2,048 tokens | 4x |\n| 2023 (Mar) | GPT-4 | 8,192 tokens | 16x |\n| 2023 (Nov) | GPT-4 Turbo | 128K tokens | 250x |\n| 2024 (Mar) | Claude 3 | 200K tokens | 390x |\n| 2024 (Feb) | Gemini 1.5 Pro | 1M tokens | 1,950x |\n| 2025 (Apr) | Llama 4 Scout | 10M tokens | 19,500x | [...] Context windows have grown 20,000x in eight years. GPT-1 launched with 512 tokens in 2018. GPT-3.5 pushed to 16K. By early 2023, most models operated between 4K and 8K. Then the race accelerated: 128K (GPT-4 Tur",
+   "published_date": null
+  },
+  {
+   "url": "https://hidekazu-konishi.com/entry/llm_context_window_growth_timeline.html",
+   "title": "LLM Context Window Growth Timeline - Milestones, Current Sizes by Provider, and Official Sources | hidekazu-konishi.com",
+   "snippet": "| Date | Model | Published Context Window | Milestone / Note | Official Source |\n ---  --- \n| 2020-06 | GPT-3 (OpenAI) | 2,048 tokens | Early API baseline; input and output shared a single 2,048-token limit. The base GPT-3 models are now retired. \\1 | OpenAI - Deprecations |\n| 2023-03 | GPT-4 (OpenAI) | 8,192 tokens | GPT-4 launched with an 8K window, alongside a 32,768-token `gpt-4-32k` variant. | OpenAI - GPT-4 model | [...] In about six years, the LLM context window grew from GPT-3's 2,048 tokens to a one-million-token baseline shared by today's closed-model flagships, with an open-weights ",
+   "published_date": null
+  },
+  {
+   "url": "https://www.maximem.ai/blog/llm-context-window-sizes-2026",
+   "title": "LLM Context Window Sizes in 2026: Every Model's Limit, the Long-Context Price Cliffs, GPT-4o's 128K, and What Happens When a Chat Runs Out",
+   "snippet": "For coding agents and long reports, the reply cap usually bites before the window does. Most current models stop at 128,000 output tokens (OpenAI and Anthropic) or 65,536 (Gemini by default), GPT-4.1 at 32,768 and GPT-4o at 16,384, so a model that can read a million tokens still needs several turns to write a large change, and every extra turn re-sends the growing history. DeepSeek's 384K output cap is the largest fixed one in the table. Anthropic lifts the cap to 300,000 output tokens on its [...] OpenAI's GPT-4o model page lists three numbers that still hold: a 128,000-token context window, ",
+   "published_date": null
+  },
+  {
+   "url": "https://www.ai-toolbox.co/chatgpt-models/chatgpt-context-window-token-limits-2026",
+   "title": "ChatGPT Context Window and Token Limits by Plan (2026)",
+   "snippet": "| GPT-5 | 400,000 tokens | 128,000 tokens | $1.25 / $10.00 |\n| GPT-4.1 | 1,047,576 tokens | 32,768 tokens | $2.00 / $8.00 | [...] ## Frequently Asked Questions\n\n### What is ChatGPT's context window in 2026?\n\nIt depends on the plan and the model type. As of September 2026, instant models get a 27K token window on Free, 54K on Go, Plus and Business, and 128K on Pro and Enterprise. Reasoning models get 256K on Go, Plus, Business and Enterprise and 400K on Pro. The figures are OpenAI's total windows, so they include the reply. Through the API, GPT-6 Astra, GPT-6 Sol and the GPT-5.6 models accept 1",
+   "published_date": null
+  },
+  {
+   "url": "https://community.openai.com/t/we-need-bigger-context-windows-in-chatgpt/1290633",
+   "title": "We need bigger context windows in ChatGPT - Feature requests - OpenAI Developer Community",
+   "snippet": "Important: The much smaller (32k) context window was typical of earlier GPT-4 models (not o3/o4), but this is no longer a global limit. Some models, like GPT-4o and o3, support 200k tokens now. There are other models (like o1, gpt-4.5-preview, gpt-4o-mini, etc.) with varying context sizes, so it pays to double-check which model you need for your specific workflow.\n\nI would also like to see GPT go up to 1mill tokens. If it does I might just subscribe again. [...] Actually, I have some doubts about the accuracy, but here is an answer from OpenAI support on this matter..\n\nI’m an AI support agent ",
+   "published_date": null
+  }
+ ],
+ "Anthropic's newest model is Claude 2. current status 2026": [
+  {
+   "url": "https://shattered.io/anthropic-two-new-claude-models-rumor-2026",
+   "title": "Anthropic Rumored to Prep 2 New Claude Models",
+   "snippet": "### Has Anthropic confirmed two new Claude models?\n\nNo. As of October 31, 2026, Anthropic has not named, dated, or specified any unreleased models beyond the Claude 5.5 family it has already released: Opus 5.5, Sonnet 5.5, and Haiku 5.5. The reports come from outlets including thewincentral.com and Seeking Alpha’s markets coverage, not from an Anthropic announcement.\n\n### What is the current top-tier Claude model? [...] An announcement lands within weeks, not months. Given Anthropic’s 2026 cadence, if two models are genuinely in the pipeline, the historical pattern points to a launch window me",
+   "published_date": null
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
+   "title": "Claude (AI) - Wikipedia",
+   "snippet": "| Image 4 |\n| Developer | Anthropic |\n| Release | March 2023(3 years ago)(2023-03) |\n|  |\n| Stable release |  Claude Fable 5.2  November 9, 2026(1 day ago)(2026-11-09)  Claude Opus 5.5  September 22, 2026(49 days ago)(2026-09-22)  Claude Sonnet 5.5  September 28, 2026(43 days ago)(2026-09-28)  Claude Haiku 5.5  October 7, 2026(34 days ago)(2026-10-07) |\n|  |\n| Platform | Cloud computing |\n| Type |  Large language model  Chatbot  Generative pre-trained transformer  Foundation model | [...] 53.   ↑#cite_ref-53)\"Anthropic's Claude Science bets on workflow, not a new model, to win over scientists\"",
+   "published_date": null
+  },
+  {
+   "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+   "title": "Model deprecations - Claude Platform Docs",
+   "snippet": "### 2025-01-21: Claude 2, Claude 2.1, and Claude Sonnet 3 models\n\nOn January 21, 2025, Anthropic notified developers using Claude 2, Claude 2.1, and Claude Sonnet 3 models of their upcoming retirements.\n\n| Retirement date | Deprecated model | Recommended replacement |\n --- \n| July 21, 2025 | `claude-2.0` | `claude-opus-4-8` |\n| July 21, 2025 | `claude-2.1` | `claude-opus-4-8` |\n| July 21, 2025 | `claude-3-sonnet-20240229` | `claude-sonnet-5-5` |\n\n### 2024-09-04: Claude 1 and Instant models [...] | Retirement date | Deprecated model | Recommended replacement |\n --- \n| June 15, 2026 | `claude-so",
+   "published_date": null
+  },
+  {
+   "url": "https://www.reddit.com/r/Anthropic/comments/1vcpw06/whats_next_for_claudeanthropic",
+   "title": "What's next for Claude/Anthropic? : r/Anthropic",
+   "snippet": "Next Claude model release information\n\nPowerful Claude model recommendations\n\nLatest breakthroughs in AI ethics\n\nImage 21\n\nImage 22\n\nTalk to Claude\n\n Public \n\nAnyone can view, post, and comment to this community\n\n0 0\n\n   Home\n   Popular\n   News\n   Explore\n   Best of Reddit\n   Best of Reddit in Portuguese\n   Best of Reddit in German\n   Reddit Rules\n   Privacy Policy\n   User Agreement\n   Accessibility\n   Reddit, Inc. © 2026. All rights reserved.\n\nImage 23\nJoin the most real place on the internet [...] •3mo ago\n\nSubscriptions were reportedly nearly 40% of revenue in June. Enterprise has had an ov",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/anthropic-claude-ai-model-now-161546709.html?fr=sycsrp_catchall",
+   "title": "Anthropic’s Claude AI model can now handle longer prompts",
+   "snippet": "Whereas OpenAI generates most of its revenue from consumer subscriptions to ChatGPT, Anthropic's business centers around selling AI models to enterprises through an API. That's made AI coding platforms a key customer for Anthropic and could be why the company is throwing in some new perks to attract users in the face of GPT-5.\n\nLast week, Anthropic unveiled an updated version of its largest AI model, Claude Opus 4.1, which pushed the company's AI coding capabilities a bit further. [...] Anthropic's product lead for the Claude platform, Brad Abrams, told TechCrunch in an interview that he expec",
+   "published_date": null
+  }
+ ],
+ "The EU AI Act is still a proposal and has not been adopted as of 2026-11-15. current status 2026 |site:eur-lex.europa.eu,digital-strategy.ec.europa.eu": [
+  {
+   "url": "https://digital-strategy.ec.europa.eu/library/proposal-cloud-and-ai-development-act-cada",
+   "title": "Proposal for the Cloud and AI Development Act (CADA) | Shaping Europe’s digital future",
+   "snippet": "The Commission has adopted a proposal for the Cloud and AI Development Act (CADA) with the aim of strengthening the EU's cloud and AI ecosystem, investment and infrastructure.\n\n© Worawee Meepian [...] ## Downloads\n\n1. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA)\n\n Download\n\n2. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA) Annexes\n\n Download\n\n3. SWD(2026) 502 - Impact Assessment (Part 1)\n\n Download\n\n4. SWD(2026) 502 - Impact Assessment (Part 2)\n\n Download\n\n5. SWD(2026) 502 - Summary of the Impact Assessment\n\n Download\n\n## Related content\n\n Po",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada#x",
+   "title": "Proposal for the Cloud and AI Development Act (CADA) | Shaping Europe’s digital future",
+   "snippet": "The Commission has adopted a proposal for the Cloud and AI Development Act (CADA) with the aim of strengthening the EU's cloud and AI ecosystem, investment and infrastructure.\n\n© Worawee Meepian [...] ## Downloads\n\n1. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA)\n\n Download\n\n2. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA) Annexes\n\n Download\n\n3. SWD(2026) 502 - Impact Assessment (Part 1)\n\n Download\n\n4. SWD(2026) 502 - Impact Assessment (Part 2)\n\n Download\n\n5. SWD(2026) 502 - Summary of the Impact Assessment\n\n Download\n\n## Related content\n\n Po",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada",
+   "title": "Proposal for the Cloud and AI Development Act (CADA) | Shaping Europe’s digital future",
+   "snippet": "The Commission has adopted a proposal for the Cloud and AI Development Act (CADA) with the aim of strengthening the EU's cloud and AI ecosystem, investment and infrastructure.\n\n© Worawee Meepian [...] ## Downloads\n\n1. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA)\n\n Download\n\n2. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA) Annexes\n\n Download\n\n3. SWD(2026) 502 - Impact Assessment (Part 1)\n\n Download\n\n4. SWD(2026) 502 - Impact Assessment (Part 2)\n\n Download\n\n5. SWD(2026) 502 - Summary of the Impact Assessment\n\n Download\n\n## Related content\n\n Po",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada#mastodon",
+   "title": "Proposal for the Cloud and AI Development Act (CADA) | Shaping Europe’s digital future",
+   "snippet": "The Commission has adopted a proposal for the Cloud and AI Development Act (CADA) with the aim of strengthening the EU's cloud and AI ecosystem, investment and infrastructure.\n\n© Worawee Meepian [...] ## Downloads\n\n1. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA)\n\n Download\n\n2. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA) Annexes\n\n Download\n\n3. SWD(2026) 502 - Impact Assessment (Part 1)\n\n Download\n\n4. SWD(2026) 502 - Impact Assessment (Part 2)\n\n Download\n\n5. SWD(2026) 502 - Summary of the Impact Assessment\n\n Download\n\n## Related content\n\n Po",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada#facebook",
+   "title": "Proposal for the Cloud and AI Development Act (CADA) | Shaping Europe’s digital future",
+   "snippet": "The Commission has adopted a proposal for the Cloud and AI Development Act (CADA) with the aim of strengthening the EU's cloud and AI ecosystem, investment and infrastructure.\n\n© Worawee Meepian [...] ## Downloads\n\n1. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA)\n\n Download\n\n2. COM(2026) 502 - Proposal Regulation Cloud and AI Development Act (CADA) Annexes\n\n Download\n\n3. SWD(2026) 502 - Impact Assessment (Part 1)\n\n Download\n\n4. SWD(2026) 502 - Impact Assessment (Part 2)\n\n Download\n\n5. SWD(2026) 502 - Summary of the Impact Assessment\n\n Download\n\n## Related content\n\n Po",
+   "published_date": null
+  }
+ ],
+ "The EU AI Act is still a proposal and has not been adopted as of 2026-11-15. current status 2026": [
+  {
+   "url": "https://www.traverssmith.com/knowledge/knowledge-container/the-eu-ai-act-the-current-state-of-play",
+   "title": "The EU AI Act – the current state of play | Travers Smith",
+   "snippet": "The EU AI Act is one of the most significant pieces of technology regulation to emerge in recent years and it is still taking shape. In May 2026 alone, the EU provisionally agreed material changes through the Digital Omnibus on AI (see our previous briefing on the \"AI Omnibus\"), postponing key compliance deadlines, and published draft guidance on high-risk system classification and transparency requirements. This briefing sets out what the Act requires, who it applies to, when obligations [...] While noting the revised compliance deadlines under the AI Omnibus (which, as of May 2026, is still ",
+   "published_date": null
+  },
+  {
+   "url": "https://airia.com/blog/where-the-eu-ai-act-actually-stands-in-2026",
+   "title": "Where the EU AI Act Actually Stands in 2026 | Airia",
+   "snippet": "Key Takeaways:\n\n The Act’s core prohibitions and general purpose AI rules are already in force and enforceable today\n The EU Council formally adopted the Omnibus package on June 29, 2026, pushing several high risk deadlines out\n High risk system obligations under Annex III now land December 2, 2027, not August 2026\n Draft classification guidelines are still open for interpretation, with no finalized version published yet [...] This is a real, adopted change, not a proposal still working through committee. If your compliance roadmap was built around an August 2026 deadline for high risk system ",
+   "published_date": null
+  },
+  {
+   "url": "https://imiel.dev/explore/eu-ai-act-2026",
+   "title": "EU AI Act 2026: How All 27 Member States Are Implementing It | Imiel Visser",
+   "snippet": "| 20 | France FR | Lagging | 35 | Draft bill | None | Not adopted |\n| 21 | Estonia EE | Lagging | 32 | No bill yet | Planned | Not adopted |\n| 22 | Austria AT | Lagging | 30 | No bill yet | None | Not adopted |\n| 23 | Portugal PT | Lagging | 30 | No bill yet | Planned | Not adopted |\n| 24 | Belgium BE | Lagging | 28 | Draft bill | None | Not adopted |\n| 25 | Croatia HR | Lagging | 20 | Draft bill | None | Not adopted |\n| 26 | Romania RO | Lagging | 20 | No bill yet | None | Not adopted | [...] Proposal to defer high-risk obligations and extend SME relief to small mid-caps; the first trilogue o",
+   "published_date": null
+  },
+  {
+   "url": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes",
+   "title": "EU AI Act Omnibus Agreement — Postponed High-Risk Deadlines and Other Key Changes - Gibson Dunn",
+   "snippet": "The deferral of high-risk applicability dates reflects a pragmatic acknowledgment that the regulatory infrastructure needed to make those obligations operable has not materialized on schedule. It is, however, a deferral rather than a dismantling: the fundamental architecture of the AI Act — its risk-based approach, its governance structure, and its core obligations — remains intact. Formal adoption is expected before 2 August 2026, but businesses should note that the new dates only bind once [...] The EU AI Act entered into force on 1 August 2024, establishing the world’s first comprehensive h",
+   "published_date": null
+  },
+  {
+   "url": "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions",
+   "title": "EU AI Act Update: Timeline Relief, Targeted Simplification, and New Prohibitions | Inside Privacy",
+   "snippet": "On 7 May 2026, negotiators from the Council of the European Union, the European Parliament, and the European Commission reached a provisional agreement on the terms of the Digital Omnibus on AI, marking the first set of amendments to the EU AI Act since its adoption in June 2024. The final package of amendments reflects a mix of pragmatic timeline extensions, focused simplification measures, and a small number of substantive policy changes.\n\nBelow is an overview of some of the key highlights.",
+   "published_date": null
+  }
+ ],
+ "As of 2026-11-15, the Bangko Sentral ng Pilipinas has not issued any guidance on AI governance for banks. current status 2026 |site:bsp.gov.ph": [
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/Regulations/MORB.aspx",
+   "title": "Bangko Sentral ng Pilipinas\r\n            \r\n            \r\n            Regulations",
+   "snippet": "Bangko Sentral ng Pilipinas\n\nPrint\nCopy Link\nX Post\nFB Share\nEmail\n\n#### Manual of Regulations for Banks (MORB) [...] The MORB organizes the Bangko Sentral rules and policy issuances that implement the provisions of Republic Act No. 8791, also known as the General Banking Law of 2000, as well as other pertinent banking laws. The MORB is updated regularly to incorporate the provisions contained in the published Bangko Sentral Circulars affecting the MORB. In case of any inconsistencies between the provisions set forth in the MORB and the published Bangko Sentral Circulars, the latter shall prev",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/FinancialStability/DirBanksFIList.aspx",
+   "title": "Bangko Sentral ng Pilipinas\r\n             \r\n            \r\n            Financial Stability - Directories and Lists",
+   "snippet": "Bangko Sentral ng Pilipinas\n\nPrint\nCopy Link\nX Post\nFB Share\nEmail\n\n### Directory of Banks and Non-Bank Financial Institutions\n\nUpdated as of {{date}}\n\nFilter: {{TypeDesc}}\n\n# Legal\n\n# Quick Links",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/Regulations/RegulationDisp.aspx?ItemId=1763",
+   "title": "Bangko Sentral ng Pilipinas\r\n            \r\n            \r\n            Regulations - BSP Issuances",
+   "snippet": "Bangko Sentral ng Pilipinas\n\nPrint\nCopy Link\nX Post\nFB Share\nEmail\n\n### \n\nDownload Signed Document\n\nFor pdf copies of signed issuances not yet posted in this website, kindly e-mail the Administrative Services Department at external\\_issuances@bsp.gov.ph. To facilitate retrieval of requested issuance, please indicate type and number, date, and subject.\n\nFor queries on the contents of issuances, please e-mail bspmail@bsp.gov.ph.\n\n# Legal\n\n# Quick Links",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/Regulations/RegulationDisp.aspx?ItemId=4983",
+   "title": "Bangko Sentral ng Pilipinas\r\n            \r\n            \r\n            Regulations - BSP Issuances",
+   "snippet": "Bangko Sentral ng Pilipinas\n\nPrint\nCopy Link\nX Post\nFB Share\nEmail\n\n### \n\nDownload Signed Document\n\nFor pdf copies of signed issuances not yet posted in this website, kindly e-mail the Administrative Services Department at external\\_issuances@bsp.gov.ph. To facilitate retrieval of requested issuance, please indicate type and number, date, and subject.\n\nFor queries on the contents of issuances, please e-mail bspmail@bsp.gov.ph.\n\n# Legal\n\n# Quick Links",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/Regulations/RegulationDisp.aspx?ItemId=4461",
+   "title": "Bangko Sentral ng Pilipinas\r\n            \r\n            \r\n            Regulations - BSP Issuances",
+   "snippet": "Bangko Sentral ng Pilipinas\n\nPrint\nCopy Link\nX Post\nFB Share\nEmail\n\n### \n\nDownload Signed Document\n\nFor pdf copies of signed issuances not yet posted in this website, kindly e-mail the Administrative Services Department at external\\_issuances@bsp.gov.ph. To facilitate retrieval of requested issuance, please indicate type and number, date, and subject.\n\nFor queries on the contents of issuances, please e-mail bspmail@bsp.gov.ph.\n\n# Legal\n\n# Quick Links",
+   "published_date": null
+  }
+ ],
+ "As of 2026-11-15, the Bangko Sentral ng Pilipinas has not issued any guidance on AI governance for banks. current status 2026": [
+  {
+   "url": "https://www.bakermckenzie.com/en/insight/publications/2026/07/philippines-bsp-releases-ai-governance-framework",
+   "title": "Philippines: BSP Releases AI Governance Framework | Insight | Baker McKenzie",
+   "snippet": "The Bangko Sentral ng Pilipinas (BSP) has issued Memorandum No. M-2026-031, introducing governance principles for the use of artificial intelligence in the financial sector. The guidance sets out supervisory expectations to help BSP-supervised financial institutions develop AI governance and risk management frameworks proportionate to their operations. It emphasizes ethical, transparent, and accountable AI adoption while addressing risks such as bias, data privacy, and misuse. The principles [...] The principles are voluntary but are intended to guide institutions in aligning AI use with exist",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/opinion/philippines-bsp-issues-governance-principles-ai",
+   "title": "Philippines: BSP issues governance principles for AI in financial services | Opinion | DataGuidance",
+   "snippet": "The Bangko Sentral ng Pilipinas (BSP) has issued voluntary governance principles for the ethical and responsible use of artificial intelligence (AI) by financial institutions, anchored on the Sustainability, Transparency, Accountability, Responsibility, and Security (STARS) framework and control checkpoints across the AI system lifecycle.On June 24, 2026, the BSP, the Philippine central bank responsible for supervising banks and other BSP-supervised financial institutions (BSFIs), issued [...] (BSFIs), issued Memorandum No. M-2026-031, which comprises guidance entitled Governance Principles fo",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-034.pdf",
+   "title": "MEMORANDUM NO. M-2026-_____",
+   "snippet": "identified, assessed, and mitigated. Finally, BSIs are recommended to formally develop their own AI Governance Framework, proportionate to the nature, extent, scale, complexity, and materiality of their AI systems, as well as the institution’s overall operational complexity and risk profile, following the principles set forth under BSP Memorandum No. M-2026-031 dated 24 June 2026. For information and guidance. LYN I. JAVIER Deputy Governor __ July 2026 06 Digitally signed by Lyn I. Javier Date: [...] Page 1 of 2 OFFICE OF THE DEPUTY GOVERNOR I FINANCIAL SUPERVISION SECTOR MEMORANDUM NO. M-2026",
+   "published_date": null
+  },
+  {
+   "url": "https://tracxn.com/d/companies/bangko-sentral-ng-pilipinas/__okTeehfTpJc1bNHaOaju-QjoCpOL-uoXC7N3PJCj3fw",
+   "title": "Bangko Sentral NG Pilipinas - 2026 Company Profile & Competitors - Tracxn",
+   "snippet": "JavaScript is disabled in your browser. enable it to enjoy the full features of Tracxn.\n\nTracxn.com\nAndroid\nApple\nChrome Web Store\nFirefox Extension\nTracxn AI Suite\n\nAI-powered market intelligence across companies, investors, and sectors.\n\nLogo for Bangko Sentral NG Pilipinas\n\n# Bangko Sentral NG Pilipinas - Company Profile\n\nlock\nlock\nlock\nlock\n\n## Bangko Sentral NG Pilipinas - About the company\n\n### Company Details\n\nX\nPDF Illustration Image [...] ## News related to Bangko Sentral NG Pilipinas\n\nlock\nlock\n\n## FAQs about Bangko Sentral NG Pilipinas\n\nAccel Partners\nPartech\nIN-Q-TEL - US\nFujitsu\nT",
+   "published_date": null
+  },
+  {
+   "url": "https://tavily.com/knowledge/company/hFXzhSH0sHl0",
+   "title": "Bangko Sentral ng Pilipinas",
+   "snippet": "# Bangko Sentral ng Pilipinas\nID: hFXzhSH0sHl0\nWebsite: www.bsp.gov.ph\nHeadquarters: Manila, Philippines\nLinkedIn: www.linkedin.com/company/bangko-sentral-ng-pilipinas · 158,808 followers\nIndustry: Banking\nIndustry codes: SIC 60, 602, NAICS 52, 522\nCompany type: Government Agency\nFounded: 1993\nBusiness model: B2G\nSaaS: no [...] Description: Bangko Sentral ng Pilipinas is a bank that provides financial services and operates in the banking industry. They have a vision, mission, and core values, and focus on sustainability, investor relations, organization and governance, responsibility and accou",
+   "published_date": null
+  }
+ ],
+ "As of 2026-11-15, the National Privacy Commission's main AI guidance is NPC Advisory No. 2024-04. current status 2026 |site:privacy.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2025/02/Advisory-2024.12.19-Guidelines-on-Artificial-Intelligence-w-SGD.pdf",
+   "title": "[PDF] NPC Advisory No. 2024 – 04 - National Privacy Commission",
+   "snippet": "shall implement mechanisms to identify and monitor biases in the AI systems and to limit such biases and their impact on the data subjects. PICs must consider systemic bias, human bias, and statistical bias when assessing or auditing their AI systems. Consistent with the Principle of Fairness, PICs shall not utilize AI Washing, the practice where PICs overstate the involvement of AI systems to the detriment of their data subjects, and other deceptive practices. D. Accuracy.12 PICs must maintain [...] premises, the NPC hereby issues this Advisory on the Guidelines on the Application of Republic",
+   "published_date": null
+  },
+  {
+   "url": "http://www.privacy.gov.ph/news-2",
+   "title": "News - National Privacy CommissionNational Privacy Commission",
+   "snippet": "QUEZON CITY, PHILIPPINES — On September 22, 2026, the National Privacy Commission\n\nRead More\n\n##### NOTICE TO THE PUBLIC: Use of Real Persons’ Likenesses in AI-Generated Images\n\nAnnouncement Public Advisory August 11, 2026\n\nThe National Privacy Commission (Commission) has observed the increasing circulation of synthetic\n\nRead More\n\n##### NPC strengthens regional ties and advances data privacy standards at the 65th APPA Forum in Hong Kong, SAR China\n\nPress Releases June 18, 2026 [...] HONG KONG, SAR CHINA- The National Privacy Commission (NPC) of the Philippines\n\nRead More\n\n##### PAW 2026: NPC ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/news-2/page/2",
+   "title": "News - Page 2 of 23 - National Privacy CommissionNational Privacy Commission",
+   "snippet": "QUEZON CITY, PHILIPPINES — On September 22, 2026, the National Privacy Commission\n\nRead More\n\n##### NOTICE TO THE PUBLIC: Use of Real Persons’ Likenesses in AI-Generated Images\n\nAnnouncement Public Advisory August 11, 2026\n\nThe National Privacy Commission (Commission) has observed the increasing circulation of synthetic\n\nRead More\n\n##### NPC strengthens regional ties and advances data privacy standards at the 65th APPA Forum in Hong Kong, SAR China\n\nPress Releases June 18, 2026 [...] HONG KONG, SAR CHINA- The National Privacy Commission (NPC) of the Philippines\n\nRead More\n\n##### PAW 2026: NPC ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/news-2/page/22",
+   "title": "News - Page 22 of 23 - National Privacy CommissionNational Privacy Commission",
+   "snippet": "QUEZON CITY, PHILIPPINES — On September 22, 2026, the National Privacy Commission\n\nRead More\n\n##### NOTICE TO THE PUBLIC: Use of Real Persons’ Likenesses in AI-Generated Images\n\nAnnouncement Public Advisory August 11, 2026\n\nThe National Privacy Commission (Commission) has observed the increasing circulation of synthetic\n\nRead More\n\n##### NPC strengthens regional ties and advances data privacy standards at the 65th APPA Forum in Hong Kong, SAR China\n\nPress Releases June 18, 2026 [...] HONG KONG, SAR CHINA- The National Privacy Commission (NPC) of the Philippines\n\nRead More\n\n##### PAW 2026: NPC ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/news-2",
+   "title": "News - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Read More\n\n##### STATEMENT OF THE NATIONAL PRIVACY COMMISSION ON INTENSIFIED OVERSIGHT OF DIGITAL PLATFORMS TO PROTECT CHILDREN’S PRIVACY\n\nPress Statement September 22, 2026\n\nQUEZON CITY, PHILIPPINES — On September 22, 2026, the National Privacy Commission\n\nRead More\n\n##### NOTICE TO THE PUBLIC: Use of Real Persons’ Likenesses in AI-Generated Images\n\nAnnouncement Public Advisory August 11, 2026\n\nThe National Privacy Commission (Commission) has observed the increasing circulation of synthetic [...] Read More\n\n##### NPC strengthens regional ties and advances data privacy standards at the 65th AP",
+   "published_date": null
+  }
+ ],
+ "As of 2026-11-15, the National Privacy Commission's main AI guidance is NPC Advisory No. 2024-04. current status 2026": [
+  {
+   "url": "https://www.rajahtannasia.com/viewpoints/npcs-advisory-on-ai-and-data-privacy-ensuring-compliance-with-the-data-privacy-laws-for-ai-systems",
+   "title": "NPC's Advisory on AI and Data Privacy: Ensuring Compliance with the Data Privacy Laws for AI Systems | Rajah & Tann Asia",
+   "snippet": "+ News\n  + Deals\n  + Awards & Accolades\n About\n Contact Us\n Join Us\n Responsible Business\n  + Sustainability\n  + Social impact\n Languages\n  + 中文版\n  + 日本語\n\nSCAM ALERT NOTICE!\n\n released Advisory No. 2024-04 (“Advisory“) which provides guidance on the application of the Data Privacy Act of 2012, its implementing rules and regulations, and other NPC issuances to artificial intelligence (“AI“) systems processing personal data. [...] The Advisory mandates Personal Information Controllers (“PICs“) and Personal Information Processors (“PIPs“) to adhere to general data privacy principles in employing ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/advisories-circulars",
+   "title": "Advisories & Circulars - National Privacy CommissionNational Privacy Commission",
+   "snippet": "NPC-IC Joint Advisory No. 2025-001: Considerations on the Use of Privacy Enhancing Technologies (PETs) in the Insurance Industry\n NPC Advisory No. 2024-04: Guidelines on the Application of Republic Act No. 10173 or the Data Privacy Act of 2012 (DPA), its Implementing Rules and Regulations, and the Issuances of the Commission to Artificial Intelligence Systems Processing Personal Data [...] NPC Advisory No. 2026-02: Clarification on the Submission of Personal Data Breach Notification through Data Breach Notification Management System\n NPC Advisory No. 2026-01: Guidelines on Data Scraping of Pub",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/jurisdictions/philippines",
+   "title": "Philippines | Jurisdictions | DataGuidance",
+   "snippet": "comply with when processing personal data, as well as the sanctions for violations of the Act. The NPC has also released over 100 advisory opinions in response to queries on topics such as data breach management, notifications regarding automated decision-making, the designation of data protection officers, Privacy Impact Assessments, and access to personal data. The Philippines participates in the Asia-Pacific Economic Cooperation Cross-Border Privacy Rules (APEC CBPR) system. [...] Summary: On September 8, 2012, the Data Privacy Act of 2012 (Republic Act No. 10173) (the Act) became effective",
+   "published_date": null
+  },
+  {
+   "url": "https://www.facebook.com/privacy.gov.ph/posts/%F0%9D%90%8D%F0%9D%90%8F%F0%9D%90%82-%F0%9D%90%80%F0%9D%90%9D%F0%9D%90%AF%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%B2-%F0%9D%9F%90%F0%9D%9F%8E%F0%9D%9F%90%F0%9D%9F%94-%F0%9D%9F%8E%F0%9D%9F%91-%F0%9D%90%86%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%A8%F0%9D%90%9F-%F0%9D%90%80%F0%9D%90%9D%F0%9D%90%9D%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5-%F0%9D%90%8F%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%A8%F0%9D%90%9D-%F0%9D%90%AD%F0%9D%90%A8-%F0%9D%90%92%F0%9D%90%AE%F0%9D%90%9B%F0%9D%90%A6%F0%9D%90%A2%F0%9D%90%AD-%F0%9D%90%80%F0%9D%90%A7%F0%9D%90%A7%F0%9D%90%AE%F0%9D%90%9A%F0%9D%90%A5-%F0%9D%90%92%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%B2-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%9C%F0%9D%90%A2%F0%9D%90%9D%F0%9D%90%9E/1547012874133908",
+   "title": "National Privacy Commission",
+   "snippet": "Log In\n\nLog In\n\nForgot Account?\n\n## National Privacy Commission's Post\n\n  \n\n[](\n\n### National Privacy Commission\n\nTuesday, September 22, 2026 at 10:02 AM\n\nSeptember 22 · \n\n𝐍𝐏𝐂 𝐀𝐝𝐯𝐢𝐬𝐨𝐫𝐲 𝟐𝟎𝟐𝟔-𝟎𝟑: 𝐆𝐫𝐚𝐧𝐭 𝐨𝐟 𝐀𝐝𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐏𝐞𝐫𝐢𝐨𝐝 𝐭𝐨 𝐒𝐮𝐛𝐦𝐢𝐭 𝐀𝐧𝐧𝐮𝐚𝐥 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐈𝐧𝐜𝐢𝐝𝐞𝐧𝐭 𝐑𝐞𝐩𝐨𝐫𝐭 𝟐𝟎𝟐𝟓 \n\nThe National Privacy Commission issued NPC Advisory No. 2026-03, which grants an additional period to submit Annual Security Incident Reports for the year 2025.\n\nFor more information, you may access the Advisory here:",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/non-player-character-npc-generation-144600991.html",
+   "title": "Non-Player Character (NPC) Generation Artificial Intelligence Research Report 2026: $5.51 Bn Market Opportunities, Trends, Competitive Analysis, Strategies, Forecasts, 2019-2024, 2024-2029F, 2034F",
+   "snippet": "The NPC Generation AI market report offers comprehensive analysis and insights into its current and future trajectory, providing stakeholders with essential data and recommendations to navigate this rapidly evolving landscape effectively.\n\nKey Attributes: [...] About ResearchAndMarkets.com  \nResearchAndMarkets.com is the world's leading source for international market research reports and market data. We provide you with the latest data on international and regional markets, key industries, the top companies, new products and the latest trends.\n\n Non-Player Character (NPC) Generation Artificia",
+   "published_date": null
+  }
+ ],
+ "In the Philippines, a personal data breach must be reported to the National Privacy Commission within 72 hours. current status 2026 |site:privacy.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/statement-of-the-national-privacy-commission-on-reported-data-leaks-involving-government-agencies",
+   "title": "STATEMENT OF THE NATIONAL PRIVACY COMMISSION ON REPORTED DATA LEAKS INVOLVING GOVERNMENT AGENCIES - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under NPC Circular No. 16-03, personal information controllers (PICs) are required to notify the Commission and affected data subjects within 72 hours upon knowledge of, or reasonable belief that, a personal data breach requiring mandatory notification has occurred. Should the reported incidents be confirmed and meet the requirements for mandatory notification, the concerned agencies must submit the prescribed personal data breach notifications in accordance with existing regulations. [...] According to NPC Spokesperson and Deputy Privacy Commissioner Atty. Jose Belarmino II, as of 6 November ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/exercising-breach-reporting-procedures",
+   "title": "Exercising Breach Reporting Procedures - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred.\n\nGenerally, there shall be no delay in notification however, the notification may only be delayed to the extent necessary to determine:\n\n the scope of the breach;\n to prevent further disclosures; or\n to restore reasonable integrity to the information and communications system. [...] There can be no delay in the notification if the breach involves at least one hundred (100) dat",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/5-pillars-of-compliance-5",
+   "title": "5 Pillars of Compliance - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred.\n\nGenerally, there shall be no delay in notification however, the notification may only be delayed to the extent necessary to determine:\n\nthe scope of the breach;  \nto prevent further disclosures; or to restore reasonable integrity to the information and communications system. [...] Notify the data subject within seventy-two (72) hours upon knowledge of or reasonable belief tha",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/press-statement-on-alleged-data-breach-involving-toyota-robinsons-and-sr",
+   "title": "Press Statement on Alleged Data Breach Involving Toyota, Robinsons, and S&R - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Philippine National Police (PNP) has also reported six data breach notifications in May 2024. As of 7:25 AM today, there is no official notification of any data breach involving S&R.\n\nCompanies and individuals processing personal data must notify affected data subjects individually and report to the Commission via the Data Breach Notification Management System (DBNMS) within 72 hours of discovering a breach. [...] The NPC takes all allegations of data breaches very seriously and is actively monitoring the situation to ensure the security and privacy of all concerned data subjects. We encou",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/statement-privacy-commissioner-raymund-enriquez-liboro-possible-personal-data-breach-sustained-col-financial-group-inc",
+   "title": "Statement of the Privacy Commissioner Raymund Enriquez Liboro on the possible personal data breach sustained by COL Financial Group, Inc. - National Privacy CommissionNational Privacy Commission",
+   "snippet": "At present, the COL Financial has been upfront and transparent in handling this incident. This includes notification to the NPC and the affected data subjects within 72 hours upon knowledge or reasonable belief that a breach has occurred.\n\nThe Commission shall be expecting to receive from COL Financial a full report on the incident within five days. This will aid us to more accurately investigate the incident and decide on our further course of action. [...] We are assuring the public especially the clients of COL Financial Group , Inc. that the NPC is monitoring this incident and shall be iss",
+   "published_date": null
+  }
+ ],
+ "In the Philippines, a personal data breach must be reported to the National Privacy Commission within 72 hours. current status 2026": [
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/breach-reporting",
+   "title": "Breach Reporting - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under the Data Privacy Act, the data subject has the right to be notified In the enforcement of this right, the PIC MUST NOTIFY the data subject within seventy-two (72) hours upon knowledge of or reasonable belief that a personal data breach has occurred. [...] If the breach involves at least one hundred (100) data subjects, or the disclosure of sensitive, personal information will harm or adversely affect the data subject, delay is not allowed. In both instances, the Commission shall be notified within the 72-hour period based on available information. If it is not possible to notify the affe",
+   "published_date": null
+  },
+  {
+   "url": "https://www.facebook.com/privacy.gov.ph/posts/%F0%9D%90%8F%F0%9D%90%91%F0%9D%90%84%F0%9D%90%92%F0%9D%90%92-%F0%9D%90%91%F0%9D%90%84%F0%9D%90%8B%F0%9D%90%84%F0%9D%90%80%F0%9D%90%92%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%8F%F0%9D%90%82-%F0%9D%90%8C%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%AC-%F0%9D%90%8F%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%AC%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5-%F0%9D%90%83%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%9A-%F0%9D%90%81%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%A1-%F0%9D%90%8D%F0%9D%90%A8%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%9F%F0%9D%90%A2%F0%9D%90%9C%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%A8%F0%9D%90%A7%F0%9D%90%AC-%F0%9D%90%9F%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A6-%F0%9D%90%86%F0%9D%90%A8%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%AB%F0%9D%90%A7%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%80%F0%9D%90%A0%F0%9D%90%9E/1600023002166228",
+   "title": "National Privacy Commission",
+   "snippet": "The National Privacy Commission (NPC) confirms that, as of Tuesday, 10 November 2026, it has received personal data breach notifications from several government agencies, namely: the Presidential Commission on Good Government (PCGG); Department of Information and Communications Technology (DICT); Department of Labor and Employment (DOLE), through its Bureau of Local Employment; Bureau of Internal Revenue (BIR); Philippine Amusement and Gaming Corporation (PAGCOR); Department of Justice (DOJ), [...] Log in\n\nLog in\n\nForgotten account?\n\n## National Privacy Commission's post\n\n  \n\nOnline status ind",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/npc-monitors-personal-data-breach-notifications-from-government-agencies",
+   "title": "NPC Monitors Personal Data Breach Notifications from Government Agencies - National Privacy CommissionNational Privacy Commission",
+   "snippet": "MANILA, Philippines — The National Privacy Commission (NPC) confirms that, as of Tuesday, 10 November 2026, it has received personal data breach notifications from several government agencies, namely: the Presidential Commission on Good Government (PCGG); Department of Information and Communications Technology (DICT); Department of Labor and Employment (DOLE), through its Bureau of Local Employment; Bureau of Internal Revenue (BIR); Philippine Amusement and Gaming Corporation (PAGCOR); [...] “The submission of personal data breach notifications is a regulatory requirement under NPC Circular No",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph",
+   "title": "HOME - National Privacy CommissionNational Privacy Commission",
+   "snippet": "#### Announcement regarding the submission of Personal Data Breach Notifications (PDBN) and Annual Security Incident Reports (ASIR)\n\nWith the launch of the DBNMS, the NPC will no longer accept Breach Notification and  \n Annual Security Incident Report submissions except through the DBNMS online platform. Thus, submissions through  \n email, personal filing, ordinary mail, licensed courier service, and any other mode of physical submission shall  \n not be considered as valid. [...] Learn how to comply with the Data Privacy Act of 2012 (DPA) and read through NPC's issuances and guidance.\n\nKNOW HO",
+   "published_date": null
+  },
+  {
+   "url": "https://www.decryptiondigest.com/blog/breach-notification-regulatory-timeline-gdpr-ccpa-hipaa-state-laws",
+   "title": "Data Breach Notification Requirements 2026: GDPR, HIPAA, CCPA, SEC Timelines",
+   "snippet": "Data controllers (organizations that determine the purposes and means of processing personal data) are required to notify. Data processors (organizations that process data on behalf of a controller, such as cloud service providers or outsourced IT) must notify the data controller 'without undue delay' upon becoming aware of a breach — the controller then notifies the supervisory authority.\n\n#### The 72-hour window [...] not known within 72 hours, a phase-one notification can be filed with available information, with a follow-up when investigation is complete. [...] The clock-start events matte",
+   "published_date": null
+  }
+ ],
+ "The EU AI Act is still a proposal and has not been adopted. current status 2026 |site:eur-lex.europa.eu,digital-strategy.ec.europa.eu": [
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence",
+   "title": "European approach to artificial intelligence | Shaping Europe’s digital future",
+   "snippet": "The Commission is committed to a clear, simple and innovation-friendly implementation of the AI Act. In November 2025, we proposed targeted amendments to the AI Act (the 'AI omnibus') as part of the digital simplification package. The amendments were adopted in June 2026 and entered into force in 27 July 2026. [...] ## AI Act\n\nThe AI Act introduces a clear, easy-to-understand approach based on 4 different levels of risk - giving AI developers, deployers, and users clarity about how to address risks generated by specific AI uses. The law strikes a balance between promoting AI research and innov",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+   "title": "AI Act | Shaping Europe’s digital future",
+   "snippet": "## How has the Commission simplified the implementation of the AI Act?\n\nThe Digital Package on Simplification proposed amendments to simplify the AI Act implementation and ensure the rules remain clear, simple, and innovation-friendly. This legislative proposal (dubbed as the 'AI Omnibus') was adopted on 19 November 2025, a political agreement was reached on 7 May 2026 and entered into force on 27 July 2026. Find the final text of the AI Omnibus Regulation. [...] The Commission and the European Union Agency for Cybersecurity (ENISA) will also create a blueprint to secure access to advanced AI ",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-pact",
+   "title": "AI Pact | Shaping Europe’s digital future",
+   "snippet": "The AI Act entered into force on August 1, 2024. Most provisions of the AI Act came into full application over the following years, and the AI Office and national authorities assumed enforcement powers on 2 August 2026. However, some requirements on the high-risk AI systems and other provisions will only be applicable from December 2027.",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+   "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August | Shaping Europe’s digital future",
+   "snippet": "From 2 August 2026, the European Commission’s AI Office, together with national authorities, will begin enforcing the Artificial Intelligence (AI) Act.\n\nOn the same date, new transparency rules will start to apply, requiring certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it. [...] AI Act complaints tool\n AI Act Whistleblower Tool\n Complaints channel for downstream providers using general-purpose AI models\n\nFind more information about:\n\n Guidelines on Transparency of AI-generated Content\n General-Purpose AI (GPAI) Code of Pra",
+   "published_date": null
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
+   "title": "AI Omnibus enters into force | Shaping Europe’s digital future",
+   "snippet": "## Related content\n\n Policy and legislation\n 19 November 2025\n\nDigital Omnibus on AI Regulation Proposal\n\nThe Commission is proposing targeted simplification measures to ensure timely, smooth, and proportionate implementation of certain of the AI Act’s provisions.\n\n##### Last update\n\n31 July 2026\n\nPrint as PDF [...] On 27 July 2026, the AI Omnibus enters into force across the EU, bringing extended timelines to administrative simplification.\n\nThe AI Omnibus, proposed as part of the digital omnibus package on 19 November 2025, delivers a targeted simplification of the AI rulebook while preservin",
+   "published_date": null
+  }
+ ],
+ "The National Privacy Commission of the Philippines has not issued any guidance on AI systems that process personal data. current status 2026 |site:privacy.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/npc-joins-international-data-protection-authorities-in-statement-on-privacy-risks-of-ai-generated-imagery",
+   "title": "NPC Joins International Data Protection Authorities in Statement on Privacy Risks of AI-Generated Imagery - National Privacy CommissionNational Privacy Commission",
+   "snippet": "In the Philippines, the NPC remains committed to safeguarding personal data and continues to work closely with relevant agencies to ensure compliance with the Data Privacy Act of 2012. The NPC maintains regular coordination with the Department of Information and Communications Technology (DICT) and other relevant agencies as part of ongoing inter-agency efforts. The NPC is likewise reviewing regulatory and policy options, including continued monitoring developments, documentation, potential [...] Implementing robust safeguards to prevent the misuse of personal information and generation of non",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph?p=52882",
+   "title": "The NPC celebrates 10 years of protecting data privacy of every Filipino - National Privacy CommissionNational Privacy Commission",
+   "snippet": "“With emerging technologies such as artificial intelligence and cross-border data flows reshaping the digital landscape, the NPC will continue working to ensure that innovation advances alongside accountability and respect for privacy,” he added.\n\nAs the NPC marks ten years of service, it calls on all personal information controllers, personal information processors, government agencies, and citizens to continue working together toward a secure and privacy-respecting digital Philippines. [...] Over the past decade, the NPC has strengthened regulatory frameworks, empowered data subjects, and pa",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/news-2",
+   "title": "News - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Read More\n\n##### NPC strengthens regional ties and advances data privacy standards at the 65th APPA Forum in Hong Kong, SAR China\n\nPress Releases June 18, 2026\n\nHONG KONG, SAR CHINA- The National Privacy Commission (NPC) of the Philippines\n\nRead More\n\n##### PAW 2026: NPC celebrates a decade of privacy leadership, calls for responsible AI governance\n\nPress Releases June 3, 2026\n\nThe National Privacy Commission (NPC), with the support of the Department of\n\nRead More [...] Read More\n\n##### NPC Joins International Data Protection Authorities in Statement on Privacy Risks of AI-Generated Imagery\n\nP",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2024/01/Circular-on-CCTV-Jan-2024-For-Public-Consultation.pdf",
+   "title": "[PDF] NPC Circular No. 2024 - ___ - National Privacy Commission",
+   "snippet": "processes a digital video signal 95 using a special algorithm to perform a security-related function. The common 96 types of video analytics are fixed algorithm analytics, artificial intelligence 97 learning algorithms, and facial recognition systems.3 98 99 SECTION 3. General principles. —PICs and its PIPs engaged in the processing of 100 personal data through CCTV systems are mandated to ensure that reasonable and 101 appropriate safeguards are in place for the protection of personal data, [...] 13 systems as the technology for such systems is continuously evolving, and the use of the 14 sam",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/npc-issues-circulars-to-strengthen-personal-data-protection-in-ph",
+   "title": "NPC issues Circulars to strengthen personal data protection in PH - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The NPC Circular 2023-06 or the Security of Personal Data in the Government and Private Sector provides updated requirements for the security of personal data processed by a PIC or PIP. To ensure data security, the Circular enumerates the general obligations of a PIC or PIP which includes the designation and registration of a Data Protection Officer, registration of data processing systems, conducting Privacy Impact Assessment (PIA), implementing a Privacy Management Program, periodic training [...] Privacy Commissioner Atty. John Henry D. Naga stated, “Through these Circulars, the NPC aims to",
+   "published_date": null
+  }
+ ],
+ "The National Privacy Commission of the Philippines has not issued any guidance on AI systems that process personal data. current status 2026": [
+  {
+   "url": "https://nhimg.org/philippines-data-privacy-act-guide",
+   "title": "Philippines Data Privacy Act Guide: NPC Rules and Breaches",
+   "snippet": "breach management, registration and administrative fines. This guide is for security, privacy and engineering leads processing personal data of people in the Philippines, including outsourcing operators, and covers scope, obligations, current status as checked in October 2026, enforcement, and what the rules mean for service accounts, API keys and AI agents. [...] | 5 December 2022 (effective 11 January 2023) | NPC Circular 2022-04, registration of DPS and DPOs (amends 17-01) | In force |\n| Effective 30 March 2024 | NPC Circular 2023-06, Security of Personal Data in the Government and Private ",
+   "published_date": null
+  },
+  {
+   "url": "https://securiti.ai/philippines-data-privacy-act-application-to-ai-systems-processing-personal-data",
+   "title": "Philippines Data Privacy Act’s Application to AI Systems Processing Personal Data - Securiti",
+   "snippet": "The governance of AI systems is becoming increasingly critical, particularly when these systems process personal data. To address this, the National Privacy Commission (NPC) of the Philippines issued Advisory Guidelines on the Application of the Data Privacy Act (DPA), its Implementing Rules and Regulations (IRR), and NPC Issuances to AI Systems Processing Personal Data (‘Advisory Guidelines’), Its Implementing Rules And Regulations (IRR), And NPC Issuances To AI Systems Processing Personal [...] ### Accuracy\n\nThe PICs must maintain the accuracy and currency of personal data to uphold fairness",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2025/02/Advisory-2024.12.19-Guidelines-on-Artificial-Intelligence-w-SGD.pdf",
+   "title": "[PDF] NPC Advisory No. 2024 – 04 - National Privacy Commission",
+   "snippet": "premises, the NPC hereby issues this Advisory on the Guidelines on the Application of Republic Act No. 10173 or the Data Privacy Act of 2012 (DPA), its Implementing Rules and Regulations, and the issuances of the Commission to Artificial Intelligence Systems Processing Personal Data. SECTION 1. Scope. — This Advisory applies when the processing of personal data is involved in the development or deployment of AI systems, including its training and testing. SECTION 2. Application of the DPA. — [...] data subjects of the nature, purpose, and extent of the processing of personal data when such pro",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/jurisdictions/philippines",
+   "title": "Philippines | Jurisdictions | DataGuidance",
+   "snippet": "comply with when processing personal data, as well as the sanctions for violations of the Act. The NPC has also released over 100 advisory opinions in response to queries on topics such as data breach management, notifications regarding automated decision-making, the designation of data protection officers, Privacy Impact Assessments, and access to personal data. The Philippines participates in the Asia-Pacific Economic Cooperation Cross-Border Privacy Rules (APEC CBPR) system. [...] Summary: On September 8, 2012, the Data Privacy Act of 2012 (Republic Act No. 10173) (the Act) became effective",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph",
+   "title": "HOME - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Data Privacy Act of 2012 is a 21st-century law that addresses 21st-century crimes and concerns. It (1) protects the privacy of individuals while ensuring free flow of information to promote innovation and growth; (2) regulates the collection, recording, organization, storage, updating or modification, retrieval, consultation, use, consolidation, blocking, erasure, or destruction of personal data; and (3) ensures that the Philippines complies with international standards set for data [...] ### DATA SUBJECTS\n\nData Subjects\n\nData Subjects\n\nPeople whose personal information are collected, stor",
+   "published_date": null
+  }
+ ],
+ "Companies in the Philippines must notify the National Privacy Commission of a personal data breach within 72 hours of discovery. current status 2026 |site:privacy.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/statement-of-the-national-privacy-commission-on-reported-data-leaks-involving-government-agencies",
+   "title": "STATEMENT OF THE NATIONAL PRIVACY COMMISSION ON REPORTED DATA LEAKS INVOLVING GOVERNMENT AGENCIES - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under NPC Circular No. 16-03, personal information controllers (PICs) are required to notify the Commission and affected data subjects within 72 hours upon knowledge of, or reasonable belief that, a personal data breach requiring mandatory notification has occurred. Should the reported incidents be confirmed and meet the requirements for mandatory notification, the concerned agencies must submit the prescribed personal data breach notifications in accordance with existing regulations. [...] According to NPC Spokesperson and Deputy Privacy Commissioner Atty. Jose Belarmino II, as of 6 November ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/press-statement-on-alleged-data-breach-involving-toyota-robinsons-and-sr",
+   "title": "Press Statement on Alleged Data Breach Involving Toyota, Robinsons, and S&R - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Philippine National Police (PNP) has also reported six data breach notifications in May 2024. As of 7:25 AM today, there is no official notification of any data breach involving S&R.\n\nCompanies and individuals processing personal data must notify affected data subjects individually and report to the Commission via the Data Breach Notification Management System (DBNMS) within 72 hours of discovering a breach. [...] The NPC takes all allegations of data breaches very seriously and is actively monitoring the situation to ensure the security and privacy of all concerned data subjects. We encou",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/exercising-breach-reporting-procedures",
+   "title": "Exercising Breach Reporting Procedures - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred.\n\nGenerally, there shall be no delay in notification however, the notification may only be delayed to the extent necessary to determine:\n\n the scope of the breach;\n to prevent further disclosures; or\n to restore reasonable integrity to the information and communications system. [...] There can be no delay in the notification if the breach involves at least one hundred (100) dat",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/5-pillars-of-compliance-5",
+   "title": "5 Pillars of Compliance - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred.\n\nGenerally, there shall be no delay in notification however, the notification may only be delayed to the extent necessary to determine:\n\nthe scope of the breach;  \nto prevent further disclosures; or to restore reasonable integrity to the information and communications system. [...] There can be no delay in the notification if the breach involves at least one hundred (100) data",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/statement-privacy-commissioner-raymund-enriquez-liboro-possible-personal-data-breach-sustained-col-financial-group-inc",
+   "title": "Statement of the Privacy Commissioner Raymund Enriquez Liboro on the possible personal data breach sustained by COL Financial Group, Inc. - National Privacy CommissionNational Privacy Commission",
+   "snippet": "At present, the COL Financial has been upfront and transparent in handling this incident. This includes notification to the NPC and the affected data subjects within 72 hours upon knowledge or reasonable belief that a breach has occurred.\n\nThe Commission shall be expecting to receive from COL Financial a full report on the incident within five days. This will aid us to more accurately investigate the incident and decide on our further course of action. [...] We are assuring the public especially the clients of COL Financial Group , Inc. that the NPC is monitoring this incident and shall be iss",
+   "published_date": null
+  }
+ ],
+ "Anthropic's newest model is Claude 2. current status 2026 |site:anthropic.com": [
+  {
+   "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+   "title": "Model deprecations - Claude Platform Docs",
+   "snippet": "### 2025-01-21: Claude 2, Claude 2.1, and Claude Sonnet 3 models\n\nOn January 21, 2025, Anthropic notified developers using Claude 2, Claude 2.1, and Claude Sonnet 3 models of their upcoming retirements.\n\n| Retirement date | Deprecated model | Recommended replacement |\n --- \n| July 21, 2025 | `claude-2.0` | `claude-opus-4-8` |\n| July 21, 2025 | `claude-2.1` | `claude-opus-4-8` |\n| July 21, 2025 | `claude-3-sonnet-20240229` | `claude-sonnet-5-5` |\n\n### 2024-09-04: Claude 1 and Instant models [...] | Retirement date | Deprecated model | Recommended replacement |\n --- \n| June 15, 2026 | `claude-so",
+   "published_date": null
+  },
+  {
+   "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+   "title": "Models overview - Claude Platform Docs",
+   "snippet": "|  |\n| Training data cutoff | Jun 2026 | Jun 2026 | Jun 2026 | Jun 2026 |\n|  | Not sooner than September 1, 2027 | Not sooner than September 22, 2027 | Not sooner than September 28, 2027 | Not sooner than October 7, 2027 |\n| Model IDs |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n|  |  |  |  |  |\n| Claude Models on Google Cloud (Anthropic managed) ID |  |  |  |  | [...] |  | $10 / input MTok$50 / output MTok | $4 / input MTok$20 / output MTok | $2 / input MTok$10 / output MTok | From $0.10 / input MTokFrom $0.50 / output MTok |\n|  |  |  |  |  |\n| Capabilities |\n|  | Ada",
+   "published_date": null
+  },
+  {
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+   "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1 \\ Anthropic",
+   "snippet": "September 2026\n\n# :Claude: Fable 5.1and Mythos 5.1\n\nMade with Fable 5.1\n\nWe’re introducing Claude Fable 5.1 and Claude Mythos 5.1. They’re the world’s most advanced models for coding and knowledge work—and their research capabilities offer an early glimpse of how AI models will contribute to scientific progress. [...] This required us to add a watermark—a numerical way of determining the likelihood that Claude was involved in writing a piece of text—to the outputs of models released after August 2, 2026. As we recently explained, this watermark is invisible to anyone who does not have the dete",
+   "published_date": null
+  },
+  {
+   "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+   "title": "When AI builds itself \\ Anthropic",
+   "snippet": "On the most open-ended tasks, Claude’s success rate reached 76% in May 2026, up 50 percentage points in six months. To give an example of tasks in this difficulty tier, a routine upgrade began crashing tens of thousands of training jobs. An engineer pointed Claude at the live incident with little more than some text content and cluster access. Working through the running jobs and testing one environment setting at a time, Claude isolated the single obscure debugging flag that was triggering the [...] Claude is getting better at proposing its own experiments. In April 2026, Anthropic published ",
+   "published_date": null
+  },
+  {
+   "url": "https://www.anthropic.com/claude-opus-5-5",
+   "title": "Introducing Claude Opus 5.5 \\ Anthropic",
+   "snippet": "# Claude Opus 5.5\n\nSeptember 22, 2026\n\nWe’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+   "published_date": null
+  }
  ]
 }

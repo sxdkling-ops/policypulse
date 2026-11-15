@@ -37,3 +37,6 @@ REGISTER_JSON = BUILD / "register.json"
 TAVILY_CACHE = CACHE / "tavily_cache.json"
 GATEWAY_LOG = LOGS / "gateway_log.jsonl"
 MAX_CLAIMS = 8
+# Chunks retrieved per KB question: enough to cover the main brief plus related ones, small enough
+# to keep the grounded answer focused and the prompt short.
+KB_TOP_K = 5

@@ -10,7 +10,9 @@ import llm
 from judge import judge_claim
 from llm import GatewayError, chat
 from pipeline import check_answer, to_markdown
-from verifier import search
+from authority import domain
+from fixer import diff_html
+from verifier import verify
 
 st.set_page_config(page_title="PolicyPulse", page_icon="🩺", layout="wide")
 
@@ -23,6 +25,10 @@ SAMPLES = {
     "LLM API pricing":
         "OpenAI's GPT-4 API costs $0.03 per 1K input tokens and $0.06 per 1K output tokens, and GPT-4 has a "
         "maximum context window of 8K tokens. Anthropic's newest model is Claude 2.",
+    "Philippine AI & privacy rules (KB topics)":
+        "In the Philippines, the Bangko Sentral ng Pilipinas has not issued any guidance on AI governance for banks. "
+        "The National Privacy Commission's main AI guidance is NPC Advisory No. 2024-04. A personal data breach "
+        "must be reported to the NPC within 72 hours.",
     "Company CEO":
         "Twitter is run by CEO Parag Agrawal. Microsoft's CEO is Satya Nadella, and Google's parent company "
         "Alphabet is led by Sundar Pichai.",
@@ -43,16 +49,28 @@ def verdict_card(r: dict):
         c1, c2 = st.columns([5, 1])
         c1.markdown(f"**{r['claim']}**  \n`{r.get('category', 'other')}`"
                     + (f" · implied date: {r['implied_date']}" if r.get("implied_date") else ""))
+        if r.get("stale_risk"):
+            c1.markdown(f"<span style='background:#fff1cc;color:#7a5200;border-radius:6px;padding:2px 8px;"
+                        f"font-size:0.85em'>{r['stale_risk']}</span>", unsafe_allow_html=True)
         c2.markdown(f"<div style='background:{color};color:white;border-radius:8px;padding:6px;text-align:center'>"
                     f"<b>{r['verdict']}</b><br>{r['freshness_score']}/100</div>", unsafe_allow_html=True)
         if r.get("evidence"):
             st.markdown(f"**Evidence:** {r['evidence']}")
         if r.get("suggested_correction"):
             st.markdown(f"**Suggested correction:** {r['suggested_correction']}")
+        if r.get("score_parts"):
+            with st.expander(f"Why {r['freshness_score']}/100?"):
+                for j, (label, pts) in enumerate(r["score_parts"]):
+                    st.markdown(f"- {label}: **{pts if j == 0 else f'{pts:+d}'}**")
+                st.caption("The LLM picks only the verdict. The score is computed from the verdict, whether an "
+                           "official source backs it, how many sources agree, and how recent the evidence is.")
         if r.get("sources"):
-            with st.expander(f"Sources ({len(r['sources'])}){' · cached' if r.get('cached') else ''}"):
+            n_off = sum(1 for s in r["sources"] if s.get("official"))
+            label = f"Sources ({len(r['sources'])}{f', {n_off} official' if n_off else ''})"
+            with st.expander(label + (" · cached" if r.get("cached") else "")):
                 for s in r["sources"]:
-                    st.markdown(f"- [{s['title'] or s['url']}]({s['url']}) {s.get('published_date') or ''}")
+                    tag = " **· official**" if s.get("official") else ""
+                    st.markdown(f"- [{s['title'] or s['url']}]({s['url']}){tag} {s.get('published_date') or ''}")
 
 
 def show_report(report: dict, key: str, extra_md: str = ""):
@@ -65,6 +83,12 @@ def show_report(report: dict, key: str, extra_md: str = ""):
     cols[0].metric("Overall freshness", f"{score}/100" if score is not None else "n/a")
     for col, v in zip(cols[1:], COLORS):
         col.metric(v, int(counts.get(v, 0)))
+    if report.get("fixed_answer"):
+        with st.container(border=True):
+            st.markdown("#### Corrected answer")
+            st.caption("The original answer with only the suggested corrections applied. "
+                       "Red = removed, green = added.")
+            st.markdown(diff_html(report["answer"], report["fixed_answer"]), unsafe_allow_html=True)
     for r in report["results"]:
         verdict_card(r)
     st.download_button("Download Markdown report", to_markdown(report, extra=extra_md),
@@ -106,8 +130,11 @@ with st.sidebar:
     llm.SIMULATE_PRIMARY_FAILURE = st.toggle(
         "Simulate primary provider failure", value=False,
         help="Sends the request to a broken primary model so Bifrost must use the Groq fallback.")
+    st.caption("Turn on, then run any check: Bifrost reroutes every LLM call to Groq and the Gateway tab "
+               "logs it as a fallback.")
     st.caption(f"Bifrost: {config.BIFROST_URL}  \nPrimary: {config.PRIMARY_MODEL}  \nFallback: {config.FALLBACK_MODEL}")
-    st.caption(f"KB: {config.KB_PATH}")
+    _idx = load_json(str(config.INDEX_JSON)) or []
+    st.caption(f"Knowledge base: {'sample' if config.USING_SAMPLE_KB else 'full library'} ({len(_idx)} briefs)")
 
 tabs = st.tabs(["Check an Answer", "Ask the KB", "KB Freshness Audit", "Verification Register", "Gateway (Bifrost)"])
 
@@ -123,11 +150,10 @@ with tabs[0]:
 # 2. Ask the KB
 with tabs[1]:
     q = st.text_input("Ask the AI GRC knowledge base", "When must a personal data breach be reported to the NPC?")
-    k = st.slider("Chunks to retrieve", 3, 8, 5)
     if st.button("Ask", type="primary"):
         try:
             from retriever import search as kb_search
-            hits = kb_search(q, k=k)
+            hits = kb_search(q, k=config.KB_TOP_K)
         except FileNotFoundError as e:
             st.error(str(e))
             hits = None
@@ -215,11 +241,13 @@ with tabs[3]:
                 with st.spinner(f"Verifying {iid}..."):
                     try:
                         where = "Philippines " if iid.startswith("PH") else ""
-                        sources, cached = search(f"{where}{row['brief_title'][:120]} {row['item'][:200]}")
+                        off = [domain(row["official_source"])] if row["official_source"] else []
+                        sources, cached = verify(f"{where}{row['brief_title'][:120]} {row['item'][:200]}",
+                                                 extra_domains=off)
                         v, _ = judge_claim(claim, sources)
                     except Exception as e:
                         v = {"verdict": "Unverifiable", "freshness_score": 50, "evidence": f"Check failed: {e}",
-                             "suggested_correction": "", "sources": []}
+                             "suggested_correction": "", "sources": [], "score_parts": [("Check failed", 50)]}
                         cached = False
                 out.append({"item_id": iid, "claim": row["item"], "category": "regulation", **v, "cached": cached})
             st.session_state["reg_results"] = out
@@ -230,7 +258,9 @@ with tabs[3]:
                 verdict_card(r)
             csv = pd.DataFrame([{**{k: r[k] for k in ("item_id", "claim", "verdict", "freshness_score", "evidence",
                                                       "suggested_correction")},
-                                 "sources": " | ".join(s["url"] for s in r["sources"])} for r in res])
+                                 "sources": " | ".join(s["url"] for s in r["sources"]),
+                                 "official_sources": sum(1 for s in r["sources"] if s.get("official"))}
+                                for r in res])
             st.download_button("Export CSV", csv.to_csv(index=False), file_name="register_verification.csv")
 
 # 5. Gateway

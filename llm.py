@@ -90,6 +90,17 @@ def parse_json(text: str):
                 return json.loads(text[s:e + 1])
             except json.JSONDecodeError:
                 continue
+    # Truncated reply (hit max_tokens): keep every complete {...} object we can decode.
+    objs, dec, i = [], json.JSONDecoder(), text.find("{")
+    while i != -1:
+        try:
+            obj, end = dec.raw_decode(text, i)
+            objs.append(obj)
+            i = text.find("{", end)
+        except json.JSONDecodeError:
+            break
+    if objs:
+        return objs if text.lstrip().startswith("[") or len(objs) > 1 else objs[0]
     raise ValueError(f"Model did not return JSON: {text[:200]}")
 
 
