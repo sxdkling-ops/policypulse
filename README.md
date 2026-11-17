@@ -260,13 +260,11 @@ streamlit run app.py            # the app; the Freshness Guard tab needs the Doc
 Code: Apache-2.0 (see [LICENSE](LICENSE)). The sample PDFs under `data/sample/` are the author's reference
 briefs, included for the demo only and not covered by the Apache licence (see [NOTICE](NOTICE)).
 
----
-Not legal advice. Verify against official sources.
+## Screenshots: the PolicyPulse checker app
 
-<details>
-<summary>More screenshots: the PolicyPulse checker app with the full 268-brief library</summary>
+Taken from the current build with the full 268-brief library and live checks.
 
-**Check an Answer:** overall score, corrected answer (red removed, green added), verdict cards
+**Check an Answer:** overall score (33/100), corrected answer (red removed, green added), verdict cards
 ![Check an Answer](screenshots/1_check_answer.png)
 
 **Why 10/100?** The score breakdown and the official sources behind a verdict
@@ -287,4 +285,5 @@ Not legal advice. Verify against official sources.
 **`/check` API**, the endpoint the plugin calls
 ![API](screenshots/7_api.png)
 
-</details>
+---
+Not legal advice. Verify against official sources.

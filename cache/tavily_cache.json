@@ -1246,5 +1246,453 @@
    "snippet": "data elements, e.g., text, images, structuring the data to remove irrelevant information, and storing it in a structured format (e.g., databases or JSON files) for further analysis or use. B. “Publicly available personal data” refers to personal data that are readily available and accessible to the public without restrictions or the need for authorization or authentication (e.g., no log-in credentials required). This includes personal data required by laws or regulations to be made publicly [...] on its behalf by third parties, shall strictly fulfill their obligations under the DPA, such as bu",
    "published_date": null
   }
+ ],
+ "Under NPC Circular 16-03, a personal information controller must notify the National Privacy Commission within 72 hours of knowledge or reasonable belief of a breach. current status 2026 |site:privacy.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NATIONAL PRIVACY COMMISSION NPC Circular 16-03",
+   "snippet": "Notification of the Commission. The personal information controller shall notify the Commission of a personal data breach subject to the following procedures: A. When Notification Should be Done. The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred. B. Delay in Notification. Notification may only be delayed to the extent necessary [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or pe",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/statement-of-the-national-privacy-commission-on-reported-data-leaks-involving-government-agencies",
+   "title": "STATEMENT OF THE NATIONAL PRIVACY COMMISSION ON REPORTED DATA LEAKS INVOLVING GOVERNMENT AGENCIES – National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under NPC Circular No. 16-03, personal information controllers (PICs) are required to notify the Commission and affected data subjects within 72 hours upon knowledge of, or reasonable belief that, a personal data breach requiring mandatory notification has occurred. Should the reported incidents be confirmed and meet the requirements for mandatory notification, the concerned agencies must submit the prescribed personal data breach notifications in accordance with existing regulations.",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/category/press-statement",
+   "title": "Press Statement Archives - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The NPC received a breach notification from DOST on April 5, 2024. Under NPC Circular 16-03, it is mandatory for the DOST to notify the affected data subjects and the NPC within 72 hours upon knowledge of or a reasonable belief that a personal data breach has occurred.",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/resolutions",
+   "title": "Resolutions - National Privacy CommissionNational Privacy Commission",
+   "snippet": "| NPC BN 20-170 | In re: Travelpeople Ltd., Inc.  Tags: Notification of data subjects of data breaches is the general rule, The data subjects shall be notified within seventy-two (72) hours upon knowledge of or reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred, exemption or postponement will only be allowed in exceptional circumstances under Section 18(B) of NPC Circular No. 16-03, when notification is required, [...] | NPC BN 20-167 | In re: TravelServices, Inc.  Tags: The data subjects shall be notified within ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/press-statement-of-the-npc-on-alleged-dost-data-breach",
+   "title": "Press Statement of the NPC on Alleged DOST Data Breach - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The NPC received a breach notification from DOST on April 5, 2024. Under NPC Circular 16-03, it is mandatory for the DOST to notify the affected data subjects and the NPC within 72 hours upon knowledge of or a reasonable belief that a personal data breach has occurred.",
+   "published_date": null
+  }
+ ],
+ "Under NPC Circular 16-03, a personal information controller must notify the National Privacy Commission within 72 hours of knowledge or reasonable belief of a breach. current status 2026": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NATIONAL PRIVACY COMMISSION NPC Circular 16-03",
+   "snippet": "Notification of the Commission. The personal information controller shall notify the Commission of a personal data breach subject to the following procedures: A. When Notification Should be Done. The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred. B. Delay in Notification. Notification may only be delayed to the extent necessary [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or pe",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/breach-reporting",
+   "title": "Breach Reporting - National Privacy CommissionNational Privacy Commission",
+   "snippet": "PDBNFs should be accomplished and submitted within seventy-two (72) hours upon knowledge of or reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred. When providing updates or additional information, PICs should not submit new PDBNFs, otherwise, the new PDBNF will be tagged as invalid. [...] Under the Data Privacy Act, the data subject has the right to be notified In the enforcement of this right, the PIC MUST NOTIFY the data subject within seventy-two (72) hours upon knowledge of or reasonable belief that a personal",
+   "published_date": null
+  },
+  {
+   "url": "https://www.facebook.com/privacy.gov.ph/posts/%F0%9D%90%80%F0%9D%90%83%F0%9D%90%95%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8E%F0%9D%90%91%F0%9D%90%98to-all-personal-information-controllers-picsthe-national-privacy-commiss/1584893477012514",
+   "title": "National Privacy Commission on Facebook: \"𝐀𝐃𝐕𝐈𝐒𝐎𝐑𝐘 To All Personal Information Controllers (PICs): The National Privacy Commission (NPC) hereb…\"",
+   "snippet": "During this period, the requirements for mandatory notification to the Commission and to the affected data subjects under NPC Circular No. 16-03 shall remain in full force and effect. As such, PICs shall submit their Personal Data Breach Notifications (PDBN) through\nbreach@privacy.gov.ph, using the prescribed notification form. To access the form, please refer to this link: \n\nRead more below for further information.\n\n#PrivacyPH\n\n[Image: May be a graphic of map and text]",
+   "published_date": null
+  },
+  {
+   "url": "https://www.decryptiondigest.com/blog/breach-notification-regulatory-timeline-gdpr-ccpa-hipaa-state-laws",
+   "title": "Data Breach Notification Requirements 2026: GDPR, HIPAA, CCPA, SEC Timelines",
+   "snippet": "Data controllers (organizations that determine the purposes and means of processing personal data) are required to notify. Data processors (organizations that process data on behalf of a controller, such as cloud service providers or outsourced IT) must notify the data controller 'without undue delay' upon becoming aware of a breach — the controller then notifies the supervisory authority.\n\n#### The 72-hour window [...] Notification to the relevant EU supervisory authority (the Data Protection Authority in the EU member state where your organization is established, or the lead authority for cr",
+   "published_date": null
+  },
+  {
+   "url": "https://www.scribd.com/document/337278989/NPC-Circular-16-03-Personal-Data-Breach-Management",
+   "title": "NPC Circular 16-03: Data Breach Management | PDF | Personally Identifiable Information | Computer Security",
+   "snippet": "This document outlines guidelines for personal data breach management issued by the National Privacy Commission of the Philippines. It defines key terms related to personal data breaches and establishes requirements for organizations to implement security incident response policies and procedures. These include forming a data breach response team, implementing technical and organizational security measures to prevent breaches, and complying with breach notification requirements. The guidelines [...] The guidelines aim to ensure the protection of personal data and compliance with Philippines pr",
+   "published_date": null
+  }
+ ],
+ "Under NPC Circular 16-03, if facts are incomplete at the time of initial notification, the full breach report must be submitted within five days unless the National Privacy Commission grants more time. current status 2026 |site:privacy.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NPC Circular 16-03",
+   "snippet": "information. The full report of the personal data breach must be submitted within five (5) days, unless the personal information controller is granted additional time by the Commission to comply. D. Content of Notification. The notification shall include, but not be limited to: 1. Nature of the Breach a. description of how the breach occurred and the vulnerability of the data processing system that allowed the breach; b. a chronology of the events leading up to the loss of control over the [...] five (5) days from knowledge of the breach, unless allowed a longer period by the Commission. When ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/breach-reporting",
+   "title": "Breach Reporting - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Extension of time for submission of Full Report and other documents\n  + The full report of the personal data breach must be submitted within five (5) days, unless the personal information controller is granted additional time by the Commission to comply. The Commission may also require additional documents and pieces of information after its initial evaluation. As such, the PIC may request for additional time to comply with those requirements. [...] If the PIC fails to notify the Commission or data subjects, or there is unreasonable delay to the notification, the Commission shall determine if ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/exercising-breach-reporting-procedures",
+   "title": "Exercising Breach Reporting Procedures - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The full report of the personal data breach must be submitted within five (5) days from notification, unless the personal information controller is granted additional time by the Commission to comply.\n\nThe following information must be included in any Data Breach notification: [...] There can be no delay in the notification if the breach involves at least one hundred (100) data subjects, or the disclosure of sensitive personal information will harm or adversely affect the data subject. In either case, the Commission must be notified within the 72-hour period based on available information. [..",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/DPO17Breach.pdf",
+   "title": "BREACH MANAGEMENT AND REPORTING",
+   "snippet": "PROPERTY OF THE NATIONAL PRIVACY COMMISSION FULL REPORT!\nThe full report of the personal data breach must be submitted within five (5) days, unless the Personal Information Controller is granted additional time by the Commission to comply. [...] Imprisonment from 1 year and 6 months to 5 years plus fine from ₱500,000 to ₱1,000,000 Imposed on persons who: • After having knowledge of a security breach and of the obligation to notify the National Privacy Commission • Either intentionally or by omission conceals the fact of such breach PROPERTY OF THE NATIONAL PRIVACY COMMISSION ANNUAL REPORT Sec.",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/statement-of-the-national-privacy-commission-on-reported-data-leaks-involving-government-agencies",
+   "title": "STATEMENT OF THE NATIONAL PRIVACY COMMISSION ON REPORTED DATA LEAKS INVOLVING GOVERNMENT AGENCIES – National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under NPC Circular No. 16-03, personal information controllers (PICs) are required to notify the Commission and affected data subjects within 72 hours upon knowledge of, or reasonable belief that, a personal data breach requiring mandatory notification has occurred. Should the reported incidents be confirmed and meet the requirements for mandatory notification, the concerned agencies must submit the prescribed personal data breach notifications in accordance with existing regulations.",
+   "published_date": null
+  }
+ ],
+ "Under NPC Circular 16-03, if facts are incomplete at the time of initial notification, the full breach report must be submitted within five days unless the National Privacy Commission grants more time. current status 2026": [
+  {
+   "url": "https://www.quisumbingtorres.com/en/alerts/2026/06/philippine-data-breach-notification-procedure-clarified",
+   "title": "Data Breach Notification Procedure Further Clarified | Quisumbing Torres",
+   "snippet": "Submitting a request through the DBNMS does not suspend a PIC’s obligations under NPC Circular No. 16-03. Unless such request is acted upon, the full breach report must be submitted within five (5) days from the date of discovery to admindbnms@privacy.gov.ph.\n NPC inaction does not constitute approval. All approvals must be expressly issued in writing by the Commission. [...] Continuing compliance obligations. Submission of a request through the DBNMS does not relieve the PIC of its obligations under NPC Circular No. 16-03. Unless the request is acted upon, the full breach report must be submi",
+   "published_date": null
+  },
+  {
+   "url": "https://cybercode.ph/data-breach-philippines",
+   "title": "Data Breach Philippines: How to Report One, Step by Step",
+   "snippet": "Direct answer: Report a notifiable personal data breach to the National Privacy Commission (NPC) through the Data Breach Notification Management System (DBNMS) within 72 hours of knowing or reasonably believing it occurred, notify the affected data subjects inside the same 72 hours, and submit the full breach report within five days of discovery. A breach is notifiable only if it passes all three parts of the test in NPC Circular No. 16-03, Section 11. A notification filed outside the DBNMS is [...] | Five days for the full breach report | NPC Circular 16-03, Sec. 17(C); Advisory 2026-02, Sec.",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/exercising-breach-reporting-procedures",
+   "title": "Exercising Breach Reporting Procedures - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The full report of the personal data breach must be submitted within five (5) days from notification, unless the personal information controller is granted additional time by the Commission to comply.\n\nThe following information must be included in any Data Breach notification: [...] There can be no delay in the notification if the breach involves at least one hundred (100) data subjects, or the disclosure of sensitive personal information will harm or adversely affect the data subject. In either case, the Commission must be notified within the 72-hour period based on available information. [..",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/opinion/philippines-updated-breach-notification-procedures",
+   "title": "Philippines: Updated breach notification procedures under NPC Advisory No. 2026-02 | Opinion | DataGuidance",
+   "snippet": "under NPC Circular No. 16-03, or the Personal Data Breach Management Rules (NPC Circular No. 16-03), it confirms that certain requests are mutually exclusive, clarifies how changes in breach scope should be reported, e [...] The National Privacy Commission (NPC) issued Advisory No. 2026-02, titled 'Clarification on the Submission of Personal Data Breach Notification through Data Breach Notification Management System' (the Advisory), on May 11, 2026. The Advisory clarifies how personal information controllers (PICs) should submit breach notifications and related requests through the data breach",
+   "published_date": null
+  },
+  {
+   "url": "https://www.reyestacandong.com/insights-npc-advisory-2026-02-dbnms-breach-notification",
+   "title": "NPC Clarifies DBNMS Breach Notification Procedures",
+   "snippet": "##### 2. PREPARE IN ADVANCE\n\n### Organizations must be “notification-ready”\n\nSubmitting a request through the DBNMS does not suspend the PIC’s obligations under NPC Circular No. 16-03. Pending requests do not stop the compliance clock, and the NPC’s inaction cannot be treated as approval or justification for noncompliance. [...] NPC Advisory No. 2026-02\n NPC Circular No. 16-03: Personal Data Breach Management\n NPC Breach Reporting page\n Republic Act No. 10173: Data Privacy Act of 2012\n NPC Circular No. 2022-01: Guidelines on Administrative Fines\n\n### Informational Disclaimer\n\nThis material is ",
+   "published_date": null
+  }
+ ],
+ "The 72-hour breach notification deadline comes from NPC Circular 16-03, not from the Data Privacy Act, which only requires 'prompt' notice. current status 2026 |site:privacy.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NPC Circular 16-03",
+   "snippet": "five (5) days from knowledge of the breach, unless allowed a longer period by the Commission. When should data subjects or individuals be notified. Within seventy-two (72) hours from knowledge of the breach, unless there is a reason to postpone or omit notification, subject to approval of the Commission. What are the contents of notification to Commision In general- 1. nature of the breach 2. sensitive personal information possibly involved 3. measures taken by the entity to address the breach [...] Notification of the Commission. The personal information controller shall notify the Commission",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/pips-and-pics/breach-reporting",
+   "title": "Breach Reporting - National Privacy CommissionNational Privacy Commission",
+   "snippet": "Under the Data Privacy Act, the data subject has the right to be notified In the enforcement of this right, the PIC MUST NOTIFY the data subject within seventy-two (72) hours upon knowledge of or reasonable belief that a personal data breach has occurred. [...] The notification may be made based on available informationwithin the 72-hour period if the personal data breach is likely to give rise to a real risk to the rights and freedoms of data subjects;\n Notification to the data subjects must be sent individually, either by written or electronic means. [...] If the breach involves at least one",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/DPO17Breach.pdf",
+   "title": "BREACH MANAGEMENT AND REPORTING",
+   "snippet": "PROPERTY OF THE NATIONAL PRIVACY COMMISSION WHEN SHOULD WE NOTIFY? The notification must be made within 72 hours upon knowledge of, or when there is reasonable belief that a personal data breach has occurred. PROPERTY OF THE NATIONAL PRIVACY COMMISSION WHO SHOULD BE NOTIFIED? Notification must be made to the Commission and to any affected data subjects.\nAffected data subjects National Privacy Commission PROPERTY OF THE NATIONAL PRIVACY COMMISSION HOW DO WE NOTIFY NPC? [...] PROPERTY OF THE NATIONAL PRIVACY COMMISSION PROPERTY OF THE NATIONAL PRIVACY COMMISSION PROPERTY OF THE NATIONAL PRIVACY ",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/exercising-breach-reporting-procedures",
+   "title": "Exercising Breach Reporting Procedures - National Privacy CommissionNational Privacy Commission",
+   "snippet": "The Commission shall be notified within seventy-two (72) hours upon knowledge of or the reasonable belief by the personal information controller or personal information processor that a personal data breach has occurred.\n\nGenerally, there shall be no delay in notification however, the notification may only be delayed to the extent necessary to determine:\n\n the scope of the breach;\n to prevent further disclosures; or\n to restore reasonable integrity to the information and communications system. [...] Notify the data subject within seventy-two (72) hours upon knowledge of or reasonable belief th",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2026/05/Advisory-Clarification-on-the-Submission-of-Personal-Data-Breach-Notification-through-DBNMS_11-May-2026.pdf",
+   "title": "NPC Advisory No. 2026 - 02",
+   "snippet": "through the Data Breach Notification Management System (DBNMS) shall not relieve the PIC of its obligation pursuant to NPC Circular No. 16-03. Unless the request is acted upon by the Commission, the PIC shall submit its full breach report within five (5) days from the date of discovery to admindbnms@privacy.gov.ph with the subject FBR_NameofPIC_NameofDPO, as well as all other required submissions. The PIC may coordinate with the Compliance and Monitoring Division (CMD) of the NPC through [...] Data Breach Management1 (NPC Circular No. 16-03), shall be guided by the following clarifications: A.",
+   "published_date": null
+  }
+ ],
+ "The 72-hour breach notification deadline comes from NPC Circular 16-03, not from the Data Privacy Act, which only requires 'prompt' notice. current status 2026": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NATIONAL PRIVACY COMMISSION NPC Circular 16-03",
+   "snippet": "five (5) days from knowledge of the breach, unless allowed a longer period by the Commission. When should data subjects or individuals be notified. Within seventy-two (72) hours from knowledge of the breach, unless there is a reason to postpone or omit notification, subject to approval of the Commission. What are the contents of notification to Commision In general- 1. nature of the breach 2. sensitive personal information possibly involved 3. measures taken by the entity to address the breach [...] Notification of the Commission. The personal information controller shall notify the Commission",
+   "published_date": null
+  },
+  {
+   "url": "https://www.decryptiondigest.com/blog/breach-notification-regulatory-timeline-gdpr-ccpa-hipaa-state-laws",
+   "title": "Data Breach Notification Requirements 2026: GDPR, HIPAA, CCPA, SEC Timelines",
+   "snippet": "Notification to the relevant EU supervisory authority (the Data Protection Authority in the EU member state where your organization is established, or the lead authority for cross-border processing) must occur within 72 hours of becoming aware that a personal data breach has occurred. 'Becoming aware' is the organization having reasonable certainty that an incident has occurred — not a preliminary suspicion, but not a completed investigation either. If the full facts are not known within 72 [...] The clock-start events matter as much as the deadlines: GDPR's 72-hour clock starts when you 'beco",
+   "published_date": null
+  },
+  {
+   "url": "https://www.facebook.com/privacy.gov.ph/posts/%F0%9D%90%80%F0%9D%90%83%F0%9D%90%95%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8E%F0%9D%90%91%F0%9D%90%98to-all-personal-information-controllers-picsthe-national-privacy-commiss/1584893477012514",
+   "title": "National Privacy Commission on Facebook: \"𝐀𝐃𝐕𝐈𝐒𝐎𝐑𝐘 To All Personal Information Controllers (PICs): The National Privacy Commission (NPC) hereb…\"",
+   "snippet": "During this period, the requirements for mandatory notification to the Commission and to the affected data subjects under NPC Circular No. 16-03 shall remain in full force and effect. As such, PICs shall submit their Personal Data Breach Notifications (PDBN) through\nbreach@privacy.gov.ph, using the prescribed notification form. To access the form, please refer to this link: \n\nRead more below for further information.\n\n#PrivacyPH\n\n[Image: May be a graphic of map and text]",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bakermckenzie.com/en/insight/publications/2026/06/philippines-data-breach-notification-procedure-further-clarified",
+   "title": "Philippines: Data Breach Notification Procedure Further Clarified | Insight | Baker McKenzie",
+   "snippet": "Moreover, the Advisory reinforces the rule that filing requests through the DBNMS does not pause a PIC’s obligations under NPC Circular No. 16-03. As such, the full breach report is due within five days from the date of discovery regardless of any pending request, and the NPC's silence on a submitted request cannot be treated as an approval. All approvals must therefore be expressly issued in writing by the NPC. [...] for required submissions under NPC Circular No. 16-03 on Personal Data Breach Management. [...] The National Privacy Commission (NPC) has issued Advisory No. 2026-02 (“Advisory”)",
+   "published_date": null
+  },
+  {
+   "url": "https://www.dataguidance.com/opinion/philippines-updated-breach-notification-procedures",
+   "title": "Philippines: Updated breach notification procedures under NPC Advisory No. 2026-02 | Opinion | DataGuidance",
+   "snippet": "under NPC Circular No. 16-03, or the Personal Data Breach Management Rules (NPC Circular No. 16-03), it confirms that certain requests are mutually exclusive, clarifies how changes in breach scope should be reported, e [...] The National Privacy Commission (NPC) issued Advisory No. 2026-02, titled 'Clarification on the Submission of Personal Data Breach Notification through Data Breach Notification Management System' (the Advisory), on May 11, 2026. The Advisory clarifies how personal information controllers (PICs) should submit breach notifications and related requests through the data breach",
+   "published_date": null
+  }
+ ],
+ "The 72-hour breach notification duty under NPC Circular 16-03 applies only when Section 11 conditions are met: sensitive or identity-fraud-enabling data is involved, an unauthorised person likely acquired it, and there is a real risk of serious harm. current status 2026 |site:privacy.gov.ph": [
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "NATIONAL PRIVACY COMMISSION NPC Circular 16-03",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://www.privacy.gov.ph/wp-content/uploads/2016/12/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "Republic of the Philippines NATIONAL PRIVACY COMMISSION NPC Circular 16-03",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://www.privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "Microsoft Word - NPC Circular 16-03 Personal Data Breach Management.docx",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2024/12/NPC-BN-20-167-11.13.2023-In-re-TravelServices-Inc_Resolution.pdf",
+   "title": "IN RE: TRAVELSERVICES, INC. x",
+   "snippet": "Section 11 of NPC Circular No. 16-03 provides: Sec. 11. When notification is required. Notification shall be required upon knowledge of or when there is reasonable belief by the personal information controller or personal information processor that a personal data breach requiring notification has occurred, under the following conditions: A. The personal data involves sensitive personal information or any other information that may be used to enable identity fraud. For this purpose, “other",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2025/10/NPC-BN-20-167-11.13.2023-In-re-TravelServices-Inc_Resolution-1.pdf",
+   "title": "IN RE: TRAVELSERVICES, INC. x",
+   "snippet": "Section 11 of NPC Circular No. 16-03 provides: Sec. 11. When notification is required. Notification shall be required upon knowledge of or when there is reasonable belief by the personal information controller or personal information processor that a personal data breach requiring notification has occurred, under the following conditions: A. The personal data involves sensitive personal information or any other information that may be used to enable identity fraud. For this purpose, “other",
+   "published_date": null
+  }
+ ],
+ "The 72-hour breach notification duty under NPC Circular 16-03 applies only when Section 11 conditions are met: sensitive or identity-fraud-enabling data is involved, an unauthorised person likely acquired it, and there is a real risk of serious harm. current status 2026": [
+  {
+   "url": "https://cybercode.ph/data-breach-philippines",
+   "title": "Data Breach Philippines: How to Report One, Step by Step",
+   "snippet": "Direct answer: Report a notifiable personal data breach to the National Privacy Commission (NPC) through the Data Breach Notification Management System (DBNMS) within 72 hours of knowing or reasonably believing it occurred, notify the affected data subjects inside the same 72 hours, and submit the full breach report within five days of discovery. A breach is notifiable only if it passes all three parts of the test in NPC Circular No. 16-03, Section 11. A notification filed outside the DBNMS is [...] Not every security incident is a notifiable breach. Section 11 of NPC Circular No. 16-03 sets a",
+   "published_date": null
+  },
+  {
+   "url": "https://www.privacy.gov.ph/wp-content/uploads/2016/12/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "https://www.privacy.gov.ph/wp-content/uploads/2016/12/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://www.privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "https://www.privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "title": "https://privacy.gov.ph/wp-content/uploads/2022/01/sgd-npc-circular-16-03-personal-data-breach-management.pdf",
+   "snippet": "been acquired by an unauthorized person 3. The unauthorized acquisition is likely to give rise to a real risk of serious harm Who should notify. The personal information controller, which controls the processing of information, even if processing is outsourced or subcontracted to a third party. When should notification of Commission be done. Within 72 hours from knowledge of the personal data breach, based on available information. Follow up report should be submitted within five (5) days from [...] (72) hours upon knowledge of or reasonable belief by the personal information controller or per",
+   "published_date": null
+  },
+  {
+   "url": "https://cybercode.ph/data-breach-notification-philippines-npc",
+   "title": "Data Breach Notification Philippines: NPC 72-Hour Rule",
+   "snippet": "A Philippine personal information controller must notify the National Privacy Commission and affected data subjects within 72 hours when a personal data breach meets the mandatory-notification test. Under the Data Privacy Act IRR, notification is required when sensitive personal information or other information that can enable identity fraud is reasonably believed to have been acquired by an unauthorized person and the unauthorized acquisition is likely to create a real risk of serious harm. [...] 1. What information was involved? Sensitive personal information or other information that may en",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se Status of the BSP Model Risk Management framework, which the paper calls \"forthcoming\". A draft MRM circular covering the full model life cycle and risk-based model inventory tiering was reported as p |site:bsp.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://www.bsp.gov.ph/Pages/BSPAnniversary/2024/BSPAnniversary_Home.aspx",
+   "title": "BSP Anniversary - Home",
+   "snippet": "The Bank has set up macroprudential oversight and microprudential supervision to monitor and manage financial stability risks, and we aim to enhance this by developing an integrated systemic risk management framework encompassing governance, macroprudential supervision, surveillance tools, and crisis management to respond effectively to systemic risks.\n\n#### Strategic Objective 3: Deepened Capital Markets [...] We plan to create a centralized data platform for real-time analytics, automate data processes, fully implement cybersecurity protocols, explore emerging technologies, use Artificial In",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Pages/FinancialStability/Risk-and-Resilience-in-the-Philippine-Financial-System/Chapter6.aspx",
+   "title": "The BSP Book on Risk and Resilience in the Philippine Financial System: How Much Has Changed?",
+   "snippet": "time, accelerated adoption of digital finance and related services signaled a structural redefinition of resilience, grounded not only in capital buffers but also in policy agility, institutional adaptability, and technological transformation. [...] Veronica B. Bayangos is Assistant Governor and Head of the Office of Systemic Risk Management at the BSP. She leads the development of systemic risk assessment frameworks and macroprudential policy, oversees the BSP’s Financial Stability Policy Committee and the inter-agency Financial Stability Coordination Council, and represents the BSP in nation",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/M-2024-013.pdf",
+   "title": "[PDF] memorandum no. m-2024 - BSP",
+   "snippet": "banking days after reference period. The end-December 2023 report shall be submitted to the Department of Supervisory Analytics (DSA) on or before 31 May 2024. Subsequent reporting periods shall be due within the prescribed deadline. For covered banks 4. Detailed guidelines on the implementation of API-based submission via machine-to-machine modality and the use of IFSS Submission Portal of covered institutions are provided in Memorandum No. M-2023-022 dated 20 July 2023. 013 Page 2 of 2 For",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-005.pdf",
+   "title": "[PDF] MEMORANDUM No. M-2026-005 - Bangko Sentral ng Pilipinas",
+   "snippet": "Meanwhile. more rigorous EDD shall be applied when transactions deviate from a customer's expected behavior or present heightened risks, BSFls must ensure that EDD procedures do riot unduly delay legitimate transactions by streamlining processes and providing branch personnel with targeted training to promote consistent, efficient. and effective implementation, For guidance and strict implementation. [...] Subject MEMORANDUM No. M-2026-005 OFFICE OFTHE GOVERNOR BSFls may also adopt streamlined EDD considering the customer's risk rofile.\nnature of business or operations, and transaction pattern",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2022/M-2022-042.pdf",
+   "title": "M-2022-042.pdf",
+   "snippet": "principles in the corporate governance and risk management frameworks as well as in the business strategies and operations of banks. One of the major expectations under the Sustainable Finance Framework is the development and implementation of Environmental and Social Risk Management (ESRM) System. This guide describes the BSP’s minimum expectations as embodied in the issued Circulars and provides information and reference to publications of the Central Banks and Supervisors Network for [...] These issuances emphasize the tone from the top and set out the duties and responsibilities of the boa",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se Status of the BSP Model Risk Management framework, which the paper calls \"forthcoming\". A draft MRM circular covering the full model life cycle and risk-based model inventory tiering was reported as p": [
+  {
+   "url": "https://www.bakermckenzie.com/en/insight/publications/2026/07/philippines-bsp-releases-ai-governance-framework",
+   "title": "Philippines: BSP Releases AI Governance Framework | Insight | Baker McKenzie",
+   "snippet": "The Bangko Sentral ng Pilipinas (BSP) has issued Memorandum No. M-2026-031, introducing governance principles for the use of artificial intelligence in the financial sector. The guidance sets out supervisory expectations to help BSP-supervised financial institutions develop AI governance and risk management frameworks proportionate to their operations. It emphasizes ethical, transparent, and accountable AI adoption while addressing risks such as bias, data privacy, and misuse. The principles [...] For a detailed analysis of BSP Memorandum No. M-2026-031, read the full alert on quisumbingtorres",
+   "published_date": null
+  },
+  {
+   "url": "https://worldngayon.com/bsp-stars-framework",
+   "title": "BSP STARS Framework 2026: How the Philippines Regulates AI in Banking",
+   "snippet": "The framework refers to the set of principles and expectations the Bangko Sentral ng Pilipinas has established for how banks and other BSP-supervised financial institutions (BSFIs) should develop, deploy, and monitor artificial intelligence systems. The framework was issued through Memorandum No. M-2026-031, dated June 24, 2026, and announced publicly on June 30 through a guidance paper titled “Governance Principles for Artificial Intelligence in Financial Services.” [...] issued Memorandum No. M-2026-031, titled “Governance Principles for Artificial Intelligence in Financial Services” — the P",
+   "published_date": null
+  },
+  {
+   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+   "title": "AI Risk Management Framework",
+   "snippet": "Released on January 26, 2023, the Framework was developed through a consensus-driven, open, transparent, and collaborative process that included a Request for Information, several draft versions for public comments, multiple workshops, and other opportunities to provide input. It is intended to build on, align with, and support AI risk management efforts by others (Fact Sheet). [...] Second draft of the AI Risk Management Framework (August 18, 2022)\n   Initial draft of the AI Risk Management Framework(March 17, 2022)\n   Concept paper to help guide development of the AI Risk Management Framewor",
+   "published_date": null
+  },
+  {
+   "url": "https://tradingkey.com/news/economic-indicator/261822737-fxstr",
+   "title": "PHP: BSP tightening supports Peso but risks linger – OCBC",
+   "snippet": "TradingKey - On November 16, the three major U.S. stock indices fell sharply across the board. Concerns surrounding AI industry valuations, Nvidia's (NVDA) governance, and export restrictions on advanced chips continued to mount, with chip, cloud computing, and data center stocks leading the decline\n\nTradingKey2 hours ago\n\n### Kospi Falls Below 5,000 Mark, Nikkei Drops 1% as Samsung Electronics Slides 3%, SoftBank and Kioxia Slump Over 4% [...] On Monday, November 16, Eastern Time, U.S. stocks moved lower, with technology shares serving as the primary drag. Nvidia extended its losses as invest",
+   "published_date": null
+  },
+  {
+   "url": "https://www.cbinsights.com/company/bsp-group",
+   "title": "BSP - Products, Competitors, Financials, Employees, Headquarters Locations",
+   "snippet": "Sep 17, 2026\n\nFranklin BSP Realty Trust, Inc. benoemt Jerry Baglien tot Co-President\n\nSep 3, 2026\n\nBSP announces major leadership restructure in Fiji\n\nAug 22, 2026\n\nDie BFL-Aktie profitiert von steigenden Zinsen und höherem Halbjahresgewinn\n\n### BSPFrequently Asked Questions (FAQ)\n\n When was BSP founded?\n\n  BSP was founded in 1957.\n Where is BSP's headquarters?\n\n  BSP's headquarters is located at Klinki Street, Waigani Drive, Port Moresby.\n What is BSP's latest funding round? [...] ## About BSP\n\nBSP is a financial institution that provides banking services in the personal, business, and intern",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se Whether the BSP has since issued binding AI regulations, FAQs or examination procedures implementing these principles. |site:bsp.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-003.pdf",
+   "title": "[PDF] MEMORANDUM NO. M-2026-___ 003",
+   "snippet": "Page 1 of 3 OFFICE OF THE DEPUTY GOVERNOR | FINANCIAL SUPERVISION SECTOR MEMORANDUM NO. M-2026-___ To : All BSP Supervised Financial Institutions (BSFIs) Subject : Reminders on Sound Risk Management Practices when Dealing with Virtual Asset Service Providers (VASPs) Consistent with Parts 9 and 2 of the Manual of Regulations for Banks (MORB) and Manual of Regulations for Non-Bank Financial Institutions – M regulations (MORNBFI – M), respectively, BSFls are reminded to ensure the soundness and [...] provisions under BSP Memorandum M-2019-021 dated 23 July 2019. For guidance and strict compliance",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/M-2024-013.pdf",
+   "title": "[PDF] memorandum no. m-2024 - BSP",
+   "snippet": "banking days after reference period. The end-December 2023 report shall be submitted to the Department of Supervisory Analytics (DSA) on or before 31 May 2024. Subsequent reporting periods shall be due within the prescribed deadline. For covered banks 4. Detailed guidelines on the implementation of API-based submission via machine-to-machine modality and the use of IFSS Submission Portal of covered institutions are provided in Memorandum No. M-2023-022 dated 20 July 2023. 013 Page 2 of 2 For [...] be accepted and validated, subject to applicable sanctions for reporting violations as provided u",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-005.pdf",
+   "title": "[PDF] MEMORANDUM No. M-2026-005 - Bangko Sentral ng Pilipinas",
+   "snippet": "Meanwhile. more rigorous EDD shall be applied when transactions deviate from a customer's expected behavior or present heightened risks, BSFls must ensure that EDD procedures do riot unduly delay legitimate transactions by streamlining processes and providing branch personnel with targeted training to promote consistent, efficient. and effective implementation, For guidance and strict implementation. [...] February 2026 I^,.^ Including BSP Memorandum No. M-2025 036 dated 30 October 2025 containing the Fre uentl Asked Q t' on the Regulation on Large Value Cash Transactions ELI M. REMOLONA. R.\nG",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Pages/IRG/irg-files/Philippine%20Macroeconomic%20Presentation%20Toward%20Economy%20%28October%202025%29.pdf",
+   "title": "PowerPoint Presentation",
+   "snippet": "▪ Adoption of Payment System Oversight Framework (PSOF), which sets out a risk -based oversight approach over payment systems and f inancial \n\nmarket infrastructures \n\n▪ Regulatory Sandbox Framework, which fosters an enabling environment for responsible innovation on inclusive digital financial ec osystem \n\n▪ Consumer protection and digital literacy \n\nRegulatory Approach \n\n# VIII. Strong Foundation for Digital Payments \n\n> Source: BSP",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/SitePages/Regulations/GuidelinesAndOtherRegulations.aspx",
+   "title": "Bangko Sentral ng Pilipinas\r\n            \r\n            \r\n            Regulations",
+   "snippet": "The Technical Note on “Focused Update of the BCP” contains an assessment on the BSP’s compliance with the standards for sound prudential regulation and supervision of banks. Said Technical Note recognizes the improvements in the regulatory and the supervisory framework for banks since the last FSAP mission. The Technical Note on Access to Finance, on the other hand, speaks of the progress made by the BSP in strengthening the regulatory framework for advancing microfinance and mobile financial [...] The International Monetary Fund (IMF) and The World Bank jointly conducted the Financial Sector ",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se Whether the BSP has since issued binding AI regulations, FAQs or examination procedures implementing these principles.": [
+  {
+   "url": "https://www.dataguidance.com/opinion/philippines-bsp-issues-governance-principles-ai",
+   "title": "Philippines: BSP issues governance principles for AI in financial services | Opinion | DataGuidance",
+   "snippet": "### Things to Consider\n\n   Develop AI Governance Framework: Financial institutions should develop AI governance frameworks based on the STARS principles to ensure ethical and responsible AI use and enhance public trust.\n\n Frequently Asked Questions \n\nIs compliance with the Guidance mandatory?\n\n No, compliance with the Guidance is voluntary and nonbinding. \n\nWhat is the AI system lifecycle according to the Guidance? [...] (BSFIs), issued Memorandum No. M-2026-031, which comprises guidance entitled Governance Principles for Artificial Intelligence (AI) in Financial Services (the Guidance).The Gu",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-034.pdf",
+   "title": "MEMORANDUM NO. M-2026-_____ - BSP",
+   "snippet": "identified, assessed, and mitigated. Finally, BSIs are recommended to formally develop their own AI Governance Framework, proportionate to the nature, extent, scale, complexity, and materiality of their AI systems, as well as the institution’s overall operational complexity and risk profile, following the principles set forth under BSP Memorandum No. M-2026-031 dated 24 June 2026. For information and guidance. LYN I. JAVIER Deputy Governor __ July 2026 06 Digitally signed by Lyn I. Javier Date: [...] Page 1 of 2 OFFICE OF THE DEPUTY GOVERNOR I FINANCIAL SUPERVISION SECTOR MEMORANDUM NO. M-2026",
+   "published_date": null
+  },
+  {
+   "url": "https://tradingkey.com/news/economic-indicator/261822737-fxstr",
+   "title": "PHP: BSP tightening supports Peso but risks linger – OCBC",
+   "snippet": "TradingKey - On November 16, the three major U.S. stock indices fell sharply across the board. Concerns surrounding AI industry valuations, Nvidia's (NVDA) governance, and export restrictions on advanced chips continued to mount, with chip, cloud computing, and data center stocks leading the decline\n\nTradingKey2 hours ago\n\n### Kospi Falls Below 5,000 Mark, Nikkei Drops 1% as Samsung Electronics Slides 3%, SoftBank and Kioxia Slump Over 4% [...] On Monday, November 16, Eastern Time, U.S. stocks moved lower, with technology shares serving as the primary drag. Nvidia extended its losses as invest",
+   "published_date": null
+  },
+  {
+   "url": "https://tavily.com/knowledge/company/l62HhDiM48yG",
+   "title": "BSP",
+   "snippet": "# BSP\nID: l62HhDiM48yG\nWebsite: www.bsp.lu\nLegal name: Bonn Steichen & Partners S.C.S\nHeadquarters: Leudelange, Luxembourg\nLinkedIn: www.linkedin.com/company/bonn-steichen-%26-partners · 7,377 followers\nIndustry: Law Practice\nIndustry codes: SIC 81, 811, NAICS 54111, 541\nCompany type: Self-Employed\nFounded: 2012\nBusiness model: B2B\nSaaS: no [...] Products: Banking and Financial Services Legal Advice, Capital Markets Legal Services, Corporate and M&A Legal Services, Private Equity Legal Services, Data Protection and Privacy Legal Advice, Arbitration Services, Litigation Services, Employment Law",
+   "published_date": null
+  },
+  {
+   "url": "https://tracxn.com/d/legal-entities/germany/bsp-gmbh/__kKrhs07TygU37qi0NIxDy0Zsd5DSbvCx3CUO91bKju4",
+   "title": "BSP GmbH - 2026 Company Profile - Tracxn",
+   "snippet": "JavaScript is disabled in your browser. enable it to enjoy the full features of Tracxn.\n\nTracxn.com\nAndroid\nApple\nChrome Web Store\nFirefox Extension\nTracxn AI Suite\n\nAI-powered market intelligence across companies, investors, and sectors.\n\n# BSP GmbH - Company Profile\n\n## About BSP GmbH\n\n## Contact Details for BSP GmbH\n\n## Financials of BSP GmbH\n\n## Latest cap tables and shareholding of BSP GmbH\n\n## FAQs about BSP GmbH\n\nAccel Partners\nPartech\nIN-Q-TEL - US\nFujitsu\nTenity\nStanford",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se The 2024 thematic review on AI and ML in Philippine financial services cited in the paper (named \"Project Sapiens\"). Its findings may not be public. |site:bsp.gov.ph,officialgazette.gov.ph": [
+  {
+   "url": "https://www.bsp.gov.ph/Media_And_Research/Publications/EN25-01.pdf",
+   "title": "[PDF] OPPORTUNITIES AND CHALLENGES IN THE PHILIPPINE IT-BPM ...",
+   "snippet": "export revenues and creating jobs. The rise of generative artificial intelligence (GenAI), along with the increasing adoption of emerging technologies, is reshaping business operations in the country, presenting both opportunities and challenges. This paper presents findings from the Bangko Sentral ng Pilipinas (BSP)’s consultation meetings with key stakeholders, which indicate that GenAI is expected to augment, rather than displace, jobs in the near term. These insights underscore the urgent [...] of AI-related regulatory frameworks in the Philippines have prompted companies to adopt a cautio",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-003.pdf",
+   "title": "[PDF] MEMORANDUM NO. M-2026-___ 003",
+   "snippet": "Program (MTPP). Therefore, to promote consumer protection and ﬁnancial integrity, BSFIs are expected to observe the following: 1. Deal only with: a. VASPs that are duly registered with and authorized by the Bangko Sentral ng Pilipinas (BSP). b. Crypto Asset Service Providers (CASPs) that are duly registered with and authorized by the Securities and Exchange Commission (SEC). c. Offshore VASPs that are duly registered/licensed/authorized to operate as a VASP or CASP in their home country. d. [...] Page 1 of 3 OFFICE OF THE DEPUTY GOVERNOR | FINANCIAL SUPERVISION SECTOR MEMORANDUM NO. M-2026-___",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/M-2024-013.pdf",
+   "title": "[PDF] memorandum no. m-2024 - BSP",
+   "snippet": "banking days after reference period. The end-December 2023 report shall be submitted to the Department of Supervisory Analytics (DSA) on or before 31 May 2024. Subsequent reporting periods shall be due within the prescribed deadline. For covered banks 4. Detailed guidelines on the implementation of API-based submission via machine-to-machine modality and the use of IFSS Submission Portal of covered institutions are provided in Memorandum No. M-2023-022 dated 20 July 2023. 013 Page 2 of 2 For [...] Chuchi G. Fonacier Date: 2024.04.26 22:04:27 +08'00' [...] be accepted and validated, subject to ",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/M-2024-043.pdf",
+   "title": "[PDF] MEMORANDUM NO. M-2024-____",
+   "snippet": "Only BSFIs that are actively participating in the pilot test in accordance with the provisions of item 3 shall be eligible for the grace period. Queries on the pilot test and/or clarifications about COCREE 2.0, can be referred to CRSU at (632) 5306-2561, (632) 5306-3128 and cocree@bsp.gov.ph. For compliance and proper guidance. CHUCHI G. FONACIER Deputy Governor ___ December 2024 19 Digitally signed by Chuchi G. Fonacier Date: 2024.12.19 11:00:48 +08'00' [...] environment of COCREE 2.0 will be later released by the Credit Reporting System Unit (CRSU). 1/ Other related regulatory issuances are ",
+   "published_date": null
+  },
+  {
+   "url": "https://www.bsp.gov.ph/Regulations/Issuances/2026/M-2026-005.pdf",
+   "title": "[PDF] MEMORANDUM No. M-2026-005 - Bangko Sentral ng Pilipinas",
+   "snippet": "Meanwhile. more rigorous EDD shall be applied when transactions deviate from a customer's expected behavior or present heightened risks, BSFls must ensure that EDD procedures do riot unduly delay legitimate transactions by streamlining processes and providing branch personnel with targeted training to promote consistent, efficient. and effective implementation, For guidance and strict implementation. [...] Subject MEMORANDUM No. M-2026-005 OFFICE OFTHE GOVERNOR BSFls may also adopt streamlined EDD considering the customer's risk rofile.\nnature of business or operations, and transaction pattern",
+   "published_date": null
+  }
+ ],
+ "Philippines BSP Memorandum No. M-2026-031 — Guidance Paper on Governance Principles for Artificial Intelligence (AI) in Financial Se The 2024 thematic review on AI and ML in Philippine financial services cited in the paper (named \"Project Sapiens\"). Its findings may not be public.": [
+  {
+   "url": "https://www.dataguidance.com/opinion/philippines-bsp-issues-governance-principles-ai",
+   "title": "Philippines: BSP issues governance principles for AI in financial services | Opinion | DataGuidance",
+   "snippet": "(BSFIs), issued Memorandum No. M-2026-031, which comprises guidance entitled Governance Principles for Artificial Intelligence (AI) in Financial Services (the Guidance).The Guidance sets out principles for the ethical and [...] Governance Principles: BSP issued voluntary governance principles for ethical AI use in financial services, based on the STARS framework.\n   Cybersecurity Recommendations: BSP provided recommendations for managing cybersecurity risks from frontier AI systems.\n   Scope and Compliance: Guidance applies to BSP-supervised financial institutions and vendors, with voluntary c",
+   "published_date": null
+  },
+  {
+   "url": "https://tavily.com/knowledge/company/qvVv7hXvSu0u",
+   "title": "Project Sapiens",
+   "snippet": "# Project Sapiens\nID: qvVv7hXvSu0u\nWebsite: www.projectsapiens.ai\nHeadquarters: London, Essex, United Kingdom\nLinkedIn: www.linkedin.com/company/project-sapiens · 5 followers\nIndustry: Technology, Information and Internet\nIndustry codes: SIC 87, 873, NAICS 54, 541\nCompany type: Public Company\nBusiness model: B2B\nSaaS: yes\nDescription: DreamHost is a company that provides website search and support services. [...] ## Products and services\nBusiness areas: Artificial Intelligence Software, Custom AI Solutions, AI Product Development, Enterprise AI Integration\nProducts: Large Language Model Soluti",
+   "published_date": null
+  },
+  {
+   "url": "https://www.cbinsights.com/company/sapiens-intelligence/alternatives-competitors",
+   "title": "Top Sapiens Intelligence Alternatives, Competitors",
+   "snippet": "Spring Labs provides automation solutions for customer experience and compliance within the financial services sector. The company offers solutions for complaints management, including conversation intelligence, regulatory tracking, and templated responses, aimed at improving operational processes and compliance. Spring Labs serves sponsor banks, BaaS platforms, fintechs, and consumer banks with its platforms. Spring Labs was formerly known as Springcoin. It was founded in 2017 and is based in [...] Credolab is a company specializing in alternative credit scoring, fraud detection, and marketin",
+   "published_date": null
+  },
+  {
+   "url": "https://www.cbinsights.com/company/sapiens-intelligence/people",
+   "title": "Sapiens Intelligence CEO, Founder, Key Executive Team, Board of Directors & Employees",
+   "snippet": "Spring Labs provides automation for compliance and customer experience within the financial services sector. The company offers a platform that includes tools for governance, risk, and compliance management, as well as customer experience optimization through conversation intelligence and sentiment analysis. Spring Labs primarily serves banks, fintechs, and enterprise financial institutions, delivering solutions for compliance workflows and customer interactions. It was founded in 2017 and is [...] Credolab is a company specializing in alternative credit scoring, fraud detection, and marketing",
+   "published_date": null
+  },
+  {
+   "url": "https://finance.yahoo.com/news/future-financial-services-thematic-intelligence-080200955.html",
+   "title": "The Future of Financial Services Thematic Intelligence 2024: Impacts of Ai, Cryptocurrencies, Quantum Computing, Big Tech Finance, Robotics, and Climate Change",
+   "snippet": "The report examines how themes like artificial intelligence, cryptocurrencies, quantum computing, Big Tech finance, robotics, and climate change will transform financial services, providing signals and innovation case studies. It also evaluates the global outlook for the industry and how areas such as biometrics, the Lightning Network, and space travel will impact it.  \n  \nScope [...] Key Topics Covered:\n\n Executive Summary\n Artificial Intelligence\n Cryptocurrencies\n Quantum Computing\n Big Tech Finance\n Insuring the Future\n Glossary\n\nCompanies Featured [...] The report uses the analyst's uniqu",
+   "published_date": null
+  }
  ]
 }
