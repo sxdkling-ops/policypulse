@@ -3,6 +3,8 @@
 > Geek Room Global AI Hackathon 2026 · **Bifrost track: Open-Source Bifrost Gateway** (extend Bifrost with a
 > practical feature) · Tavily integration: *Build a Stale-Answer Detector for AI Applications*
 
+![The idea: every AI answer that passes through your gateway is fact-checked against the live web](docs/images/the-idea.png)
+
 LLMs answer with confidence, but laws, regulator circulars, prices, model versions and company facts change
 after the training cutoff. Every app built on an LLM inherits that problem, and in AI governance, risk and
 compliance a stale answer can mean a missed deadline, a wrong control or a fine.
@@ -15,14 +17,7 @@ The checking engine is **PolicyPulse**: it extracts time-sensitive claims, re-ve
 **Tavily** (official regulator and vendor sites first), and gives every claim a verdict and an explainable
 0–100 freshness score.
 
-```text
-your app ──► Bifrost ──► Claude / Groq / any provider
-                │
-                └─ Freshness Guard plugin (HTTPTransportPostHook)
-                      └─► PolicyPulse /check ──► Tavily (official sites first) + LLM judge via Bifrost
-                │
-your app ◄── answer + verdicts  (annotate)  ·  corrected answer (fix)  ·  HTTP 422 (block)
-```
+![How Freshness Guard works inside Bifrost](docs/images/gateway-flow.png)
 
 ### Real result through the gateway
 
@@ -39,9 +34,10 @@ In `fix` mode the same request comes back **200 · fixed**, with only the stale 
 
 ## Demo videos
 
-- ▶ **Freshness Guard plugin (2:32):** [docs/Freshness_Guard_Demo.mp4](docs/Freshness_Guard_Demo.mp4): the
-  one-command Docker build, a stale answer blocked with HTTP 422 at the gateway, the same answer fixed, the
-  plugin code, and the PolicyPulse tools behind it. All requests are live.
+- ▶ **Freshness Guard plugin (3:27):** [docs/Freshness_Guard_Demo.mp4](docs/Freshness_Guard_Demo.mp4): starts
+  with the idea and the problem it solves, then the one-command Docker build, a stale answer blocked with
+  HTTP 422 at the gateway, the same answer fixed, the plugin code, and the PolicyPulse tools behind it. All
+  requests are live.
 - **PolicyPulse checker app (4:17):** [YouTube](https://youtu.be/ktF9vd21EIM) ·
   [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4): every tab of the compliance app.
 
