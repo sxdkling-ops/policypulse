@@ -128,7 +128,7 @@ To build against a local Bifrost checkout instead, copy `main.go` and `guard.go`
 - `guard_test.go`: 21 unit tests. All modes, the per-request header, cache hits, expiry and disabling, smart
   skip, sampling, model filters, bounded background checks, fail-open and fail-closed, webhook events, config
   validation, and the three hooks driven with Bifrost's own `schemas` types (including two interleaved streams).
-- `scripts/e2e_test.py` (repository root): 27 checks against a real Bifrost with the plugin loaded, run in CI
+- `scripts/e2e_test.py` (repository root): 29 checks against a real Bifrost with the plugin loaded, run in CI
   on every push with no API keys.
 
 ## Proposed upstream shape

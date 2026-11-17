@@ -16,6 +16,8 @@ import (
 	"github.com/maximhq/bifrost/core/schemas"
 )
 
+const bifrostRequestIDHeader = "x-bifrost-request-id"
+
 var (
 	mu    sync.RWMutex
 	guard *Guard
@@ -59,7 +61,11 @@ func HTTPTransportPostHook(ctx *schemas.BifrostContext, req *schemas.HTTPRequest
 	if g == nil || req == nil || resp == nil {
 		return nil
 	}
-	out := g.ProcessID(requestID(ctx), req.Headers, req.Path, req.Body, resp.StatusCode, resp.Body)
+	id := requestID(ctx)
+	if id == "" {
+		id = headerValue(resp.Headers, bifrostRequestIDHeader)
+	}
+	out := g.ProcessID(id, req.Headers, req.Path, req.Body, resp.StatusCode, resp.Body)
 	if out.Action == "" {
 		return nil
 	}
@@ -103,7 +109,7 @@ func HTTPTransportResponseHeadersHook(ctx *schemas.BifrostContext, req *schemas.
 	resp.SetHeader("x-freshness-status", "pending")
 	id := requestID(ctx)
 	if id == "" {
-		id = resp.Header("x-request-id")
+		id = resp.Header(bifrostRequestIDHeader) // not x-request-id: providers overwrite that one
 	}
 	if id != "" {
 		resp.SetHeader("x-freshness-check-id", id)

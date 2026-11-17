@@ -504,7 +504,9 @@ func TestStreamIsCollectedAndAudited(t *testing.T) {
 	req := &schemas.HTTPRequest{Method: "POST", Path: chatPath, Headers: map[string]string{},
 		Body: []byte(`{"model":"groq/openai/gpt-oss-120b","stream":true}`)}
 
-	meta := &schemas.HTTPResponseMetadata{StatusCode: 200, Headers: map[string]string{"X-Request-Id": id}}
+	// providers overwrite x-request-id with their own ID; the plugin must use Bifrost's
+	meta := &schemas.HTTPResponseMetadata{StatusCode: 200, Headers: map[string]string{
+		"X-Request-Id": "req_provider_123", "X-Bifrost-Request-Id": id}}
 	if err := HTTPTransportResponseHeadersHook(nil, req, meta); err != nil {
 		t.Fatal(err)
 	}
@@ -590,5 +592,12 @@ func TestCheckIDIsBifrostRequestID(t *testing.T) {
 	}
 	if resp.Headers["x-freshness-check-id"] != "req-42" {
 		t.Errorf("check id = %q, want the Bifrost request ID", resp.Headers["x-freshness-check-id"])
+	}
+	// without a context ID, the response header is used
+	resp = &schemas.HTTPResponse{StatusCode: 200, Headers: map[string]string{"X-Bifrost-Request-Id": "req-43"},
+		Body: chatResponse(staleAnswer)}
+	_ = HTTPTransportPostHook(nil, req, resp)
+	if resp.Headers["x-freshness-check-id"] != "req-43" {
+		t.Errorf("check id = %q, want the x-bifrost-request-id header value", resp.Headers["x-freshness-check-id"])
 	}
 }

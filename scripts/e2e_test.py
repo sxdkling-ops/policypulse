@@ -128,6 +128,8 @@ status, h, text, ms = chat(Q_ANTHROPIC)  # no header: the gateway's configured m
 check("HTTP 200 and status pending", status == 200 and h.get("x-freshness-status") == "pending",
       f"{status} {h.get('x-freshness-status')}")
 check("body untouched", "freshness" not in json.loads(text))
+check("check ID is the Bifrost request ID", h.get("x-freshness-check-id") == h.get("x-bifrost-request-id"),
+      str(h.get("x-freshness-check-id")))
 ev = audit_event(h.get("x-freshness-check-id", "missing"))
 check("audit event arrives", ev is not None)
 check("audit event has a score and stale claims", bool(ev) and ev.get("score") is not None and ev.get("stale_claims", 0) > 0,
@@ -140,8 +142,8 @@ streamed = "".join(json.loads(c[6:])["choices"][0].get("delta", {}).get("content
                    if json.loads(c[6:]).get("choices"))
 check("stream delivered intact", status == 200 and streamed.strip() == original.strip(), f"{len(chunks)} chunks")
 check("stream marked pending", h.get("x-freshness-status") == "pending", str(h.get("x-freshness-status")))
-stream_id = h.get("x-freshness-check-id") or h.get("x-request-id") or h.get("x-bifrost-request-id") or "missing"
-check("stream check ID is the Bifrost request ID", stream_id == h.get("x-request-id", stream_id), stream_id)
+stream_id = h.get("x-freshness-check-id", "missing")
+check("stream check ID is the Bifrost request ID", stream_id == h.get("x-bifrost-request-id"), stream_id)
 ev = audit_event(stream_id)
 check("stream audit event arrives", bool(ev) and ev.get("stream") is True and ev.get("action") == "audited",
       json.dumps({k: ev.get(k) for k in ("action", "stream", "cache", "score")}) if ev else "")
