@@ -37,9 +37,13 @@ In `fix` mode the same request comes back **200 · fixed**, with only the stale 
 
 ![Freshness Guard fixing a stale answer](screenshots/0b_freshness_guard_fix.png)
 
-## Demo video
+## Demo videos
 
-▶ **[Watch the demo on YouTube](https://youtu.be/ktF9vd21EIM)** · or download [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4)
+- ▶ **Freshness Guard plugin (2:32):** [docs/Freshness_Guard_Demo.mp4](docs/Freshness_Guard_Demo.mp4): the
+  one-command Docker build, a stale answer blocked with HTTP 422 at the gateway, the same answer fixed, the
+  plugin code, and the PolicyPulse tools behind it. All requests are live.
+- **PolicyPulse checker app (4:17):** [YouTube](https://youtu.be/ktF9vd21EIM) ·
+  [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4): every tab of the compliance app.
 
 ## Quick start (one command)
 
