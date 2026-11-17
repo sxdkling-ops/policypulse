@@ -82,24 +82,31 @@ verdicts arrive in the audit log (`GET http://localhost:8000/audit`) and the **G
 
 ## Results
 
-**Blocked at the gateway.** Asked for Anthropic's newest model and price, Groq's `gpt-oss-120b` (2024
-knowledge) answered with an old model and old prices. With `x-freshness-guard: block`, Bifrost returned 422:
+All four screenshots are live requests through Bifrost to Groq's `gpt-oss-120b` (knowledge from 2024), asked
+for Anthropic's newest model and its price. It answered with an old model and old prices.
+
+**Audit mode (the default): no added latency.** The answer came back in 2.1 s, untouched and marked
+`pending`. The check finished in the background and scored it 18/100 with 3 stale claims.
+
+![Audit mode: the answer returns at once, the verdict follows](screenshots/0a_audit_mode.png)
+
+**Block mode: stale answers never reach the app.** Bifrost returned HTTP 422 with the score in the headers.
 
 ![Freshness Guard blocking a stale answer](screenshots/0_freshness_guard_block.png)
 
-**Fixed at the gateway.** The same request in `fix` mode comes back 200 with only the stale parts rewritten:
+**Fix mode: only the stale parts are rewritten.** The app receives the corrected answer (red removed, green
+added); the original is kept in the response for audit.
 
 ![Freshness Guard fixing a stale answer](screenshots/0b_freshness_guard_fix.png)
 
-**What the operator sees.** Live audit results for the same questions sent to two models through one gateway:
+**What the operator sees.** Live audit results for the same questions sent to two models through one gateway.
+The 2024-era model averages 38; the current model 60, because even a current model has stale answers.
 
 ![Gateway audit: freshness by model](screenshots/0c_gateway_audit.png)
 
-Measured on the live stack:
-
 | | `audit` mode | `annotate` / `fix` / `block` |
 |---|---|---|
-| Added latency | **about 0** (the check runs after the response; a request took 1.0 s end to end) | one live check, typically 15–60 s |
+| Added latency | **none**: requests returned in 1–2 s, the model's own response time | one live check, typically 15–60 s |
 | Repeat of a known answer | annotated at once from the cache | served from the cache |
 | Answer with nothing time-sensitive | skipped, no cost | skipped, no cost |
 
@@ -196,12 +203,12 @@ PolicyPulse ships a Streamlit app (http://localhost:8501):
   are LLM steps, all routed through Bifrost. The freshness score is computed, not generated.
 - **Built with Claude Code:** this project was designed and coded with Claude Code.
 
-## Demo videos
+## Demo video and pitch deck
 
-- ▶ **Freshness Guard plugin:** [docs/Freshness_Guard_Demo.mp4](docs/Freshness_Guard_Demo.mp4): the idea and
-  the problem it solves, then the live gateway.
-- **PolicyPulse checker app:** [YouTube](https://youtu.be/ktF9vd21EIM) ·
-  [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4): every tab of the compliance app.
+- ▶ **Demo video (4 min):** [docs/Freshness_Guard_Demo.mp4](docs/Freshness_Guard_Demo.mp4). The idea and the
+  problem it solves, then the live gateway: audit mode, smart skip, a stale answer blocked and fixed, the
+  operator dashboard, the plugin code, the tests and CI. Every request in it is live.
+- **Pitch deck (18 slides):** [docs/Freshness_Guard_Deck.pptx](docs/Freshness_Guard_Deck.pptx)
 
 ## Repository layout
 
@@ -257,7 +264,7 @@ briefs, included for the demo only and not covered by the Apache licence (see [N
 Not legal advice. Verify against official sources.
 
 <details>
-<summary>More screenshots of the PolicyPulse app</summary>
+<summary>More screenshots: the PolicyPulse checker app with the full 268-brief library</summary>
 
 **Check an Answer:** overall score, corrected answer (red removed, green added), verdict cards
 ![Check an Answer](screenshots/1_check_answer.png)
