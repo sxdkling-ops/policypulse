@@ -38,6 +38,11 @@ SAMPLES = {
 
 # ---------- helpers ----------
 def setup_warnings():
+    if config.DEMO_MODE:
+        st.info("Keyless demo: Bifrost and the Freshness Guard plugin are real; the model is a mock that replays "
+                "answers from a 2024-era model, and the checker replays the live checks recorded for them. The "
+                "first two tabs work here. The other tabs need the full stack with API keys.")
+        return
     if not config.TAVILY_API_KEY:
         st.warning("TAVILY_API_KEY is missing in .env, so live verification is off (cached results still work).")
     if config.USING_SAMPLE_KB:
@@ -128,24 +133,33 @@ setup_warnings()
 
 with st.sidebar:
     st.subheader("Gateway")
-    llm.SIMULATE_PRIMARY_FAILURE = st.toggle(
-        "Simulate primary provider failure", value=False,
-        help="Sends the request to a broken primary model so Bifrost must use the Groq fallback.")
-    st.caption("Turn on, then run any check: Bifrost reroutes every LLM call to Groq and the Gateway tab "
-               "logs it as a fallback.")
-    st.caption(f"Bifrost: {config.BIFROST_URL}  \nPrimary: {config.PRIMARY_MODEL}  \nFallback: {config.FALLBACK_MODEL}")
+    if config.DEMO_MODE:
+        st.caption(f"Bifrost: {config.BIFROST_URL}  \nModel: openai/mock-2024 (demo)  \nChecker: replay mode")
+    else:
+        llm.SIMULATE_PRIMARY_FAILURE = st.toggle(
+            "Simulate primary provider failure", value=False,
+            help="Sends the request to a broken primary model so Bifrost must use the Groq fallback.")
+        st.caption("Turn on, then run any check: Bifrost reroutes every LLM call to Groq and the Gateway log "
+                   "tab shows it as a fallback.")
+        st.caption(f"Bifrost: {config.BIFROST_URL}  \nPrimary: {config.PRIMARY_MODEL}  \n"
+                   f"Fallback: {config.FALLBACK_MODEL}")
     _idx = load_json(str(config.INDEX_JSON)) or []
     st.caption(f"Knowledge base: {'sample' if config.USING_SAMPLE_KB else 'full library'} ({len(_idx)} briefs)")
 
-tabs = st.tabs(["Freshness Guard (Bifrost plugin)", "Check an Answer", "Ask the KB", "KB Freshness Audit",
-                "Verification Register", "Gateway log"])
+t_guard, t_audit, t_check, t_ask, t_kb, t_reg, t_gw = st.tabs([
+    "Freshness Guard (Bifrost plugin)", "Gateway audit", "Check an Answer", "Ask the KB", "KB Freshness Audit",
+    "Verification Register", "Gateway log"])
 
-# 0. Freshness Guard: the Bifrost plugin, seen from a client app
-with tabs[0]:
+# Freshness Guard: the Bifrost plugin, seen from a client app
+with t_guard:
     guard_demo.render()
 
+# Gateway audit: what the plugin reported for every answer it checked
+with t_audit:
+    guard_demo.render_audit()
+
 # 1. Check an Answer
-with tabs[1]:
+with t_check:
     pick = st.selectbox("Load a sample answer", ["(paste your own)"] + list(SAMPLES))
     answer = st.text_area("LLM answer to check", value=SAMPLES.get(pick, ""), height=160)
     if st.button("Check freshness", type="primary", disabled=not answer.strip()):
@@ -154,7 +168,7 @@ with tabs[1]:
         show_report(st.session_state["check_report"], "check")
 
 # 2. Ask the KB
-with tabs[2]:
+with t_ask:
     q = st.text_input("Ask the AI GRC knowledge base", "When must a personal data breach be reported to the NPC?")
     if st.button("Ask", type="primary"):
         try:
@@ -193,7 +207,7 @@ with tabs[2]:
             show_report(kb["report"], "kb", extra_md=f"Question: {kb['q']}  \nKB briefs retrieved: {cites}")
 
 # 3. KB Freshness Audit
-with tabs[3]:
+with t_kb:
     index = load_json(str(config.INDEX_JSON))
     if not index:
         st.error("build/index.json not found. Run: python ingest.py")
@@ -225,7 +239,7 @@ with tabs[3]:
                    "see what falls due.")
 
 # 4. Verification Register
-with tabs[4]:
+with t_reg:
     reg = load_json(str(config.REGISTER_JSON))
     if not reg:
         st.error("build/register.json not found or empty. Run: python ingest.py")
@@ -270,7 +284,7 @@ with tabs[4]:
             st.download_button("Export CSV", csv.to_csv(index=False), file_name="register_verification.csv")
 
 # 5. Gateway
-with tabs[5]:
+with t_gw:
     st.markdown("Every LLM call goes through **Bifrost** (OpenAI-compatible gateway). The request names the "
                 f"primary model `{config.PRIMARY_MODEL}` and lists `{config.FALLBACK_MODEL}` in Bifrost's "
                 "`fallbacks` field, so Bifrost retries on Groq if the primary fails.")

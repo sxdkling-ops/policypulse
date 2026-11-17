@@ -1,0 +1,33 @@
+[
+ {
+  "match": [
+   "anthropic",
+   "claude"
+  ],
+  "prompt": "What is Anthropic's newest Claude model and what does its API cost per million tokens? Answer in 3 sentences.",
+  "answer": "Anthropic’s newest model is **Claude 4**, launched in early 2026 as the latest generation of its family‑wide AI assistants. The flagship Claude 4 Opus tier is priced at **$20 per 1 million tokens** (combined input + output). Smaller Claude 4 variants (e.g., Sonnet and Haiku) are offered at lower rates, but Opus represents the top‑of‑the‑line cost.",
+  "recorded_from": "groq/openai/gpt-oss-120b"
+ },
+ {
+  "match": [
+   "eu ai act"
+  ],
+  "prompt": "When did the EU AI Act enter into force? Answer in 2 sentences.",
+  "answer": "The EU AI Act entered into force on 6 July 2023, after being formally adopted by the European Parliament and Council earlier that year. Its substantive obligations will begin to apply 24 months later, on 6 July 2025.",
+  "recorded_from": "groq/openai/gpt-oss-120b"
+ },
+ {
+  "match": [
+   "microsoft"
+  ],
+  "prompt": "Who is the CEO of Microsoft and since when? Answer in 2 sentences.",
+  "answer": "Satya Nadella is the chief executive officer of Microsoft. He has held the position since February 2014, when he succeeded Steve Ballmer.",
+  "recorded_from": "groq/openai/gpt-oss-120b"
+ },
+ {
+  "match": [],
+  "prompt": "Explain in 2 sentences what an API gateway does.",
+  "answer": "An API gateway acts as a single entry point that routes client requests to the appropriate backend services, handling protocol translation, authentication, rate limiting, and other cross‑cutting concerns. It also aggregates responses, enforces security policies, and can provide caching or load‑balancing to improve performance and reliability.",
+  "recorded_from": "groq/openai/gpt-oss-120b"
+ }
+]

@@ -14,6 +14,10 @@ if not BIFROST_URL.endswith("/v1"):
     BIFROST_URL += "/v1"
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY") or os.getenv("TRAVILY") or ""
 
+# Checker API (audit log) and demo switches used by the Streamlit app.
+CHECKER_URL = os.getenv("CHECKER_URL", "http://localhost:8000").rstrip("/")
+DEMO_MODE = os.getenv("DEMO_MODE", "").strip() in ("1", "true", "yes")
+
 PRIMARY_MODEL = os.getenv("PRIMARY_MODEL", "anthropic/claude-haiku-5-5")
 FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "groq/openai/gpt-oss-120b")
 

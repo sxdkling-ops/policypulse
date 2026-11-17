@@ -1,0 +1,7 @@
+PolicyPulse Freshness Guard
+Copyright 2026 Salam Kling
+
+The source code in this repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The PDF documents under data/sample/ are reference briefs written by the author. They are included only so
+the demo runs out of the box, are not covered by the Apache License, and remain copyright of the author.

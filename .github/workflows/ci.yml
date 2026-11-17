@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  plugin-tests:
+    name: Plugin unit tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bifrost-plugin/freshnessguard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: bifrost-plugin/freshnessguard/go.mod
+          cache-dependency-path: bifrost-plugin/freshnessguard/go.sum
+      - name: gofmt
+        run: test -z "$(gofmt -l .)"
+      - name: go vet
+        run: go vet ./...
+      - name: go test
+        run: go test -count=1 -race ./...
+
+  e2e:
+    name: End to end in real Bifrost (no API keys)
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and start Bifrost + Freshness Guard, mock model and checker
+        run: docker compose -f docker-compose.demo.yml up --build -d bifrost policypulse-api mock-llm
+      - name: Plugin is loaded
+        run: |
+          for i in $(seq 1 60); do
+            docker compose -f docker-compose.demo.yml logs bifrost 2>&1 | grep -q "plugin status: freshness-guard - active" && exit 0
+            sleep 2
+          done
+          docker compose -f docker-compose.demo.yml logs bifrost
+          exit 1
+      - name: End-to-end test
+        run: python3 scripts/e2e_test.py http://localhost:8080 http://localhost:8000
+      - name: Logs on failure
+        if: failure()
+        run: docker compose -f docker-compose.demo.yml logs --tail 200

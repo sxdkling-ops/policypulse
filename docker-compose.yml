@@ -32,6 +32,7 @@ services:
     command: ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
     environment:
       BIFROST_URL: http://bifrost:8080/v1
+      CHECKER_URL: http://policypulse-api:8000
       TAVILY_API_KEY: ${TAVILY_API_KEY:?set TAVILY_API_KEY in .env}
       KB_PATH: ""
     ports:

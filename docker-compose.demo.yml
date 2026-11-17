@@ -1,0 +1,49 @@
+# Keyless demo: no API keys needed.
+#   docker compose -f docker-compose.demo.yml up --build
+# A mock model replays answers recorded from a real 2024-era model, and the checker replays the real live
+# checks recorded for those answers. Bifrost and the Freshness Guard plugin run for real.
+#   Bifrost  http://localhost:8080     App  http://localhost:8501     Checker  http://localhost:8000
+services:
+  mock-llm:
+    build:
+      context: .
+      dockerfile: docker/policypulse.Dockerfile
+    image: policypulse/app:latest
+    command: ["uvicorn", "demo.mock_llm:app", "--host", "0.0.0.0", "--port", "9000"]
+
+  policypulse-api:
+    image: policypulse/app:latest
+    environment:
+      POLICYPULSE_REPLAY: /app/demo/replay.json
+      POLICYPULSE_REPLAY_ONLY: "1"
+      KB_PATH: ""
+    ports:
+      - "${API_HOST_PORT:-8000}:8000"
+    depends_on:
+      - mock-llm
+
+  bifrost:
+    build:
+      context: .
+      dockerfile: docker/bifrost.Dockerfile
+    image: policypulse/bifrost-freshness:2.5.1
+    volumes:
+      - ./docker/bifrost-config.demo.json:/app/data/config.json:ro
+    ports:
+      - "${BIFROST_HOST_PORT:-8080}:8080"
+    depends_on:
+      - mock-llm
+      - policypulse-api
+
+  app:
+    image: policypulse/app:latest
+    command: ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    environment:
+      BIFROST_URL: http://bifrost:8080/v1
+      CHECKER_URL: http://policypulse-api:8000
+      DEMO_MODE: "1"
+      KB_PATH: ""
+    ports:
+      - "${APP_HOST_PORT:-8501}:8501"
+    depends_on:
+      - bifrost

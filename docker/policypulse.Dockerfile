@@ -5,6 +5,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY *.py ./
 COPY data/sample ./data/sample
+COPY demo ./demo
 COPY cache ./cache
 COPY .streamlit ./.streamlit
 # Build the KB index from the bundled sample PDFs (mount your own library and set KB_PATH to use it).

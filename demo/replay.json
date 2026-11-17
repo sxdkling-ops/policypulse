@@ -1,0 +1,469 @@
+{
+ "055036b9b9f53e7a6a78e3f720394fc67a93f7c5a09d1e8d44a243bcf85c0351": {
+  "overall_freshness": 38,
+  "has_stale_claims": true,
+  "corrected_answer": "Anthropic announced **Claude 4** as a generation of its family‑wide AI assistants, but it is no longer Anthropic's newest model. Newer models, including Claude Fable 5.1 and Mythos 5.1 (September 2026), have since been released, and Claude Opus 4.8 appears in Anthropic's release timeline. The flagship Claude 4 Opus tier is priced at **$20 per 1 million tokens** (combined input + output). Smaller Claude 4 variants (e.g., Sonnet and Haiku) are offered at lower rates, but Opus represents the top‑of‑the‑line cost.",
+  "claims": [
+   {
+    "claim": "Claude 4 is Anthropic's newest model.",
+    "category": "api_version",
+    "entities": [
+     "Anthropic",
+     "Claude 4"
+    ],
+    "implied_date": "2026-11-17",
+    "verdict": "Outdated",
+    "freshness_score": 0,
+    "score_parts": [
+     [
+      "Verdict: Outdated",
+      30
+     ],
+     [
+      "Backed by an official source",
+      -10
+     ],
+     [
+      "3 sources agree",
+      -10
+     ],
+     [
+      "Evidence from the last 12 months",
+      -10
+     ]
+    ],
+    "evidence": "Anthropic's Fable 5.1 and Mythos 5.1 announcement (September 2026) describes them as its most advanced models, well after Claude 4 (May 2025). Other sources also list later releases, including Claude Sonnet 5 and Opus 5, and the deprecation notices name newer replacement models.",
+    "suggested_correction": "Claude 4 is no longer Anthropic's newest model; Anthropic has since released newer models, including Claude Fable 5.1 and Mythos 5.1 (September 2026).",
+    "sources": [
+     {
+      "url": "https://www.anthropic.com/system-cards",
+      "title": "Model system cards \\ Anthropic",
+      "snippet": "May 2026\n\nRead system card\n\nClaude Fable 5 and Mythos 5\n\nJune 2026\n\nRead system card\n\nClaude Opus 4.7\n\nApril 2026\n\nRead system card\n\nMythos Preview\n\nApril 2026\n\nRead system card\n\nClaude Sonnet 4.6\n\nFebruary 2026\n\nRead system card\n\nClaude Opus 4.6\n\nFebruary 2026\n\nRead system card\n\nClaude Opus 4.5\n\nNovember 2025\n\nRead system card\n\nClaude Haiku 4.5\n\nOctober 2025\n\nRead system card\n\nClaude Sonnet 4.5\n\nSeptember 2025\n\nRead system card\n\nClaude Opus 4.1\n\nAugust 2025\n\nRead system card [...] # Model system cards\n\nSystem cards document the capabilities, safety evaluations, and responsible deployment deci",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+      "title": "Model deprecations - Claude Platform Docs",
+      "snippet": "On June 5, 2026, Anthropic notified developers using Claude Opus 4.1 of its upcoming retirement on the Claude API.\n\n| Retirement date | Deprecated model | Recommended replacement |\n --- \n| August 5, 2026 | `claude-opus-4-1-20250805` | `claude-opus-4-8` |\n\n### 2026-04-14: Claude Sonnet 4 and Claude Opus 4 models\n\nOn April 14, 2026, Anthropic notified developers using Claude Sonnet 4 and Claude Opus 4 models of their upcoming retirement on the Claude API. [...] | Retirement date | Deprecated model | Recommended replacement |\n --- \n| June 15, 2026 | `claude-sonnet-4-20250514` | `claude-sonnet-5-5",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1 \\ Anthropic",
+      "snippet": "September 2026\n\n# :Claude: Fable 5.1and Mythos 5.1\n\nMade with Fable 5.1\n\nWe’re introducing Claude Fable 5.1 and Claude Mythos 5.1. They’re the world’s most advanced models for coding and knowledge work—and their research capabilities offer an early glimpse of how AI models will contribute to scientific progress. [...] This required us to add a watermark—a numerical way of determining the likelihood that Claude was involved in writing a piece of text—to the outputs of models released after August 2, 2026. As we recently explained, this watermark is invisible to anyone who does not have the dete",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://shattered.io/anthropic-two-new-claude-models-rumor-2026",
+      "title": "Anthropic Rumored to Prep 2 New Claude Models",
+      "snippet": "The rest of 2026 followed the same rhythm. Claude Opus 4.7 arrived in April, positioned publicly as a less risky alternative sitting below the newer Mythos-class tier. Claude Fable 5 and Claude Mythos 5 followed in June, with Fable 5 landing June 9 as the first generally available model in the new Mythos class, a tier Anthropic now positions above Opus in raw capability. Claude Sonnet 5 shipped June 30, and Claude Opus 5 followed on July 24. That is five distinct model releases in under eight [...] ### Has Anthropic confirmed two new Claude models?\n\nNo. As of October 31, 2026, Anthropic has no",
+      "published_date": null,
+      "official": false
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   },
+   {
+    "claim": "Claude 4 was launched in early 2026 as the latest generation of Anthropic's family of AI assistants.",
+    "category": "api_version",
+    "entities": [
+     "Anthropic",
+     "Claude 4"
+    ],
+    "implied_date": "early 2026",
+    "verdict": "Outdated",
+    "freshness_score": 15,
+    "score_parts": [
+     [
+      "Verdict: Outdated",
+      30
+     ],
+     [
+      "Backed by an official source",
+      -10
+     ],
+     [
+      "2 sources agree",
+      -5
+     ]
+    ],
+    "evidence": "The Claude 4 announcement page [6] gives no launch date, so the sources do not support an early-2026 launch. However, the timeline source [7] lists later models, including Claude Opus 4.8 (deprecation scheduled for November 30, 2026), so Claude 4 is not the latest generation.",
+    "suggested_correction": "Claude 4 was announced by Anthropic (the sources give no exact date) and is no longer the latest generation; later models such as Claude Opus 4.8 are listed in Anthropic's release timeline.",
+    "sources": [
+     {
+      "url": "https://anthropic.com/news/claude-4",
+      "title": "Introducing Claude 4 \\ Anthropic",
+      "snippet": "Claude Code is now generally available: After receiving extensive positive feedback during our research preview, we’re expanding how developers can collaborate with Claude. Claude Code now supports background tasks via GitHub Actions and native integrations with VS Code and JetBrains, displaying edits directly in your files for seamless pair programming. [...] No extended thinking: SWE-bench Verified, Terminal-bench\n Extended thinking (up to 64K tokens):\n  + TAU-bench (no results w/o extended thinking reported)\n  + GPQA Diamond (w/o extended thinking: Opus 4 scores 74.9% and Sonnet 4 is 70.0%)",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://hidekazu-konishi.com/entry/anthropic_claude_model_release_timeline.html",
+      "title": "Anthropic Claude Model Release Timeline - Model Family Tree, Capability Evolution, and Platform Availability | hidekazu-konishi.com",
+      "snippet": "Claude Opus 4.8 is deprecated, with removal scheduled for November 30, 2026, while the model itself stays Active. Neither change is a model deprecation, so neither appears in the table above. [...] November 30, 2026. The dates on the Model deprecations page apply to Anthropic-operated platforms (the Claude API, Claude Platform on AWS, Claude Models on Google Cloud (Anthropic managed), and Microsoft Foundry); partner-operated platforms (Claude Models on Google Cloud (Google managed) and Amazon Bedrock) set their own schedules, and the Amazon Bedrock model card lists Claude Sonnet 4.5 as Legacy ",
+      "published_date": null,
+      "official": false
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   },
+   {
+    "claim": "Claude 4 Opus is priced at $20 per 1 million tokens, combined input and output.",
+    "category": "pricing",
+    "entities": [
+     "Anthropic",
+     "Claude 4 Opus"
+    ],
+    "implied_date": null,
+    "verdict": "Unverifiable",
+    "freshness_score": 50,
+    "score_parts": [
+     [
+      "No source settles the claim either way",
+      50
+     ]
+    ],
+    "evidence": "None of the sources give pricing for Claude 4 Opus. They list separate input and output rates, not a combined per-token price. The $20 figure appears only as the output rate for Claude Opus 5.5 ($4 input / $20 output), and the 4.5-to-4.6 Opus line is $5/$25.",
+    "suggested_correction": "",
+    "sources": [
+     {
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "title": "Models overview - Claude Platform Docs",
+      "snippet": "| Model | Capabilities | Base tokens |\n --- \n| Name | Context window | Max output | Input | Output |\n| Claude Fable 5.2 | 1Mtokens | 128Ktokens | $8/ | $40/ MTok |\n| Claude Opus 5.5 | 1Mtokens | 128Ktokens | $4/ MTok | $20/ MTok |\n| Claude Sonnet 5.5 | 1Mtokens | 128Ktokens | $2/ MTok | $10/ MTok |\n| Claude Haiku 5.5 | 1Mtokens | 128Ktokens | From $0.10/ MTok | From $0.50/ MTok |\n| Claude Mythos 5.2 | 1Mtokens | 128Ktokens | $8/ MTok | $40/ MTok | [...] | Claude Opus 4.6 | 1Mtokens | 128Ktokens | $5/ MTok | $25/ MTok |\n| Claude Opus 4.5 | 200Ktokens | 64Ktokens | $5/ MTok | $25/ MTok |\n| Claud",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+      "title": "Pricing - Claude Platform Docs",
+      "snippet": "| Model | Base tokens | Prompt caching |\n --- \n| Name | Input | Output |  |  |  |\n| Claude Fable 5.1For demanding reasoning and long-horizon agentic work | $10/ | $50/ MTok | $12.50/ MTok | $20/ MTok | / MTok |\n| Claude Opus 5.5For long-running agentic coding and knowledge work | $4/ MTok | $20/ MTok | $5/ MTok | $8/ MTok | / MTok |\n| Claude Sonnet 5.5The best combination of speed and intelligence | $2/ MTok | $10/ MTok | $2.50/ MTok | $4/ MTok | / MTok | [...] | Model | Input | Output |\n --- \n| Claude Opus 5.5 | $8 USD / MTok | $40 USD / MTok |\n| Claude Opus 5 / Claude Opus 4.8 | $10 USD / MT",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "title": "Introducing Claude Opus 4.5 \\ Anthropic",
+      "snippet": "Claude Opus 4.5 is state-of-the-art on tests of real-world software engineering:\n\nOpus 4.5 is available today on our apps, our API, and on all three major cloud platforms. If you’re a developer, simply use `claude-opus-4-5-20251101` via the Claude API. Pricing is now $5/$25 per million tokens—making Opus-level capabilities accessible to even more users, teams, and enterprises. [...] Many of our customers with early access have had similar experiences. Here are some examples of what they told us:\n\nJeff Wang logo\n\n> “Opus models have always been “the real SOTA” but have been cost prohibitive in ",
+      "published_date": null,
+      "official": true
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   },
+   {
+    "claim": "Claude 4 Opus is the most expensive tier in the Claude 4 family.",
+    "category": "pricing",
+    "entities": [
+     "Anthropic",
+     "Claude 4 Opus"
+    ],
+    "implied_date": null,
+    "verdict": "Current",
+    "freshness_score": 100,
+    "score_parts": [
+     [
+      "Verdict: Current",
+      70
+     ],
+     [
+      "Backed by an official source",
+      10
+     ],
+     [
+      "3 sources agree",
+      10
+     ],
+     [
+      "Evidence from the last 12 months",
+      10
+     ]
+    ],
+    "evidence": "The Claude 4 launch post lists Opus 4 at $15/$75 per million tokens versus Sonnet 4 at $3/$15, and a 2026 cost comparison puts Opus 4 at $300 for the same workload where Opus 4.5 and 4.6 cost $100. Current pricing for Opus 4.5 through 4.8 is $5/$25, so Opus 4 remains the highest-priced Claude 4 model in these sources.",
+    "suggested_correction": "",
+    "sources": [
+     {
+      "url": "https://www.anthropic.com/pricing",
+      "title": "Plans & pricing | Claude by Anthropic",
+      "snippet": "### Sonnet 4.6\n\nPrompt caching\n\nRead\n\n$0.30/ MTok\n\nWrite\n\n$3.75/ MTok\n\nInput\n\n$3/ MTok\n\nOutput\n\n$15/ MTok\n\n### Opus 4.7\n\nPrompt caching\n\nRead\n\n$0.50/ MTok\n\nWrite\n\n$6.25/ MTok\n\nInput\n\n$5/ MTok\n\nOutput\n\n$25/ MTok\n\n### Opus 4.6\n\nPrompt caching\n\nRead\n\n$0.50/ MTok\n\nWrite\n\n$6.25/ MTok\n\nInput\n\n$5/ MTok\n\nOutput\n\n$25/ MTok\n\n### Sonnet 4.5\n\nPrompt caching\n\nRead\n\n$0.30/ MTok\n\nWrite\n\n$3.75/ MTok\n\nInput\n\n$3/ MTok\n\nOutput\n\n$15/ MTok\n\n### Opus 4.5\n\nPrompt caching\n\nRead\n\n$0.50/ MTok\n\nWrite\n\n$6.25/ MTok\n\nInput [...] Output\n\n$5/ MTok\n\nSave 50% with batch processing. Learn more\n\n### Sonnet 5\n\nPrompt caching\n\nRea",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://anthropic.com/news/claude-4",
+      "title": "Introducing Claude 4 \\ Anthropic",
+      "snippet": "Claude Opus 4 and Sonnet 4 are hybrid models offering two modes: near-instant responses and extended thinking for deeper reasoning. The Pro, Max, Team, and Enterprise Claude plans include both models and extended thinking, with Sonnet 4 also available to free users. Both models are available on our API, Amazon Bedrock, and Google Cloud's Vertex AI. Pricing remains consistent with previous Opus and Sonnet models: Opus 4 at $15/$75 per million tokens (input/output) and Sonnet 4 at $3/$15. [...] ## Claude 4\n\nClaude Opus 4 is our most powerful model yet and the best coding model in the world, lead",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://www.silicondata.com/use-cases/anthropic-claude-api-pricing-2026",
+      "title": "Claude API Pricing 2026: Cost per 1M Tokens, All Models",
+      "snippet": "The first cost decision is model family, not micro-optimization. On the latest observed date, a 10M-input / 2M-output workload costs $20 on Haiku 4.5, $60 on Sonnet 4.5 or 4.6, $100 on Opus 4.5 or 4.6, and $300 on Opus 4 or Opus 4.1. Production teams should therefore choose the cheapest model family that clears the quality bar, then use batching, caching, and context controls to reduce the remainder. [...] No observed model-context pair changed its base price once listed in the Jan. 1–Mar. 10, 2026 history; the story is portfolio refresh, not constant repricing.\n The premium-tier reset is larg",
+      "published_date": null,
+      "official": false
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   },
+   {
+    "claim": "Smaller Claude 4 variants, including Sonnet and Haiku, are priced lower than Claude 4 Opus.",
+    "category": "pricing",
+    "entities": [
+     "Anthropic",
+     "Claude 4 Sonnet",
+     "Claude 4 Haiku"
+    ],
+    "implied_date": null,
+    "verdict": "Unverifiable",
+    "freshness_score": 50,
+    "score_parts": [
+     [
+      "No source settles the claim either way",
+      50
+     ]
+    ],
+    "evidence": "The CNBC article says Haiku models typically cost about one-third of Sonnet, and Sonnet about one-fifth of Opus, which supports smaller variants being cheaper than Opus. However, the sources concern Haiku 4.5 and Sonnet 4.5 and do not give Claude 4 Opus pricing, so the specific claim about Claude 4 Opus cannot be confirmed.",
+    "suggested_correction": "",
+    "sources": [
+     {
+      "url": "https://www.cnbc.com/2025/10/15/anthropic-claude-haiku-4-5-ai.html?msockid=34b71857cbf86fdd22880ed0ca926e1a",
+      "title": "Anthropic launches Claude Haiku 4.5, a smaller, cheaper AI model",
+      "snippet": "For paid users, Haiku models are typically around one-third of the cost of Anthropic's Sonnet models, while Sonnet models are one-fifth of the cost of its Opus models, Krieger said. Anthropic's free users can still choose to use Claude Sonnet 4.5, but they'll get more capacity out of Claude Haiku 4.5 since it's smaller, he added.\n\nClaude Sonnet 4.5 is still Anthropic's best-performing model, but the company said Claude Haiku 4.5 is ideal for users looking for fast, accurate answers. [...] Claude Haiku 4.5 is available to Anthropic's free users, and it's now the cheapest model available to paid",
+      "published_date": null,
+      "official": false
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   }
+  ],
+  "checked_at": "2026-11-17T16:28:46"
+ },
+ "7a54643c88e52291ef6b17cd57d88eb126adec5d28bcf2c51ae51e7bde133eef": {
+  "overall_freshness": 13,
+  "has_stale_claims": true,
+  "corrected_answer": "The EU AI Act entered into force on 1 August 2024, after being formally adopted by the European Parliament and Council in 2024 as Regulation (EU) 2024/1689 of 13 June 2024. Most of its substantive obligations will begin to apply 24 months later, on 2 August 2026, with some provisions applying earlier, such as prohibited practices from 2 February 2025 and general-purpose AI governance from 2 August 2025.",
+  "claims": [
+   {
+    "claim": "The EU AI Act entered into force on 6 July 2023.",
+    "category": "regulation",
+    "entities": [
+     "EU AI Act"
+    ],
+    "implied_date": "2023-07-06",
+    "verdict": "Outdated",
+    "freshness_score": 10,
+    "score_parts": [
+     [
+      "Verdict: Outdated",
+      30
+     ],
+     [
+      "Backed by an official source",
+      -10
+     ],
+     [
+      "3 sources agree",
+      -10
+     ]
+    ],
+    "evidence": "Multiple OFFICIAL sources state the AI Act entered into force on 1 August 2024, not 6 July 2023. The 6 July 2023 date was the Parliament's plenary/Council-era milestone, not entry into force.",
+    "suggested_correction": "The EU AI Act entered into force on 1 August 2024.",
+    "sources": [
+     {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "title": "AI Act | Shaping Europe’s digital future",
+      "snippet": "The Commission and the European Union Agency for Cybersecurity (ENISA) will also create a blueprint to secure access to advanced AI systems for cybersecurity purposes and establish a secure testing platform to help organisations in critical sectors - such as energy, transport, health, finance and public administration - safely test and deploy AI solutions.\n\n## Application timeline\n\nThe AI Act entered into force on 1 August 2024 and became applicable on 2 August 2026, with some exceptions: [...] Moreover, providers of generative AI have to ensure that AI-generated content is identifiable. On to",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-pact",
+      "title": "AI Pact | Shaping Europe’s digital future",
+      "snippet": "The AI Act entered into force on August 1, 2024. Most provisions of the AI Act came into full application over the following years, and the AI Office and national authorities assumed enforcement powers on 2 August 2026. However, some requirements on the high-risk AI systems and other provisions will only be applicable from December 2027.",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act",
+      "title": "Navigating the AI Act | Shaping Europe’s digital future",
+      "snippet": "## Governance, enforcement, and implementation\n\nWhen will the AI Act be fully applicable? \n\nThe AI Act will apply 2 years after entry into force on 2 August 2026, except for the following specific provisions: [...] The Digital Omnibus entered into force on 27 July 2026 allowing for the extension of these deadlines and thereby more time to prepare standards and set-up competent authorities in EU Member States to oversee implementation.\n\nHow will the AI Act be enforced? [...] Specific exceptions apply to all the transparency obligations mentioned.\n\nThe AI Office will issue guidelines to provide ",
+      "published_date": null,
+      "official": true
+     }
+    ],
+    "cached": false,
+    "stale_risk": "Assumes 2023: over a year old, high stale risk"
+   },
+   {
+    "claim": "The EU AI Act was formally adopted by the European Parliament and Council in 2023.",
+    "category": "regulation",
+    "entities": [
+     "EU AI Act",
+     "European Parliament",
+     "Council of the European Union"
+    ],
+    "implied_date": "2023",
+    "verdict": "Outdated",
+    "freshness_score": 15,
+    "score_parts": [
+     [
+      "Verdict: Outdated",
+      30
+     ],
+     [
+      "Backed by an official source",
+      -10
+     ],
+     [
+      "2 sources agree",
+      -5
+     ]
+    ],
+    "evidence": "Source [2] cites the final act as Regulation (EU) 2024/1689 of 13 June 2024, and source [6] says the AI Act entered into force on 1 August 2024. The 2023 date matches only the Parliament's amendments of 14 June 2023, not formal adoption by both institutions.",
+    "suggested_correction": "The EU AI Act was formally adopted in 2024 as Regulation (EU) 2024/1689 of 13 June 2024; the European Parliament's amendments were adopted in June 2023, and the Act entered into force on 1 August 2024.",
+    "sources": [
+     {
+      "url": "https://eur-lex.europa.eu/search.html?lang=en&SUBDOM_INIT=ALL_ALL&orText1=bias&textScope1=ti-te&DC_CODED=3030&qid=1757662825531&type=advanced&sortOne=DD&sortOneOrder=desc&DC_TT_CODED=13&AU_CODED=EP",
+      "title": "Search results - EUR-Lex",
+      "snippet": "## Amendments adopted by the European Parliament on 14 June 2023 on the proposal for a regulation of the European Parliament and of the Council on laying down harmonised rules on artificial intelligence (Artificial Intelligence Act) and amending certain Union legislative acts (COM(2021)0206 — C9-0146/2021 — 2021/0106(COD))\n\nOJ C, C/2024/506, 23.1.2024, ELI: \n(BG, ES, CS, DA, DE, ET, EL, EN, FR, GA, HR, IT, LV, LT, HU, MT, NL, PL, PT, RO, SK, SL, FI, SV)\n\nOJ C, C/2024/506, 23.1.2024, ELI: [...] ## Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying dow",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "title": "AI Act | Shaping Europe’s digital future",
+      "snippet": "The Commission and the European Union Agency for Cybersecurity (ENISA) will also create a blueprint to secure access to advanced AI systems for cybersecurity purposes and establish a secure testing platform to help organisations in critical sectors - such as energy, transport, health, finance and public administration - safely test and deploy AI solutions.\n\n## Application timeline\n\nThe AI Act entered into force on 1 August 2024 and became applicable on 2 August 2026, with some exceptions: [...] Moreover, providers of generative AI have to ensure that AI-generated content is identifiable. On to",
+      "published_date": null,
+      "official": true
+     }
+    ],
+    "cached": false,
+    "stale_risk": "Assumes 2023: over a year old, high stale risk"
+   },
+   {
+    "claim": "The substantive obligations of the EU AI Act will begin to apply on 6 July 2025, 24 months after its entry into force.",
+    "category": "regulation",
+    "entities": [
+     "EU AI Act"
+    ],
+    "implied_date": "2025-07-06",
+    "verdict": "Outdated",
+    "freshness_score": 15,
+    "score_parts": [
+     [
+      "Verdict: Outdated",
+      30
+     ],
+     [
+      "2 sources agree",
+      -5
+     ],
+     [
+      "Evidence from the last 12 months",
+      -10
+     ]
+    ],
+    "evidence": "The AI Act entered into force on 1 August 2024, so its 24-month transitional period ends on 2 August 2026, not 6 July 2025. McCann FitzGerald states that most general provisions apply from 2 August 2026, and alicelabs notes that 2 August 2026 is the milestone when the Act reached general applicability.",
+    "suggested_correction": "Most substantive obligations of the EU AI Act apply from 2 August 2026, 24 months after its entry into force on 1 August 2024, with some provisions applying earlier (for example, prohibited practices from 2 February 2025 and general-purpose AI governance from 2 August 2025).",
+    "sources": [
+     {
+      "url": "https://alicelabs.ai/en/insights/eu-ai-act-timeline-2026",
+      "title": "EU AI Act Timeline 2026: Aug 2 Milestone & Next Deadlines",
+      "snippet": "The EU AI Act was published in the Official Journal of the EU on 12 July 2024 and entered into force on 1 August 2024 — 20 days after publication, as required by Regulation (EU) 2024/1689.\n\nEntry into force is not the same as application. Most substantive obligations apply on a staggered schedule running through 2027.\n\n### The Four Implementation Phases at a Glance [...] IAPP, EU AI Act: Next Steps for Implementation, 2024\n\n## Key Takeaways\n\n### Contents\n\n## The Four Phases of the EU AI Act Timeline\n\n### Status: 2 August 2026 milestone activated\n\nOn 2 August 2026, the EU AI Act reached its gen",
+      "published_date": null,
+      "official": false
+     },
+     {
+      "url": "https://www.mccannfitzgerald.com/knowledge/data-privacy-and-cyber-risk/eu-ai-act-enters-into-force-key-compliance-dates-for-stakeholders",
+      "title": "EU AI Act Enters into Force: Key Compliance Dates for Stakeholders",
+      "snippet": "## General Applicability after 24 Months – 2 August 2026\n\nThe AI Act provides for a 24-month transitional period, to allow time for delegated legislation, guidelines, and standards to be drafted and published across all Member States. Most general provisions of the Act will apply from 2 August 2026, with some exceptions outlined below.\n\n## Prohibited Practices Provisions – Applicability after 6 Months – 2 February 2025 [...] ## General Purpose AI Models, Governance and Sanctions Provisions – Applicability after 12 Months – 2 August 2025\n\n2 August 2025 marks the applicability of Chapter V relat",
+      "published_date": null,
+      "official": false
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   }
+  ],
+  "checked_at": "2026-11-17T16:29:20"
+ },
+ "94d93a95acac98c0519aa07782a7a3a775c6d787758b95a30da18e501f0a0528": {
+  "overall_freshness": 100,
+  "has_stale_claims": false,
+  "corrected_answer": null,
+  "claims": [
+   {
+    "claim": "Satya Nadella is the chief executive officer of Microsoft.",
+    "category": "company",
+    "entities": [
+     "Satya Nadella",
+     "Microsoft"
+    ],
+    "implied_date": "2026-11-17",
+    "verdict": "Current",
+    "freshness_score": 100,
+    "score_parts": [
+     [
+      "Verdict: Current",
+      70
+     ],
+     [
+      "Backed by an official source",
+      10
+     ],
+     [
+      "3 sources agree",
+      10
+     ],
+     [
+      "Evidence from the last 12 months",
+      10
+     ]
+    ],
+    "evidence": "The OFFICIAL Microsoft 2026 Annual Report lists Satya Nadella as Chairman and Chief Executive Officer of Microsoft Corporation, and Microsoft's leadership page (OFFICIAL) says the same. The latest official earnings call transcript (July 29, 2026) also introduces him as chairman and CEO.",
+    "suggested_correction": "",
+    "sources": [
+     {
+      "url": "https://www.microsoft.com/investor/reports/ar26/index.html",
+      "title": "Microsoft 2026 Annual Report",
+      "snippet": "DIRECTORS AND EXECUTIVE OFFICERS OF MICROSOFT CORPORATION\n\n### Directors\n\nSatya Nadella  \nChairman and Chief Executive Officer,  \nMicrosoft Corporation\n\nTeri L. List 1,3  \nFormer Executive Vice President and  \nChief Financial Officer, The Gap, Inc.\n\nJohn David Rainey 1  \nExecutive Vice President and Chief  \nFinancial Officer, Walmart, Inc.\n\nCarmine Di Sibio 1,2  \nFormer Global Chairman and CEO of  \nEY\n\nCatherine MacGregor 2,4  \nGroup Chief Executive Officer and  \nDirector, Engie S.A. [...] By expanding access to intelligence while preserving choice, control, safety, and trust, we can ensure th",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+      "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+      "snippet": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call\n\nWednesday, July 29, 2026  \n Satya Nadella, Chairman and CEO and Amy Hood, EVP & CFO\n\nMicrosoft FY26 Fourth Quarter Earnings Conference Call\n\nJonathan Neilson, Satya Nadella, Amy Hood\n\nWednesday July 29, 2026\n\nJONATHAN NEILSON: [...] JONATHAN NEILSON:\n\nGood afternoon and thank you for joining us today. On the call with me are Satya Nadella, chairman and chief executive officer, Amy Hood, chief financial officer, Alice Jolla, chief accounting officer, and Brian DeFoe, deputy general counsel and corporate secretary. [...] And wit",
+      "published_date": null,
+      "official": true
+     },
+     {
+      "url": "https://news.microsoft.com/source/exec/satya-nadella",
+      "title": "Satya Nadella - Source",
+      "snippet": "Satya Nadella portrait\n\nBack to leadership page \n\n## Satya Nadella\n\nChairman and Chief Executive Officer\n\nSatya Nadella is Chairman and Chief Executive Officer of Microsoft. Before being named CEO in February 2014, Nadella held leadership roles in both enterprise and consumer businesses across the company.\n\nJoining Microsoft in 1992, he quickly became known as a leader who could span a breadth of technologies and businesses to transform some of Microsoft’s biggest product offerings.",
+      "published_date": null,
+      "official": true
+     }
+    ],
+    "cached": false,
+    "stale_risk": null
+   }
+  ],
+  "checked_at": "2026-11-17T16:29:29"
+ },
+ "678d1d6d8d671126416dd5ebc67b4aa3c8c38078935d0e7a0d3227a985577143": {
+  "overall_freshness": null,
+  "has_stale_claims": false,
+  "corrected_answer": null,
+  "claims": [],
+  "checked_at": "2026-11-17T16:29:30"
+ }
+}
