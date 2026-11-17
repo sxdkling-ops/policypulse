@@ -1,212 +1,252 @@
-# PolicyPulse — Stale-Answer Detector for AI Governance & Compliance
+# PolicyPulse Freshness Guard: a Bifrost plugin that stops stale AI answers
 
-> Geek Room Global AI Hackathon · Problem: *Build a Stale-Answer Detector for AI Applications*
+> Geek Room Global AI Hackathon 2026 · **Bifrost track: Open-Source Bifrost Gateway** (extend Bifrost with a
+> practical feature) · Tavily integration: *Build a Stale-Answer Detector for AI Applications*
 
-LLMs answer compliance questions with confidence, but laws, regulator circulars, prices, model versions and
-company facts change after the training cutoff. In AI governance, risk and compliance (GRC) a stale answer is
-not just wrong: it can lead to a missed deadline, a wrong control, or a fine.
+LLMs answer with confidence, but laws, regulator circulars, prices, model versions and company facts change
+after the training cutoff. Every app built on an LLM inherits that problem, and in AI governance, risk and
+compliance a stale answer can mean a missed deadline, a wrong control or a fine.
 
-**PolicyPulse** takes any LLM answer, pulls out the claims that can go out of date, re-checks each one against
-live web sources with **Tavily** (official regulator and vendor sites first), and gives every claim a verdict and
-an explainable freshness score. It then rewrites the answer with the corrections, showing exactly what changed.
-All LLM calls go through the **Bifrost** gateway with automatic fallback from Claude to Groq. Other AI apps can
-call it through a one-endpoint API before they show an answer to a user.
+**Freshness Guard** fixes it at the gateway. It is a native Bifrost plugin: every chat completion that passes
+through Bifrost is checked for stale claims before it reaches the calling app. Apps change nothing. They keep
+calling Bifrost's OpenAI-compatible API, and each answer comes back **annotated**, **fixed** or **blocked**.
 
-### What makes it different
+The checking engine is **PolicyPulse**: it extracts time-sensitive claims, re-verifies each one live with
+**Tavily** (official regulator and vendor sites first), and gives every claim a verdict and an explainable
+0–100 freshness score.
 
-- **Official sources first.** Each claim is searched on the regulator's or vendor's own site (privacy.gov.ph,
-  bsp.gov.ph, eur-lex.europa.eu, openai.com…) before the open web, and official sources are labelled.
-- **A score you can explain.** The LLM only picks the verdict. The 0–100 score is computed from the verdict,
-  official backing, how many sources agree and how recent the evidence is, and each card shows the breakdown.
-- **It fixes the answer.** A corrected version of the answer is shown with removed text in red and added text
-  in green.
-- **It audits its own knowledge base.** The KB's 1,902 open "verify this" notes can be checked live too.
-
-## Quick start
-
-```bash
-pip install -r requirements.txt
-python run_bifrost.py 8080      # terminal 1: Bifrost with Claude + Groq (keys from .env)
-python ingest.py                # builds the KB index (uses data/sample/ if KB_PATH is not set)
-streamlit run app.py            # terminal 2: the app
-uvicorn api:app --port 8000     # optional: the /check API
+```text
+your app ──► Bifrost ──► Claude / Groq / any provider
+                │
+                └─ Freshness Guard plugin (HTTPTransportPostHook)
+                      └─► PolicyPulse /check ──► Tavily (official sites first) + LLM judge via Bifrost
+                │
+your app ◄── answer + verdicts  (annotate)  ·  corrected answer (fix)  ·  HTTP 422 (block)
 ```
 
-Full setup is under [Install and run](#install-and-run).
+### Real result through the gateway
 
-## Features
+Asked *"What is Anthropic's newest Claude model and what does its API cost?"*, Groq's `gpt-oss-120b`
+(knowledge from 2024) answered "Claude 3.5 Sonnet" with 2024 prices. With `x-freshness-guard: block`, Bifrost
+returned **HTTP 422**: *"Freshness Guard blocked this answer: freshness 23/100 is below the minimum of 40"*,
+listing each outdated claim with its sources.
 
-| Tab | What it does |
-|---|---|
-| **Check an Answer** | Paste any LLM answer → time-sensitive claims → live Tavily evidence (official sources first) → colour-coded verdict cards (Current / Possibly stale / Outdated / Unverifiable), explainable 0–100 freshness score, stale-risk flag for claims that assume an old date, suggested correction, labelled sources, overall score, and the **corrected answer** with changes highlighted. Four sample answers (AI regulation, LLM API pricing, Philippine AI and privacy rules, company CEO). Markdown report download. |
-| **Ask the KB** | Ask the AI GRC knowledge base → BM25 retrieval → grounded answer citing brief IDs (e.g. `[PH-04]`) and their review dates → the stale check runs automatically on that answer. Markdown report download. |
-| **KB Freshness Audit** | Every brief in the KB with status, last review date, review cycle, next review date and open verification items. Overdue briefs are highlighted; move "Audit as of" forward to see what falls due. |
-| **Verification Register** | Pick open fact-check items from the KB's Verification Register (1,902 items across 268 briefs) → Tavily searches the brief's own official source first, then the open web → verdict, score, sources → export CSV. |
-| **Gateway (Bifrost)** | Log of every LLM call: model, provider, latency, tokens, fallback used. Sidebar toggle **Simulate primary provider failure** forces the Groq fallback path. |
-| **API** (`api.py`) | `POST /check` with `{"answer": "...", "fix": true}` returns the overall score, `has_stale_claims`, the corrected answer and every claim's verdict, score breakdown and sources. `GET /health` reports gateway and key status. Interactive docs at `/docs`. |
+![Freshness Guard blocking a stale answer](screenshots/0_freshness_guard_block.png)
 
-## Architecture
+In `fix` mode the same request comes back **200 · fixed**, with only the stale parts rewritten:
 
-```mermaid
-flowchart LR
-    U[User / LLM answer] --> X[extractor.py<br/>time-sensitive claims]
-    Q[Question] --> R[retriever.py<br/>BM25 over kb.json] --> A[Grounded answer<br/>cites brief IDs] --> X
-    X --> V[verifier.py<br/>Tavily: official sites first<br/>then open web · disk cache]
-    V --> J[judge.py<br/>LLM verdict]
-    J --> S[authority.py<br/>explainable score]
-    S --> F[fixer.py<br/>corrected answer + diff]
-    F --> UI[Streamlit app.py<br/>cards · report · CSV]
-    F --> API[api.py<br/>POST /check]
-    REG[register.json<br/>open fact-check items] --> V
-    IDX[index.json<br/>briefs + review dates] --> UI
-
-    subgraph Gateway
-      B[Bifrost /v1] --> C[anthropic/claude-haiku-5-5]
-      B -. fallback .-> G[groq/openai/gpt-oss-120b]
-    end
-    X & J & A & F --> L[llm.py] --> B
-    L --> LOG[logs/gateway_log.jsonl] --> UI
-
-    KB[(AI GRC PDFs<br/>KB_PATH)] --> I[ingest.py<br/>PyMuPDF] --> IDX & REG & K[kb.json chunks]
-    K --> R
-```
-
-## How Tavily is used
-
-- `verifier.py` first runs a **basic-depth** search limited with `include_domains` to the official sites for
-  that claim (the regulator, standards body or vendor, picked from the claim's entities and the KB's own
-  official-source links), then an open-web search. Results are merged, de-duplicated and labelled *official*.
-  Each search is 1 credit with `max_results=5`.
-- The Verification Register tab turns each open fact-check item into a search, so the KB's own "verify this"
-  notes are checked against the live web.
-- Free-tier friendly: every result is cached in `cache/tavily_cache.json` keyed by query, so repeat runs cost
-  0 credits, and a check is capped at **8 claims**.
-
-## How the freshness score works
-
-The LLM judge picks only the **verdict**, using the sources alone. The score is then computed in
-`authority.py`, so it can be explained and reproduced:
-
-| Part | Points |
-|---|---|
-| Verdict base | Current 70 · Possibly stale 50 · Outdated 30 · Unverifiable 50 (no adjustments) |
-| Backed by an official source | ±10 |
-| Extra sources that agree | ±5 each, up to ±10 |
-| Evidence from the last 12 months | ±10 |
-
-Evidence moves the score away from the middle in the verdict's direction (up for Current, down for stale), and
-the result is kept within 0–100. Example: *"The EU AI Act is still a proposal"* → Outdated 30, two agreeing
-sources −5, recent evidence −10 = **15**. Every card has a *Why 15/100?* panel with this breakdown.
-
-## How Bifrost is used
-
-- `llm.py` is the only place that calls an LLM. It uses the `openai` SDK with `base_url = BIFROST_URL`, so
-  provider keys live in Bifrost, not in the app.
-- Each request names the primary model `anthropic/claude-haiku-5-5` and passes Bifrost's native
-  `"fallbacks": ["groq/openai/gpt-oss-120b"]` in the request body. If Anthropic fails, Bifrost retries on Groq.
-- Every call is logged to `logs/gateway_log.jsonl` with the model that answered, provider, latency, tokens and
-  whether the fallback was used (from Bifrost's `routing_info.is_fallback`). The Gateway tab shows the log.
-- The **Simulate primary provider failure** toggle sends the request to a model that does not exist on the
-  primary provider, so you can watch Bifrost switch to Groq live.
-
-## Tech stack
-
-Python 3.11+, Streamlit, FastAPI, tavily-python, openai SDK (pointed at Bifrost), Bifrost gateway, PyMuPDF,
-rank_bm25, pandas, python-dotenv. No embeddings and no vector DB.
-
-## Install and run
-
-1. **Bifrost** (in its own terminal, leave it running). Put `CLAUDE_API` and `GROQ_API` in `.env`, then:
-   ```bash
-   python run_bifrost.py          # port 8080; or: python run_bifrost.py 8089
-   ```
-   This starts `npx -y @maximhq/bifrost` with [`bifrost/config.json`](bifrost/config.json), which declares the
-   Anthropic and Groq providers and reads their keys from environment variables (`env.CLAUDE_API`,
-   `env.GROQ_API`), so no key is ever written to a file in the repo. Set `BIFROST_URL` to match the port.
-2. **App:**
-   ```bash
-   git clone https://github.com/sxdkling-ops/policypulse.git
-   cd policypulse
-   cp .env.example .env      # then add TAVILY_API_KEY, BIFROST_URL, KB_PATH
-   pip install -r requirements.txt
-   python ingest.py          # builds build/index.json, register.json, kb.json
-   streamlit run app.py
-   ```
-3. Optional API: `uvicorn api:app --port 8000`, then open http://localhost:8000/docs or:
-   ```bash
-   curl -X POST http://localhost:8000/check -H "Content-Type: application/json" -d '{"answer": "Anthropic'"'"'s newest model is Claude 2."}'
-   ```
-4. Optional check: `python smoke_test.py` runs the full pipeline on
-   *"The EU AI Act is still a proposal and has not been adopted."* and expects **Outdated**.
-
-`.env`:
-
-| Variable | Meaning |
-|---|---|
-| `TAVILY_API_KEY` | Tavily key (app.tavily.com) |
-| `CLAUDE_API`, `GROQ_API` | Provider keys, read by Bifrost only (via `run_bifrost.py`) |
-| `BIFROST_URL` | Bifrost OpenAI-compatible endpoint, default `http://localhost:8080/v1` |
-| `KB_PATH` | Folder with the KB PDFs. If unset or missing, `data/sample/` is used |
-| `KB_FOLDERS` | Optional; `;`-separated subfolders to chunk (default: Topic Guides + Philippines) |
-
-## Usage
-
-1. **Check an Answer:** pick "AI regulation (has a stale claim)" and click *Check freshness*. The EU AI Act
-   claim comes back **Outdated** with a correction, labelled sources, a *Why…/100?* breakdown, and a corrected
-   answer with the changes highlighted. Try the Philippine sample too: the BSP claim is caught as Outdated from
-   the BSP's own site.
-2. **Ask the KB:** ask "When must a personal data breach be reported to the NPC?" You get an answer citing
-   `[PH-04]` with its review date, then a freshness check of that answer.
-3. **KB Freshness Audit:** set "Audit as of" a few months ahead to see which briefs fall due for review.
-4. **Verification Register:** choose a brief (e.g. `PH-02`), select open items, verify, export CSV.
-5. **Gateway:** turn on *Simulate primary provider failure* in the sidebar, run any check, and watch the log
-   show `groq/openai/gpt-oss-120b` with *fallback used*.
-
-## Knowledge base
-
-The full KB is a private collection of ~280 AI GRC reference PDFs: Philippine laws and regulator issuances
-(`PH-xx`), Asian (`AS-xx`) and international (`IN-xx`) laws and standards, and practice topic guides (`TG-xx`),
-plus a Master Index and a Verification Register. **It is not in this repo.** `data/sample/` holds five sample
-briefs (PH-02, PH-03, PH-04, IN-01, TG-08) and the Verification Register so the app runs out of the box.
-
-`ingest.py` reads each brief's header (title, type, status, *Last reviewed*, official source), parses the
-Verification Register into one row per open item, and chunks brief text (~800 tokens) for BM25.
-
-## How AI is used
-
-- **Claim extraction:** the LLM rewrites each time-sensitive statement as a standalone claim with category,
-  entities and implied date (JSON).
-- **Judging:** the LLM compares one claim with the Tavily sources only, preferring official ones when sources
-  disagree. It is told never to invent facts and to return *Unverifiable* when the sources do not settle it.
-  It picks the verdict and the supporting sources; the score itself is computed, not generated. Temperature 0.
-- **Correcting:** the LLM rewrites the answer applying only the judge's corrections and keeps everything else
-  word for word; the app shows a word-level diff.
-- **Grounded KB answers:** the LLM answers only from retrieved KB excerpts and cites brief IDs.
-- **Built with Claude Code:** this project was designed and coded with Claude Code.
-
-## Limitations
-
-- Verdicts depend on what Tavily finds; paywalled or very new regulator texts can come back *Unverifiable*.
-- The list of official sites is a starter map (Philippine regulators, EU, standards bodies, major AI vendors)
-  plus every official link in the KB; other domains fall back to the open-web search.
-- The judge is an LLM: it can misread a source. Always open the sources for anything that matters.
-- BM25 is keyword search, so paraphrased questions can miss relevant chunks.
-- Review cycles in the audit tab follow the Master Index schedule by brief family, not per-brief rules.
-- MVP ingest covers the two index files, the Topic Guides and the Philippine briefs.
-
-## Future work
-
-- Scheduled re-checks of the whole KB and of past answers, using the `/check` API.
-- Alerts to policy owners when a claim they rely on turns stale.
-- Mapping each verdict to ISO/IEC 42001 controls and NIST AI RMF functions.
-- The full 280-brief KB with embeddings and hybrid search.
+![Freshness Guard fixing a stale answer](screenshots/0b_freshness_guard_fix.png)
 
 ## Demo video
 
 ▶ **[Watch the demo on YouTube](https://youtu.be/ktF9vd21EIM)** · or download [docs/PolicyPulse_Demo.mp4](docs/PolicyPulse_Demo.mp4)
 
-A narrated walkthrough of every tab, run live against Tavily and Bifrost. Long waits while it checks live
-sources are sped up and labelled.
+## Quick start (one command)
+
+Needs Docker. Put your keys in `.env` (copy `.env.example`): `CLAUDE_API`, `GROQ_API`, `TAVILY_API_KEY`.
+
+```bash
+git clone https://github.com/sxdkling-ops/policypulse.git
+cd policypulse
+cp .env.example .env        # add your keys
+docker compose up --build   # Bifrost + Freshness Guard on :8080, checker on :8000, app on :8501
+```
+
+If port 8080 is taken: `BIFROST_HOST_PORT=8089 docker compose up --build`.
+
+Then call Bifrost like any OpenAI-compatible endpoint:
+
+```bash
+curl http://localhost:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "x-freshness-guard: annotate" \
+  -d '{"model": "groq/openai/gpt-oss-120b", "max_tokens": 2000,
+       "messages": [{"role": "user", "content": "What is Anthropic'"'"'s newest Claude model?"}]}'
+```
+
+Or open http://localhost:8501 and use the **Freshness Guard (Bifrost plugin)** tab.
+
+## What the plugin does
+
+| Mode | What the app receives |
+|---|---|
+| `annotate` (default) | The original answer, plus a `freshness` object (overall score, per-claim verdicts, sources, suggested corrections) and `x-freshness-*` headers |
+| `fix` | The answer rewritten with the corrections applied (only wrong parts change). The original is kept in `freshness.original_answer` |
+| `block` | HTTP **422** `stale_answer` when the score is below `min_score`; the stale answer is kept in the error's `freshness` object for audit |
+| `off` | Untouched |
+
+The configured mode is the default. Any request can pick its own with the `x-freshness-guard` header
+(`off`, `annotate`, `fix`, `block`). Response headers: `x-freshness-status`
+(`checked`, `fixed`, `blocked`, `unchecked`, `skipped-…`), `x-freshness-score`, `x-freshness-stale-claims`.
+
+Example `freshness` object (annotate mode, abbreviated):
+
+```json
+"freshness": {
+  "status": "checked", "mode": "annotate", "overall_score": 57, "has_stale_claims": true,
+  "claims": [
+    {"claim": "Under the proposed EU AI Act, obligations would phase in over roughly two years...",
+     "verdict": "Outdated", "freshness_score": 5, "official_sources": 1,
+     "sources": ["https://eur-lex.europa.eu/..."],
+     "suggested_correction": "The AI Act entered into force on 1 August 2024 ..."}
+  ],
+  "checker": "policypulse", "checked_at": "2026-11-17T15:11:20"
+}
+```
+
+**Design choices**
+
+- **No changes to apps.** It runs in Bifrost's `HTTPTransportPostHook` and works on the standard
+  OpenAI-format JSON, so any client, SDK or language is covered.
+- **Fail-open by default.** If the checker is down or slow, the answer passes through with
+  `x-freshness-status: unchecked`. Set `"fail_open": false` to return 503 instead.
+- **No loops.** The checker's own LLM calls go through the same Bifrost with `x-freshness-guard: off`.
+- **Skips what it should.** Streaming responses, errors, non-chat routes and very short answers pass through
+  untouched (and are marked `skipped-…` where relevant).
+
+## Plugin configuration
+
+In Bifrost's `config.json` (see [`docker/bifrost-config.json`](docker/bifrost-config.json)):
+
+```json
+"plugins": [{
+  "enabled": true,
+  "name": "freshness-guard",
+  "path": "/app/plugins/freshness_guard.so",
+  "config": {
+    "checker_url": "http://policypulse-api:8000/check",
+    "mode": "annotate",
+    "min_score": 40,
+    "timeout_ms": 120000,
+    "fail_open": true,
+    "min_chars": 40
+  }
+}]
+```
+
+| Key | Default | Meaning |
+|---|---|---|
+| `checker_url` | `http://localhost:8000/check` | PolicyPulse `/check` endpoint |
+| `mode` | `annotate` | `annotate`, `fix`, `block` or `off` |
+| `min_score` | `40` | `block` mode: block stale answers scoring below this |
+| `timeout_ms` | `90000` | How long to wait for the checker |
+| `fail_open` | `true` | Checker unavailable: pass through (`true`) or HTTP 503 (`false`) |
+| `min_chars` | `40` | Skip answers shorter than this |
+
+## Building the plugin
+
+Source: [`bifrost-plugin/freshnessguard/`](bifrost-plugin/freshnessguard/) (`main.go` hooks, `guard.go` logic,
+`guard_test.go` tests).
+
+Go plugins load only into a **dynamically linked** Bifrost built with the **same Go version and dependency
+versions** (see Bifrost's *Building a Dynamically Linked Bifrost Binary* guide). On Linux and macOS only.
+[`docker/bifrost.Dockerfile`](docker/bifrost.Dockerfile) does this reproducibly:
+
+1. Clones Bifrost at `transports/v2.5.1` (core `v1.15.2`, Go 1.27.3).
+2. Builds `bifrost-http` without `-static`, as the dynamic-build guide describes.
+3. Copies the plugin into Bifrost's `transports` module and runs `go vet`, `go test` and
+   `go build -buildmode=plugin` there, so the plugin shares Bifrost's exact dependency graph.
+4. Ships both in `debian:bookworm-slim`. On startup Bifrost logs `plugin status: freshness-guard - active`.
+
+Run the tests on their own:
+
+```bash
+cd bifrost-plugin/freshnessguard
+go test -v ./...        # Linux/macOS; on Windows use: docker run --rm -v "%cd%:/src" -w /src golang:1.27.3-bookworm go test ./...
+```
+
+The 11 tests cover all four modes, the per-request header, streaming/error/non-chat/short-answer skips,
+fail-open and fail-closed, array content parts, config validation, and the exported hook driven with
+Bifrost's own `schemas.HTTPRequest` / `schemas.HTTPResponse` types.
+
+## The checker: PolicyPulse
+
+The plugin delegates verification to PolicyPulse (`api.py`, `POST /check`), which:
+
+1. **Extracts** time-sensitive claims (regulation, pricing, API versions, company facts) with an LLM.
+2. **Searches** each claim with **Tavily**: first on the official site for that claim (`include_domains`:
+   privacy.gov.ph, bsp.gov.ph, eur-lex.europa.eu, anthropic.com…), then the open web. Results are cached.
+3. **Judges** each claim against those sources only. The LLM picks the verdict (Current / Possibly stale /
+   Outdated / Unverifiable) and must say Unverifiable rather than guess.
+4. **Scores** each claim with a transparent formula: verdict base (Current 70 · Possibly stale 50 · Outdated 30),
+   ±10 for official backing, ±5 per agreeing source (max ±10), ±10 for evidence from the last 12 months.
+5. **Fixes** the answer, changing only the wrong parts.
+
+PolicyPulse also ships a Streamlit app (http://localhost:8501) for compliance teams:
+
+| Tab | What it does |
+|---|---|
+| **Freshness Guard (Bifrost plugin)** | Sends a question through Bifrost with the plugin on; shows what the model said next to what the app receives, the plugin's headers and the checked claims |
+| **Check an Answer** | Paste any answer → verdict cards, *Why N/100?* breakdown, official sources, corrected answer with a diff, Markdown report |
+| **Ask the KB** | BM25 search over a library of 268 AI GRC briefs → grounded answer citing brief IDs → freshness check of that answer |
+| **KB Freshness Audit** | Every brief with status, review cycle and overdue flag |
+| **Verification Register** | Verify the library's own 1,902 open fact-check items live, export CSV |
+| **Gateway log** | Every LLM call with model, provider, latency, tokens and fallback; a switch simulates a primary-provider outage to show Bifrost's fallback to Groq |
+
+## How Bifrost is used
+
+- **Plugin (the entry):** Freshness Guard is a native Go plugin using Bifrost's `HTTPTransportPostHook`
+  extension point, loaded from `config.json` into a standard dynamic build.
+- **Gateway for every LLM call:** PolicyPulse calls models only through Bifrost's OpenAI-compatible endpoint,
+  with provider keys held by Bifrost (`env.CLAUDE_API`, `env.GROQ_API`), never by the app.
+- **Fallbacks:** each request names `anthropic/claude-haiku-5-5` and lists `groq/openai/gpt-oss-120b` in
+  Bifrost's native `fallbacks` field. The app reads `routing_info.is_fallback` and logs it per call.
+
+## How Tavily is used
+
+- Every claim gets a basic-depth search limited to the official sites for that claim, then an open-web search.
+  Official sources are labelled and weigh into the score.
+- The Verification Register turns the knowledge base's own "verify this" notes into live searches.
+- Results are cached by query (`cache/tavily_cache.json`), and a check is capped at 8 claims.
+
+## How AI is used
+
+- **Claim extraction**, **judging** (sources only, temperature 0) and **correcting** (only wrong parts change)
+  are LLM steps, all routed through Bifrost. The freshness score is computed, not generated.
+- **Built with Claude Code:** this project was designed and coded with Claude Code.
+
+## Repository layout
+
+```text
+bifrost-plugin/freshnessguard/   Go plugin: main.go (hooks), guard.go (logic), guard_test.go
+docker/                          bifrost.Dockerfile (dynamic Bifrost + plugin), bifrost-config.json,
+                                 policypulse.Dockerfile
+docker-compose.yml               Bifrost + checker + app
+api.py                           POST /check (the checker the plugin calls)
+pipeline.py extractor.py verifier.py judge.py authority.py fixer.py llm.py   PolicyPulse engine
+app.py guard_demo.py             Streamlit app
+ingest.py retriever.py           knowledge base (PDF ingest, BM25)
+bifrost/config.json run_bifrost.py   run a stock Bifrost via npx for the app alone (no plugin)
+```
+
+## Running without Docker (app only, no plugin)
+
+```bash
+pip install -r requirements.txt
+python run_bifrost.py 8080      # stock Bifrost via npx with Claude + Groq (keys from .env)
+python ingest.py                # KB index (uses data/sample/ if KB_PATH is not set)
+streamlit run app.py            # app; the Freshness Guard tab needs the Docker gateway
+uvicorn api:app --port 8000     # the /check API
+python smoke_test.py            # "The EU AI Act is still a proposal" → expects Outdated
+```
+
+## Limitations
+
+- A check adds latency (typically 30–80 s: claim extraction, live search and judging). That suits compliance
+  assistants and reviewed answers more than real-time chat; see *Future work* for an async mode.
+- Streaming responses are not checked yet (passed through, marked `skipped-stream`).
+- Go plugins need a dynamic Bifrost build on Linux or macOS; the Dockerfile handles this.
+- Verdicts depend on what Tavily finds. The judge is an LLM and can misread a source, so sources are always
+  returned for review.
+- The knowledge base in this repo is a five-brief sample; the full 268-brief library is private.
+
+## Future work
+
+- **Async mode:** return the answer immediately and attach verdicts through Bifrost's logs and a webhook.
+- **Streaming support** using `HTTPTransportStreamChunkHook` to buffer and check the final text.
+- Per-virtual-key modes through Bifrost governance (for example `block` for customer-facing keys).
+- Metrics (stale answers caught, by provider and model) through Bifrost telemetry.
+- Mapping verdicts to ISO/IEC 42001 controls and NIST AI RMF functions for audit evidence.
 
 ## Screenshots
 
@@ -225,10 +265,10 @@ sources are sped up and labelled.
 **Verification Register:** open fact-check items from a BSP brief, verified live
 ![Verification Register](screenshots/5_verification_register.png)
 
-**Gateway (Bifrost):** every LLM call with model, provider, latency, tokens and fallback
+**Gateway log:** every LLM call with model, provider, latency, tokens and fallback
 ![Gateway](screenshots/6_gateway.png)
 
-**`/check` API** for other AI apps
+**`/check` API**, the endpoint the plugin calls
 ![API](screenshots/7_api.png)
 
 ---

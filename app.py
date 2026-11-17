@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 import config
+import guard_demo
 import llm
 from judge import judge_claim
 from llm import GatewayError, chat
@@ -120,9 +121,9 @@ def load_json(path_str: str):
 
 
 # ---------- page ----------
-st.title("PolicyPulse")
-st.caption("Stale-answer detector for AI governance, risk and compliance. Claims are re-checked live with "
-           "Tavily; every LLM call goes through the Bifrost gateway.")
+st.title("PolicyPulse Freshness Guard")
+st.caption("A Bifrost plugin that checks AI answers for stale claims before they reach your app, plus the "
+           "PolicyPulse checker behind it: claims are re-verified live with Tavily, official sources first.")
 setup_warnings()
 
 with st.sidebar:
@@ -136,10 +137,15 @@ with st.sidebar:
     _idx = load_json(str(config.INDEX_JSON)) or []
     st.caption(f"Knowledge base: {'sample' if config.USING_SAMPLE_KB else 'full library'} ({len(_idx)} briefs)")
 
-tabs = st.tabs(["Check an Answer", "Ask the KB", "KB Freshness Audit", "Verification Register", "Gateway (Bifrost)"])
+tabs = st.tabs(["Freshness Guard (Bifrost plugin)", "Check an Answer", "Ask the KB", "KB Freshness Audit",
+                "Verification Register", "Gateway log"])
+
+# 0. Freshness Guard: the Bifrost plugin, seen from a client app
+with tabs[0]:
+    guard_demo.render()
 
 # 1. Check an Answer
-with tabs[0]:
+with tabs[1]:
     pick = st.selectbox("Load a sample answer", ["(paste your own)"] + list(SAMPLES))
     answer = st.text_area("LLM answer to check", value=SAMPLES.get(pick, ""), height=160)
     if st.button("Check freshness", type="primary", disabled=not answer.strip()):
@@ -148,7 +154,7 @@ with tabs[0]:
         show_report(st.session_state["check_report"], "check")
 
 # 2. Ask the KB
-with tabs[1]:
+with tabs[2]:
     q = st.text_input("Ask the AI GRC knowledge base", "When must a personal data breach be reported to the NPC?")
     if st.button("Ask", type="primary"):
         try:
@@ -187,7 +193,7 @@ with tabs[1]:
             show_report(kb["report"], "kb", extra_md=f"Question: {kb['q']}  \nKB briefs retrieved: {cites}")
 
 # 3. KB Freshness Audit
-with tabs[2]:
+with tabs[3]:
     index = load_json(str(config.INDEX_JSON))
     if not index:
         st.error("build/index.json not found. Run: python ingest.py")
@@ -219,7 +225,7 @@ with tabs[2]:
                    "see what falls due.")
 
 # 4. Verification Register
-with tabs[3]:
+with tabs[4]:
     reg = load_json(str(config.REGISTER_JSON))
     if not reg:
         st.error("build/register.json not found or empty. Run: python ingest.py")
@@ -264,7 +270,7 @@ with tabs[3]:
             st.download_button("Export CSV", csv.to_csv(index=False), file_name="register_verification.csv")
 
 # 5. Gateway
-with tabs[4]:
+with tabs[5]:
     st.markdown("Every LLM call goes through **Bifrost** (OpenAI-compatible gateway). The request names the "
                 f"primary model `{config.PRIMARY_MODEL}` and lists `{config.FALLBACK_MODEL}` in Bifrost's "
                 "`fallbacks` field, so Bifrost retries on Groq if the primary fails.")

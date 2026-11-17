@@ -13,7 +13,7 @@ def fix_answer(answer: str, results: list[dict]) -> str | None:
     if not fixes:
         return None
     lst = "\n".join(f"- Claim: {r['claim']}\n  Correction: {r['suggested_correction']}" for r in fixes)
-    res = chat(f"ANSWER:\n{answer}\n\nCORRECTIONS:\n{lst}", system=SYSTEM, max_tokens=1500, purpose="fix")
+    res = chat(f"ANSWER:\n{answer}\n\nCORRECTIONS:\n{lst}", system=SYSTEM, max_tokens=4000, purpose="fix")
     return res["text"].strip() or None
 
 

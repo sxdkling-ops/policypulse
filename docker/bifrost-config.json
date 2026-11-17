@@ -1,0 +1,27 @@
+{
+  "client": { "drop_excess_requests": false, "enforce_auth_on_inference": false },
+  "config_store": { "enabled": false },
+  "providers": {
+    "anthropic": {
+      "keys": [ { "name": "anthropic-main", "value": "env.CLAUDE_API", "models": ["claude-haiku-5-5"], "weight": 1.0 } ]
+    },
+    "groq": {
+      "keys": [ { "name": "groq-main", "value": "env.GROQ_API", "models": ["openai/gpt-oss-120b"], "weight": 1.0 } ]
+    }
+  },
+  "plugins": [
+    {
+      "enabled": true,
+      "name": "freshness-guard",
+      "path": "/app/plugins/freshness_guard.so",
+      "config": {
+        "checker_url": "http://policypulse-api:8000/check",
+        "mode": "annotate",
+        "min_score": 40,
+        "timeout_ms": 120000,
+        "fail_open": true,
+        "min_chars": 40
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# One command: Bifrost (with the Freshness Guard plugin) + the PolicyPulse checker + the app.
+#   docker compose up --build
+# Needs CLAUDE_API, GROQ_API and TAVILY_API_KEY in .env (see .env.example).
+services:
+  bifrost:
+    build:
+      context: .
+      dockerfile: docker/bifrost.Dockerfile
+    image: policypulse/bifrost-freshness:2.5.1
+    environment:
+      CLAUDE_API: ${CLAUDE_API:?set CLAUDE_API in .env}
+      GROQ_API: ${GROQ_API:-}
+    ports:
+      - "${BIFROST_HOST_PORT:-8080}:8080"
+    depends_on:
+      - policypulse-api
+
+  policypulse-api:
+    build:
+      context: .
+      dockerfile: docker/policypulse.Dockerfile
+    image: policypulse/app:latest
+    environment:
+      BIFROST_URL: http://bifrost:8080/v1
+      TAVILY_API_KEY: ${TAVILY_API_KEY:?set TAVILY_API_KEY in .env}
+      KB_PATH: ""
+    ports:
+      - "${API_HOST_PORT:-8000}:8000"
+
+  app:
+    image: policypulse/app:latest
+    command: ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    environment:
+      BIFROST_URL: http://bifrost:8080/v1
+      TAVILY_API_KEY: ${TAVILY_API_KEY:?set TAVILY_API_KEY in .env}
+      KB_PATH: ""
+    ports:
+      - "${APP_HOST_PORT:-8501}:8501"
+    depends_on:
+      - bifrost
+      - policypulse-api

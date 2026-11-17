@@ -1,0 +1,11 @@
+.env
+.git
+build/
+logs/
+docs/
+screenshots/
+__pycache__/
+**/*.pyc
+data/*
+!data/sample/
+bifrost-plugin/freshnessguard/go.sum

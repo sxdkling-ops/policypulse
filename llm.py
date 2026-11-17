@@ -47,6 +47,8 @@ def chat(messages, system: str | None = None, max_tokens: int = 1200, temperatur
         resp = _client().chat.completions.create(
             model=requested, messages=messages, max_tokens=max_tokens, temperature=temperature,
             extra_body={"fallbacks": [config.FALLBACK_MODEL]},
+            # PolicyPulse is the Freshness Guard's own checker: never check our own calls (avoids loops).
+            extra_headers={"x-freshness-guard": "off"},
         )
     except Exception as e:  # gateway down, or both models failed
         entry.update(ok=False, error=str(e)[:300], latency_ms=round((time.perf_counter() - t0) * 1000))

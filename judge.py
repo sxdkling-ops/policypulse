@@ -31,7 +31,7 @@ def judge_claim(claim: dict, sources: list[dict]) -> tuple[dict, dict]:
         f"\n{s['url']}\n{s['snippet']}" for i, s in enumerate(sources))
     res = chat(f"Today is {date.today().isoformat()}.\n\nCLAIM: {claim['claim']}\n"
                f"Implied date: {claim.get('implied_date')}\n\nSOURCES:\n{src_text}",
-               system=SYSTEM, max_tokens=1200, purpose="judge")
+               system=SYSTEM, max_tokens=2000, purpose="judge")
     try:
         v = parse_json(res["text"])
         if isinstance(v, list):
